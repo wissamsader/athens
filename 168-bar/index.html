@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="el" data-alt="zh">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>168 Bar — 阿水早餐面店, Διπύλου 6, Κεραμεικός</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700;800&family=Roboto:wght@300;400;500;700&family=Noto+Sans+SC:wght@400;700;900&display=swap" rel="stylesheet">
+<style>
+:root{--red:#C8102E;--red-d:#8E0A20;--ink:#17161A;--ink-2:#221F24;--paper:#F6F1E6;--gold:#E3C77A}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font:400 17px/1.78 Roboto,system-ui,sans-serif}
+html.alt body{font-family:'Noto Sans SC',Roboto,sans-serif}
+.wrap{width:min(1150px,100%);margin-inline:auto;padding-inline:5vw}
+h1,h2,h3{font-family:'Roboto Slab',Georgia,serif;font-weight:800;line-height:1.08}
+html.alt h1,html.alt h2,html.alt h3{font-family:'Noto Sans SC','Roboto Slab',serif;font-weight:900}
+a{color:inherit}
+.lgx{position:fixed;top:14px;inset-inline-end:14px;z-index:60;background:var(--red);color:#fff;border:0;
+  font:700 13px/1 Roboto,sans-serif;letter-spacing:.14em;padding:12px 16px;cursor:pointer}
+.lgx:hover{background:var(--ink)}
+/* ===== COUPLET RAILS: vertical vermilion rails + horizontal registers ===== */
+.reg{position:relative;padding-block:clamp(50px,7.2vw,94px);padding-inline:clamp(30px,5vw,64px)}
+.reg::before,.reg::after{content:"";position:absolute;top:0;bottom:0;width:clamp(14px,2.2vw,26px);background:var(--red)}
+.reg::before{inset-inline-start:0}.reg::after{inset-inline-end:0}
+.reg.dark{background:var(--ink);color:var(--paper)}
+.reg.dark::before,.reg.dark::after{background:var(--red-d)}
+.reg.mid{background:#EEE6D6}
+.fret{height:14px;background:
+  repeating-linear-gradient(90deg,var(--red) 0 3px,transparent 3px 6px,var(--red) 6px 9px,transparent 9px 20px)}
+.kick{font:700 12px/1 Roboto,sans-serif;letter-spacing:.3em;text-transform:uppercase;color:var(--red);margin-bottom:12px}
+.reg.dark .kick{color:var(--gold)}
+h2{font-size:clamp(30px,5.2vw,56px);margin-bottom:20px}
+p+p{margin-top:15px}
+/* hero */
+header{position:relative;min-height:clamp(600px,92svh,820px);max-height:860px;display:grid;place-items:center;
+  background:var(--ink);overflow:hidden}
+header::before,header::after{content:"";position:absolute;top:0;bottom:0;width:clamp(20px,3.4vw,44px);background:var(--red);z-index:3}
+header::before{inset-inline-start:0}header::after{inset-inline-end:0}
+.hbg{position:absolute;inset:0;background:#0f0e11 url('img/03.jpg') center 44%/cover no-repeat}
+.hbg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,14,17,.62),rgba(15,14,17,.3) 42%,rgba(15,14,17,.9))}
+.hin{position:relative;z-index:4;text-align:center;padding:clamp(40px,7vw,80px) clamp(44px,7vw,90px);color:var(--paper)}
+.big168{font-family:'Roboto Slab',serif;font-weight:800;font-size:clamp(78px,17vw,190px);line-height:.86;color:var(--gold);
+  letter-spacing:-.03em;text-shadow:0 10px 40px rgba(0,0,0,.6)}
+.cn{font-family:'Noto Sans SC',serif;font-size:clamp(22px,3.6vw,40px);letter-spacing:.24em;color:var(--paper);margin-top:6px}
+h1{font-size:clamp(26px,4vw,44px);margin-top:10px;font-weight:700}
+.hsub{margin-top:14px;font-size:clamp(16px,2.1vw,20px);color:#D8D2C4;max-width:48ch;margin-inline:auto}
+.hp{margin-top:20px;display:flex;flex-wrap:wrap;gap:9px;justify-content:center}
+.hp span{border:1px solid rgba(246,241,230,.4);padding:8px 15px;font:500 13px/1 Roboto,sans-serif}
+.hp span.g{background:var(--gold);border-color:var(--gold);color:var(--ink);font-weight:700}
+/* content */
+.two{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,4vw,52px);align-items:center}
+figure.fr{background:var(--paper);padding:9px;box-shadow:0 12px 26px rgba(23,22,26,.16);border:1px solid rgba(23,22,26,.1)}
+.reg.dark figure.fr{background:rgba(246,241,230,.94);border-color:transparent}
+figure.fr img{display:block;width:100%;height:auto;max-height:460px;object-fit:cover}
+figure.fr figcaption{font:400 13px/1.6 Roboto,sans-serif;color:#5c5850;padding:9px 3px 1px}
+.trio{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:24px}
+.trio figure.fr img{height:215px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:24px}
+.card{background:var(--paper);border:1px solid rgba(23,22,26,.12);overflow:hidden}
+.reg.dark .card{background:rgba(246,241,230,.06);border-color:rgba(246,241,230,.2);color:var(--paper)}
+.card img{display:block;width:100%;height:200px;object-fit:cover}
+.card .b{padding:16px 18px 20px}
+.card h3{font-size:19px;margin-bottom:6px;color:var(--red)}
+.reg.dark .card h3{color:var(--gold)}
+.card p{font-size:15px;line-height:1.6;color:#514d47}
+.reg.dark .card p{color:#CFC9BC}
+/* menu */
+.mg{display:grid;grid-template-columns:1.2fr .8fr;gap:clamp(24px,4vw,48px);align-items:start}
+.mh{font:700 12.5px/1 Roboto,sans-serif;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);
+  margin:24px 0 4px;padding-bottom:8px;border-bottom:2px solid var(--red)}
+.mh:first-of-type{margin-top:0}
+.mrow{display:grid;grid-template-columns:auto 1fr auto;gap:12px;align-items:baseline;padding:11px 0;
+  border-bottom:1px solid rgba(246,241,230,.14)}
+.mno{font:700 14px/1 'Roboto Slab',serif;color:var(--red);min-width:30px}
+.reg.dark .mno{color:var(--gold)}
+.mrow .pr{font:700 16.5px/1 'Roboto Slab',serif;color:var(--gold);white-space:nowrap}
+.qs{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:20px}
+.q{border-top:4px solid var(--red);padding:18px 2px 0}
+.q q{display:block;quotes:none;font:400 16px/1.7 Roboto,sans-serif}
+.q .w{margin-top:12px;font:700 12px/1 Roboto,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:var(--red)}
+.reg.dark .q .w{color:var(--gold)}
+table{width:100%;border-collapse:collapse}
+td{padding:10px 2px;border-bottom:1px solid rgba(23,22,26,.13);font-size:15.5px}
+td:last-child{text-align:end;font-weight:700;color:var(--red)}
+.btn{display:inline-flex;align-items:center;gap:8px;background:var(--red);color:#fff;padding:13px 22px;
+  text-decoration:none;font:700 13.5px/1 Roboto,sans-serif;letter-spacing:.1em;text-transform:uppercase;margin:10px 10px 0 0}
+.btn.k{background:var(--ink)}
+footer{padding:28px 0 118px;font-size:14.5px;color:#5f5b54;text-align:center}
+/* sticky bamboo-steamer bar */
+.bar{position:fixed;inset-inline:0;bottom:0;z-index:50;background:#3B2B1C;
+  padding:13px 12px calc(12px + env(safe-area-inset-bottom));display:flex;gap:10px;justify-content:center;
+  border-top:3px solid #6B4E2E;
+  background-image:repeating-linear-gradient(90deg,rgba(255,255,255,.06) 0 2px,transparent 2px 9px)}
+.bar::before{content:"";position:absolute;top:-11px;left:50%;transform:translateX(-50%);width:96px;height:11px;
+  background:#6B4E2E;border-radius:50px 50px 0 0;box-shadow:0 -4px 10px rgba(0,0,0,.25)}
+.bar::after{content:"";position:absolute;top:-24px;left:50%;transform:translateX(-50%);width:34px;height:16px;
+  background:radial-gradient(ellipse at 50% 100%,rgba(255,255,255,.5),transparent 70%);filter:blur(3px);
+  animation:steam 9s ease-in-out infinite}
+@keyframes steam{0%,100%{opacity:.25;transform:translateX(-50%) translateY(0)}50%{opacity:.75;transform:translateX(-50%) translateY(-5px)}}
+.bar a{flex:1;max-width:200px;display:flex;align-items:center;justify-content:center;gap:8px;
+  background:rgba(246,241,230,.1);border:1px solid rgba(246,241,230,.4);color:var(--paper);text-decoration:none;
+  padding:12px 8px;font:700 13px/1 Roboto,sans-serif;letter-spacing:.08em;text-transform:uppercase}
+.bar a.p{background:var(--red);border-color:var(--red);color:#fff}
+.bar a.w{background:#1f7a4d;border-color:#25995f}
+.bar svg{width:16px;height:16px;fill:currentColor;flex:none}
+@media(max-width:900px){
+  .two,.mg{grid-template-columns:1fr}.cards,.qs{grid-template-columns:1fr}
+  .trio{grid-template-columns:repeat(2,1fr)}
+  .reg{padding-inline:clamp(22px,5vw,40px)}
+  .reg::before,.reg::after{width:10px}
+  body{font-size:16px}
+}
+@media(max-width:430px){.bar a{font-size:11px;padding:11px 4px;letter-spacing:.02em}.bar{gap:6px}}
+</style>
+<meta name="robots" content="noindex,nofollow">
+<style data-mech>*{-webkit-tap-highlight-color:transparent}
+html,body{overflow-x:clip}
+.num{direction:ltr;unicode-bidi:isolate;white-space:nowrap}
+.rev{opacity:0;transform:translateY(18px);transition:opacity .75s ease,transform .75s ease}
+.rev.on{opacity:1;transform:none}
+html.alt .el{display:none!important}
+html:not(.alt) .tr{display:none!important}
+.tr{unicode-bidi:isolate}
+.wrap{padding-inline:5vw!important}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.rev{opacity:1;transform:none}}
+</style>
+<script data-mech>
+function LG(){var h=document.documentElement,a=h.classList.toggle('alt'),L=h.getAttribute('data-alt')||'en';
+h.setAttribute('lang',a?L:'el');if(L==='ar')h.setAttribute('dir',a?'rtl':'ltr');}
+document.addEventListener('DOMContentLoaded',function(){
+var n=document.querySelectorAll('.rev');
+if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){
+if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});
+n.forEach(function(e){io.observe(e)});}
+setTimeout(function(){document.querySelectorAll('.rev').forEach(function(e){e.classList.add('on')})},1100);});
+</script>
+</head>
+<body>
+<button class="lgx" onclick="LG()"><span class="el">中文</span><span class="tr" data-edit="t1" data-edit-label="Text — Ελληνικά">Ελληνικά</span></button>
+
+<header>
+  <div class="hbg"></div>
+  <div class="hin">
+    <div class="big168" data-edit="t2" data-edit-label="Text — 168">168</div>
+    <div class="cn">阿水早餐面店</div>
+    <h1><span class="el" data-edit="t3" data-edit-label="Text — Χειροποίητα noodles &amp; bao — από τι…">Χειροποίητα noodles &amp; bao — από τις 08:00</span><span class="tr">手工面条与包子 — 早八点开门</span></h1>
+    <p class="hsub"><span class="el" data-edit="t4" data-edit-label="Text — Μικρή οικογενειακή κουζίνα στον Κεραμε…">Μικρή οικογενειακή κουζίνα στον Κεραμεικό: ζυμωτά noodles, ατμιστά μπάο και σούπες που σερβίρονται από νωρίς το πρωί.</span><span class="tr">凯拉米克斯的家庭小厨房：手工面、蒸包和汤，从清早开始供应。</span></p>
+    <div class="hp">
+      <span class="g num" data-edit="t5" data-edit-label="Text — ★ 4,7">★ 4,7</span>
+      <span><span class="el" data-edit="t6" data-edit-label="Text — 336 κριτικές Google">336 κριτικές Google</span><span class="tr" data-edit="t7" data-edit-label="Text — 336 条 Google 评价">336 条 Google 评价</span></span>
+      <span class="num" data-edit="t8" data-edit-label="Text — 08:00–16:00">08:00–16:00</span>
+    </div>
+  </div>
+</header>
+<div class="fret"></div>
+
+<section class="reg">
+  <div class="wrap two rev">
+    <div>
+      <p class="kick"><span class="el" data-edit="t9" data-edit-label="Text — Το μαγαζί">Το μαγαζί</span><span class="tr">这家店</span></p>
+      <h2><span class="el" data-edit="t10" data-edit-label="Text — Πρωινό όπως στην Κίνα">Πρωινό όπως στην Κίνα</span><span class="tr">像在中国的早餐</span></h2>
+      <p><span class="el" data-edit="t11" data-edit-label="Text — Το 168 δουλεύει από τις οκτώ το πρωί κ…">Το 168 δουλεύει από τις οκτώ το πρωί και κλείνει το απόγευμα — γιατί εδώ το κύριο γεύμα είναι το πρωινό: σούπες με noodles, μπάο στον ατμό και youtiao, τηγανητή ζύμη για βουτηγμα.</span><span class="tr" data-edit="t12" data-edit-label="Text — 168 从早上八点营业到下午——因为这里的主餐是早餐：面汤、蒸包和油条。">168 从早上八点营业到下午——因为这里的主餐是早餐：面汤、蒸包和油条。</span></p>
+      <p><span class="el" data-edit="t13" data-edit-label="Text — Τα noodles ανοίγονται και κόβονται στο…">Τα noodles ανοίγονται και κόβονται στο χέρι· στον κατάλογο υπάρχουν και «shaved blade» noodles και λεπτά noodles αυγού. Οι μερίδες είναι μεγάλες και οι τιμές χαμηλές.</span><span class="tr">面条手工擀制、手工切；菜单上还有刀削面和细蛋面。分量大，价格实惠。</span></p>
+    </div>
+    <figure class="fr">
+      <img src="img/09.jpg" alt="Ο εσωτερικός χώρος του 168 Bar" loading="lazy">
+      <figcaption><span class="el" data-edit="t14" data-edit-label="Text — Ο χώρος στη Διπύλου — λίγα τραπέζια, α…">Ο χώρος στη Διπύλου — λίγα τραπέζια, ανοιχτή κουζίνα.</span><span class="tr">迪皮卢街的店内——几张桌子，开放厨房。</span></figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="reg dark">
+  <div class="wrap">
+    <p class="kick rev"><span class="el" data-edit="t15" data-edit-label="Text — Τρία που ζητάει ο κόσμος">Τρία που ζητάει ο κόσμος</span><span class="tr">三样最受欢迎</span></p>
+    <h2 class="rev"><span class="el" data-edit="t16" data-edit-label="Text — Το πρωινό τραπέζι">Το πρωινό τραπέζι</span><span class="tr">早餐桌</span></h2>
+    <div class="cards rev">
+      <div class="card"><img src="img/07.jpg" alt="Μπάο στον ατμό" loading="lazy">
+        <div class="b"><h3><span class="el" data-edit="t17" data-edit-label="Text — Μπάο στον ατμό">Μπάο στον ατμό</span><span class="tr">包子</span></h3>
+          <p><span class="el" data-edit="t18" data-edit-label="Text — Αφράτα, φρεσκοατμισμένα, σερβιρισμένα …">Αφράτα, φρεσκοατμισμένα, σερβιρισμένα στο μπαμπού καλάθι.</span><span class="tr">松软、现蒸，装在竹笼里上桌。</span></p></div></div>
+      <div class="card"><img src="img/04.jpg" alt="Σούπα με noodles και μοσχάρι" loading="lazy">
+        <div class="b"><h3><span class="el" data-edit="t19" data-edit-label="Text — Σούπα με noodles">Σούπα με noodles</span><span class="tr">汤面</span></h3>
+          <p><span class="el" data-edit="t20" data-edit-label="Text — Ζωμός που σιγοβράζει, χειροποίητα nood…">Ζωμός που σιγοβράζει, χειροποίητα noodles και λαχανικά εποχής.</span><span class="tr">慢炖高汤、手工面和时令蔬菜。</span></p></div></div>
+      <div class="card"><img src="img/08.jpg" alt="Youtiao και μπάο" loading="lazy">
+        <div class="b"><h3>Youtiao <span class="el" data-edit="t21" data-edit-label="Text — &amp; σόγια">&amp; σόγια</span><span class="tr">与豆浆</span></h3>
+          <p><span class="el" data-edit="t22" data-edit-label="Text — Το κλασικό κινέζικο πρωινό: τηγανητή ζ…">Το κλασικό κινέζικο πρωινό: τηγανητή ζύμη με ζεστό γάλα σόγιας.</span><span class="tr">经典中式早餐：油条配热豆浆。</span></p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="reg mid">
+  <div class="wrap">
+    <p class="kick rev"><span class="el" data-edit="t23" data-edit-label="Text — Στο πιάτο">Στο πιάτο</span><span class="tr">上桌</span></p>
+    <h2 class="rev"><span class="el" data-edit="t24" data-edit-label="Text — Από την κουζίνα">Από την κουζίνα</span><span class="tr">来自厨房</span></h2>
+    <div class="trio rev">
+      <figure class="fr"><img src="img/12.jpg" alt="Τηγανητά noodles με λαχανικά" loading="lazy"><figcaption><span class="el" data-edit="t25" data-edit-label="Text — Τηγανητά noodles.">Τηγανητά noodles.</span><span class="tr">炒面。</span></figcaption></figure>
+      <figure class="fr"><img src="img/11.jpg" alt="Σούπα με noodles και αυγό" loading="lazy"><figcaption><span class="el" data-edit="t26" data-edit-label="Text — Σούπα με αυγό.">Σούπα με αυγό.</span><span class="tr">鸡蛋汤面。</span></figcaption></figure>
+      <figure class="fr"><img src="img/06.jpg" alt="Τραπέζι με πολλά πιάτα" loading="lazy"><figcaption><span class="el" data-edit="t27" data-edit-label="Text — Τραπέζι για δύο.">Τραπέζι για δύο.</span><span class="tr">双人份。</span></figcaption></figure>
+      <figure class="fr"><img src="img/10.jpg" alt="Μπάο σε καλάθι μπαμπού" loading="lazy"><figcaption><span class="el" data-edit="t28" data-edit-label="Text — Το καλάθι με τα μπάο.">Το καλάθι με τα μπάο.</span><span class="tr">竹笼包子。</span></figcaption></figure>
+      <figure class="fr"><img src="img/05.jpg" alt="Η πρόσοψη στη Διπύλου" loading="lazy"><figcaption><span class="el" data-edit="t29" data-edit-label="Text — Η γωνιά στη Διπύλου.">Η γωνιά στη Διπύλου.</span><span class="tr">迪皮卢街转角。</span></figcaption></figure>
+      <figure class="fr"><img src="img/01.jpg" alt="Η βιτρίνα του καταστήματος" loading="lazy"><figcaption><span class="el" data-edit="t30" data-edit-label="Text — Η βιτρίνα.">Η βιτρίνα.</span><span class="tr">店面。</span></figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="reg dark">
+  <div class="wrap mg">
+    <div class="rev">
+      <p class="kick"><span class="el" data-edit="t31" data-edit-label="Text — Από τον τιμοκατάλογο">Από τον τιμοκατάλογο</span><span class="tr">菜单价格</span></p>
+      <h2><span class="el" data-edit="t32" data-edit-label="Text — Τιμές">Τιμές</span><span class="tr">价格</span></h2>
+      <p class="mh"><span class="el" data-edit="t33" data-edit-label="Text — Τηγανητά noodles">Τηγανητά noodles</span><span class="tr">炒面</span></p>
+      <div class="mrow"><span class="mno num" data-edit="t34" data-edit-label="Text — 32">32</span><span><span class="el" data-edit="t35" data-edit-label="Text — Τηγανητά noodles με λαχανικά">Τηγανητά noodles με λαχανικά</span><span class="tr">素炒面</span></span><b class="pr" data-edit="t36" data-edit-label="Text — 7,00 €">7,00 €</b></div>
+      <div class="mrow"><span class="mno num" data-edit="t37" data-edit-label="Text — 33">33</span><span><span class="el" data-edit="t38" data-edit-label="Text — …με γαρίδες">…με γαρίδες</span><span class="tr">…加虾</span></span><b class="pr" data-edit="t39" data-edit-label="Text — 8,50 €">8,50 €</b></div>
+      <div class="mrow"><span class="mno num" data-edit="t40" data-edit-label="Text — 34">34</span><span><span class="el" data-edit="t41" data-edit-label="Text — …με χοιρινό">…με χοιρινό</span><span class="tr">…加猪肉</span></span><b class="pr" data-edit="t42" data-edit-label="Text — 8,50 €">8,50 €</b></div>
+      <div class="mrow"><span class="mno num" data-edit="t43" data-edit-label="Text — 35">35</span><span><span class="el" data-edit="t44" data-edit-label="Text — …με μοσχάρι">…με μοσχάρι</span><span class="tr">…加牛肉</span></span><b class="pr" data-edit="t45" data-edit-label="Text — 8,50 €">8,50 €</b></div>
+      <div class="mrow"><span class="mno num" data-edit="t46" data-edit-label="Text — 36">36</span><span><span class="el" data-edit="t47" data-edit-label="Text — …με κοτόπουλο">…με κοτόπουλο</span><span class="tr">…加鸡肉</span></span><b class="pr" data-edit="t48" data-edit-label="Text — 8,50 €">8,50 €</b></div>
+      <div class="mrow"><span class="mno num" data-edit="t49" data-edit-label="Text — 38">38</span><span><span class="el" data-edit="t50" data-edit-label="Text — Noodles με φρέσκο κρεμμυδάκι">Noodles με φρέσκο κρεμμυδάκι</span><span class="tr">葱油面</span></span><b class="pr" data-edit="t51" data-edit-label="Text — 8,50 €">8,50 €</b></div>
+      <p class="mh"><span class="el" data-edit="t52" data-edit-label="Text — Σούπες με noodles">Σούπες με noodles</span><span class="tr">汤面</span></p>
+      <div class="mrow"><span class="mno" data-edit="t53" data-edit-label="Text — 39A">39A</span><span><span class="el" data-edit="t54" data-edit-label="Text — Σούπα με λαχανικά">Σούπα με λαχανικά</span><span class="tr">素汤面</span></span><b class="pr" data-edit="t55" data-edit-label="Text — 7,00 €">7,00 €</b></div>
+      <div class="mrow"><span class="mno num" data-edit="t56" data-edit-label="Text — 40">40</span><span><span class="el" data-edit="t57" data-edit-label="Text — …με χοιρινή πανσέτα">…με χοιρινή πανσέτα</span><span class="tr">…加五花肉</span></span><b class="pr" data-edit="t58" data-edit-label="Text — 8,50 €">8,50 €</b></div>
+      <div class="mrow"><span class="mno num" data-edit="t59" data-edit-label="Text — 42">42</span><span><span class="el" data-edit="t60" data-edit-label="Text — …με μοσχαρίσιο στήθος">…με μοσχαρίσιο στήθος</span><span class="tr">…加牛腩</span></span><b class="pr" data-edit="t61" data-edit-label="Text — 8,50 €">8,50 €</b></div>
+      <p class="mh"><span class="el" data-edit="t62" data-edit-label="Text — Μεγάλες σούπες ρυζιού">Μεγάλες σούπες ρυζιού</span><span class="tr">大碗米线汤</span></p>
+      <div class="mrow"><span class="mno" data-edit="t63" data-edit-label="Text — 49A">49A</span><span><span class="el" data-edit="t64" data-edit-label="Text — Με αυγό και λαχανικά">Με αυγό και λαχανικά</span><span class="tr">鸡蛋蔬菜</span></span><b class="pr" data-edit="t65" data-edit-label="Text — 7,00 €">7,00 €</b></div>
+      <div class="mrow"><span class="mno num" data-edit="t66" data-edit-label="Text — 52">52</span><span><span class="el" data-edit="t67" data-edit-label="Text — Με μοσχαρίσιο στήθος">Με μοσχαρίσιο στήθος</span><span class="tr">牛腩</span></span><b class="pr" data-edit="t68" data-edit-label="Text — 8,50 €">8,50 €</b></div>
+      <p class="mh"><span class="el" data-edit="t69" data-edit-label="Text — Ποτά">Ποτά</span><span class="tr">饮品</span></p>
+      <div class="mrow"><span class="mno">·</span><span><span class="el" data-edit="t70" data-edit-label="Text — Γάλα σόγιας">Γάλα σόγιας</span><span class="tr">豆浆</span></span><b class="pr" data-edit="t71" data-edit-label="Text — 1,00 €">1,00 €</b></div>
+      <div class="mrow"><span class="mno">·</span><span><span class="el" data-edit="t72" data-edit-label="Text — Νερό">Νερό</span><span class="tr">水</span></span><b class="pr" data-edit="t73" data-edit-label="Text — 0,50 €">0,50 €</b></div>
+    </div>
+    <figure class="fr rev">
+      <img src="img/02.jpg" alt="Ο τιμοκατάλογος με φωτογραφίες" loading="lazy">
+      <figcaption><span class="el" data-edit="t74" data-edit-label="Text — Ο κατάλογος στον τοίχο, με φωτογραφία …">Ο κατάλογος στον τοίχο, με φωτογραφία σε κάθε πιάτο.</span><span class="tr">墙上的菜单，每道菜都有照片。</span></figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="reg">
+  <div class="wrap">
+    <p class="kick rev"><span class="el" data-edit="t75" data-edit-label="Text — Κριτικές Google">Κριτικές Google</span><span class="tr" data-edit="t76" data-edit-label="Text — Google 评价">Google 评价</span></p>
+    <h2 class="rev"><span class="num" data-edit="t77" data-edit-label="Text — ★ 4,7">★ 4,7</span> <span class="el" data-edit="t78" data-edit-label="Text — από 336 κριτικές">από 336 κριτικές</span><span class="tr" data-edit="t79" data-edit-label="Text — 336 条评价">336 条评价</span></h2>
+    <div class="qs rev">
+      <div class="q"><q dir="ltr" data-edit="t80" data-edit-label="Quote — Μικρή οικογενειακή επιχείρηση στο κέντ…">Μικρή οικογενειακή επιχείρηση στο κέντρο της Αθήνας με αυθεντικές κινέζικες γεύσεις και πολύ καλές τιμές!</q><div class="w" data-edit="t81" data-edit-label="Text — Πολυτίμη Μουτσανά · Google">Πολυτίμη Μουτσανά · Google</div></div>
+      <div class="q"><q dir="ltr" data-edit="t82" data-edit-label="Quote — Εξαιρετικό προσωπικό, τέλεια σχέση τιμ…">Εξαιρετικό προσωπικό, τέλεια σχέση τιμής με ποσότητα φαγητού και οι μερίδες πάρα πολύ καλές και χορταστικές.</q><div class="w" data-edit="t83" data-edit-label="Text — Kylie Raftopoulou · Google">Kylie Raftopoulou · Google</div></div>
+      <div class="q"><q dir="ltr" data-edit="t84" data-edit-label="Quote — Ήταν όλα υπέροχα, φοβερές τιμές και πο…">Ήταν όλα υπέροχα, φοβερές τιμές και πολλές επιλογές! Να πάτε οπωσδήποτε.</q><div class="w" data-edit="t85" data-edit-label="Text — Dora Katsala · Google">Dora Katsala · Google</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="reg mid">
+  <div class="wrap two rev">
+    <div>
+      <p class="kick"><span class="el" data-edit="t86" data-edit-label="Text — Ωράριο">Ωράριο</span><span class="tr">营业时间</span></p>
+      <h2><span class="el" data-edit="t87" data-edit-label="Text — Κάθε μέρα 08:00–16:00">Κάθε μέρα 08:00–16:00</span><span class="tr" data-edit="t88" data-edit-label="Text — 每天 08:00–16:00">每天 08:00–16:00</span></h2>
+      <table>
+        <tr><td><span class="el" data-edit="t89" data-edit-label="Text — Δευτέρα">Δευτέρα</span><span class="tr">周一</span></td><td class="num" data-edit="t90" data-edit-label="Menu / table — 08:00–16:00">08:00–16:00</td></tr>
+        <tr><td><span class="el" data-edit="t91" data-edit-label="Text — Τρίτη">Τρίτη</span><span class="tr">周二</span></td><td class="num" data-edit="t92" data-edit-label="Menu / table — 08:00–16:00">08:00–16:00</td></tr>
+        <tr><td><span class="el" data-edit="t93" data-edit-label="Text — Τετάρτη">Τετάρτη</span><span class="tr">周三</span></td><td class="num" data-edit="t94" data-edit-label="Menu / table — 08:00–16:00">08:00–16:00</td></tr>
+        <tr><td><span class="el" data-edit="t95" data-edit-label="Text — Πέμπτη">Πέμπτη</span><span class="tr">周四</span></td><td class="num" data-edit="t96" data-edit-label="Menu / table — 08:00–16:00">08:00–16:00</td></tr>
+        <tr><td><span class="el" data-edit="t97" data-edit-label="Text — Παρασκευή">Παρασκευή</span><span class="tr">周五</span></td><td class="num" data-edit="t98" data-edit-label="Menu / table — 08:00–16:00">08:00–16:00</td></tr>
+        <tr><td><span class="el" data-edit="t99" data-edit-label="Text — Σάββατο">Σάββατο</span><span class="tr">周六</span></td><td class="num" data-edit="t100" data-edit-label="Menu / table — 08:00–16:00">08:00–16:00</td></tr>
+        <tr><td><span class="el" data-edit="t101" data-edit-label="Text — Κυριακή">Κυριακή</span><span class="tr">周日</span></td><td class="num" data-edit="t102" data-edit-label="Menu / table — 08:00–16:00">08:00–16:00</td></tr>
+      </table>
+    </div>
+    <div>
+      <p class="kick"><span class="el" data-edit="t103" data-edit-label="Text — Πού είμαστε">Πού είμαστε</span><span class="tr">地址</span></p>
+      <h2><span class="el" data-edit="t104" data-edit-label="Text — Διπύλου 6">Διπύλου 6</span><span class="tr" data-edit="t105" data-edit-label="Text — 迪皮卢街 6 号">迪皮卢街 6 号</span></h2>
+      <p style="font-size:19px"><b class="ad" data-edit="t106" data-edit-label="Text — Διπύλου 6, Αθήνα 105 53">Διπύλου 6, Αθήνα 105 53</b><br>
+        <span class="el" data-edit="t107" data-edit-label="Text — Κεραμεικός — κοντά στην Ψυρρή">Κεραμεικός — κοντά στην Ψυρρή</span><span class="tr">凯拉米克斯 — 靠近普西里区</span><br>
+        <b class="ph num" data-edit="t108" data-edit-label="Text — +30 690 965 6858">+30 690 965 6858</b></p>
+      <p>
+        <a class="btn" href="https://wa.me/306909656858?text=%CE%93%CE%B5%CE%B9%CE%B1%20%CF%83%CE%B1%CF%82%2C%20%CE%B8%CE%AD%CE%BB%CF%89%20%CE%BD%CE%B1%20%CF%81%CF%89%CF%84%CE%AE%CF%83%CF%89%20%CE%B3%CE%B9%CE%B1%20%CF%84%CE%BF%20168%20Bar" target="_blank" rel="noopener" data-edit="t109" data-edit-label="Button / link — WhatsApp">WhatsApp</a>
+        <a class="btn k" href="tel:+306909656858"><span class="el" data-edit="t110" data-edit-label="Text — Τηλέφωνο">Τηλέφωνο</span><span class="tr">电话</span></a>
+        <a class="btn k" href="https://www.google.com/maps?cid=7242831931725168647" target="_blank" rel="noopener"><span class="el" data-edit="t111" data-edit-label="Text — Χάρτης">Χάρτης</span><span class="tr">地图</span></a>
+      </p>
+    </div>
+  </div>
+  <div class="wrap"><footer><p><b data-edit="t112" data-edit-label="Text — 168 Bar · 阿水早餐面店">168 Bar · 阿水早餐面店</b> — Διπύλου 6, Αθήνα 105 53 · <span class="num" data-edit="t113" data-edit-label="Text — +30 690 965 6858">+30 690 965 6858</span></p></footer></div>
+</section>
+
+<nav class="bar">
+  <a class="w" href="https://wa.me/306909656858?text=%CE%93%CE%B5%CE%B9%CE%B1%20%CF%83%CE%B1%CF%82%2C%20%CE%B8%CE%AD%CE%BB%CF%89%20%CE%BD%CE%B1%20%CF%81%CF%89%CF%84%CE%AE%CF%83%CF%89%20%CE%B3%CE%B9%CE%B1%20%CF%84%CE%BF%20168%20Bar" target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.2 1.2-1.7 1.2-.5.1-1 .1-1.6-.1-.4-.1-.9-.3-1.5-.6-2.6-1.1-4.3-3.8-4.4-4-.1-.2-1-1.4-1-2.6s.6-1.8.9-2.1c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.3 0 .5l-.3.5-.3.3c-.1.1-.3.3-.1.6.2.3.7 1.2 1.6 2 1.1.9 1.9 1.2 2.2 1.4.3.1.5.1.6-.1.2-.2.7-.8.9-1.1.2-.3.4-.2.6-.1l2 .9c.2.1.4.2.4.3.1.2.1.7-.1 1.3z"/></svg>
+    WhatsApp</a>
+  <a class="p" href="tel:+306909656858">
+    <svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.4.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C11 21 3 13 3 3c0-.6.4-1 1-1h3.4c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.2 1l-2.2 2.2z"/></svg>
+    <span class="el" data-edit="t114" data-edit-label="Text — Κλήση">Κλήση</span><span class="tr">电话</span></a>
+  <a href="https://www.google.com/maps?cid=7242831931725168647" target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>
+    <span class="el" data-edit="t115" data-edit-label="Text — Χάρτης">Χάρτης</span><span class="tr">地图</span></a>
+</nav>
+</body>
+</html>

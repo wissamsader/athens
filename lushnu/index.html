@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="el" data-alt="ka">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>LUSHNU — γεωργιανό εστιατόριο, Αγορακρίτου 11</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Noto+Sans:wght@300;400;600&family=Noto+Sans+Georgian:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--wine:#4A1220;--wine-l:#6E1E31;--clay:#B07A52;--clay-d:#8A5A36;--linen:#EFE6D6;--linen-2:#E2D6C0;--ink:#231A16}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--linen);color:var(--ink);font:400 17px/1.8 'Noto Sans',system-ui,sans-serif}
+html.alt body{font-family:'Noto Sans Georgian','Noto Sans',sans-serif}
+.wrap{width:min(1130px,100%);margin-inline:auto;padding-inline:5vw}
+h1,h2,h3{font-family:'EB Garamond',Georgia,serif;font-weight:700;line-height:1.12}
+html.alt h1,html.alt h2,html.alt h3{font-family:'Noto Sans Georgian','EB Garamond',serif}
+a{color:inherit}
+.lgx{position:fixed;top:14px;inset-inline-end:14px;z-index:60;background:var(--wine);color:var(--linen);border:0;
+  font:600 12.5px/1 'Noto Sans',sans-serif;letter-spacing:.16em;padding:12px 16px;cursor:pointer;text-transform:uppercase;border-radius:999px}
+.lgx:hover{background:var(--clay);color:var(--wine)}
+/* hero */
+header{position:relative;min-height:clamp(600px,92svh,820px);max-height:860px;display:flex;align-items:flex-end;
+  background:#1b0a11 url('img/01.jpg') center 46%/cover no-repeat}
+header::after{content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(74,18,32,.55),rgba(27,10,17,.30) 40%,rgba(27,10,17,.88) 84%,var(--linen) 100%)}
+.hero{position:relative;z-index:2;width:100%;padding-block:0 clamp(40px,7vw,78px);color:var(--linen)}
+.kaline{font:600 12px/1 'Noto Sans',sans-serif;letter-spacing:.34em;text-transform:uppercase;color:var(--clay)}
+h1{font-size:clamp(50px,11vw,124px);margin:12px 0 0;text-shadow:0 8px 34px rgba(0,0,0,.55)}
+h1 em{display:block;font-style:normal;font-family:'Noto Sans Georgian',serif;font-size:.36em;color:var(--clay);margin-top:8px;letter-spacing:.04em}
+.hsub{margin-top:14px;font-size:clamp(16px,2.1vw,21px);max-width:46ch;color:#E7D9C6}
+.hp{margin-top:22px;display:flex;flex-wrap:wrap;gap:9px}
+.hp span{border:1px solid rgba(239,230,214,.4);border-radius:999px;padding:8px 15px;font:600 13px/1 'Noto Sans',sans-serif;background:rgba(27,10,17,.42)}
+.hp span.c{background:var(--clay);border-color:var(--clay);color:var(--wine);font-weight:700}
+/* ===== SUPRA TOASTS: numbered ritual sequence is the whole skeleton ===== */
+.sec{padding-block:clamp(50px,7.2vw,94px)}
+.sec.wine{background:var(--wine);color:var(--linen)}
+.sec.linen2{background:var(--linen-2)}
+.toast{display:grid;grid-template-columns:auto 1fr;gap:clamp(18px,3vw,40px);align-items:start}
+.tno{font-family:'EB Garamond',serif;font-size:clamp(56px,9vw,110px);line-height:.8;color:var(--clay);
+  font-weight:700;position:relative;padding-top:6px}
+.tno::after{content:"";display:block;width:2px;height:calc(100% - 30px);background:linear-gradient(180deg,var(--clay),transparent);
+  margin:16px auto 0}
+.tlabel{font:600 12px/1 'Noto Sans',sans-serif;letter-spacing:.28em;text-transform:uppercase;color:var(--clay-d);margin-bottom:10px}
+.sec.wine .tlabel{color:var(--clay)}
+h2{font-size:clamp(29px,5vw,54px);margin-bottom:18px}
+p+p{margin-top:15px}
+.tbody{max-width:70ch}
+.tpic{margin-top:22px}
+figure.fr{background:var(--linen);padding:10px;border-radius:3px;box-shadow:0 14px 30px rgba(35,26,22,.16)}
+.sec.wine figure.fr{background:rgba(239,230,214,.94)}
+figure.fr img{display:block;width:100%;height:auto;max-height:470px;object-fit:cover;border-radius:2px}
+figure.fr figcaption{font:400 13px/1.6 'Noto Sans',sans-serif;color:#6b5c50;padding:9px 3px 1px}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:22px}
+.duo figure.fr img{height:250px}
+.trio{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:22px}
+.trio figure.fr img{height:215px}
+/* menu */
+.mg{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(24px,4vw,48px);align-items:start;margin-top:22px}
+.mh{font:700 12.5px/1 'Noto Sans',sans-serif;letter-spacing:.24em;text-transform:uppercase;color:var(--clay);
+  margin:22px 0 4px;padding-bottom:8px;border-bottom:1px solid rgba(239,230,214,.3)}
+.mh:first-of-type{margin-top:0}
+.sec:not(.wine) .mh{color:var(--clay-d);border-bottom-color:rgba(35,26,22,.2)}
+.mrow{display:grid;grid-template-columns:1fr auto;gap:14px;align-items:baseline;padding:11px 0;border-bottom:1px solid rgba(239,230,214,.16)}
+.sec:not(.wine) .mrow{border-bottom-color:rgba(35,26,22,.12)}
+.mrow .pr{font:700 17px/1 'EB Garamond',serif;color:var(--clay)}
+.sec:not(.wine) .mrow .pr{color:var(--clay-d)}
+.qs{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin-top:22px}
+.q{border-inline-start:3px solid var(--clay);padding:6px 0 6px 20px}
+html[dir="rtl"] .q{padding:6px 20px 6px 0}
+.q q{display:block;quotes:none;font:400 italic 17.5px/1.7 'EB Garamond',serif}
+.q .w{margin-top:12px;font:600 12px/1 'Noto Sans',sans-serif;letter-spacing:.1em;text-transform:uppercase;color:var(--clay-d)}
+.sec.wine .q .w{color:var(--clay)}
+table{width:100%;border-collapse:collapse;margin-top:8px}
+td{padding:10px 2px;border-bottom:1px solid rgba(35,26,22,.13);font-size:15.5px}
+td:last-child{text-align:end;font-weight:600;color:var(--clay-d)}
+.btn{display:inline-flex;align-items:center;gap:8px;background:var(--wine);color:var(--linen);padding:13px 22px;
+  border-radius:999px;text-decoration:none;font:600 13.5px/1 'Noto Sans',sans-serif;letter-spacing:.1em;
+  text-transform:uppercase;margin:10px 10px 0 0}
+.btn.c{background:var(--clay);color:var(--wine)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,4vw,52px)}
+footer{padding:28px 0 118px;font-size:14.5px;color:#6f6055;text-align:center}
+/* sticky kantsi (drinking horn) bar */
+.bar{position:fixed;inset-inline:0;bottom:0;z-index:50;background:var(--wine);
+  padding:12px 12px calc(12px + env(safe-area-inset-bottom));display:flex;gap:10px;justify-content:center;
+  border-top:2px solid var(--clay)}
+.bar::before{content:"";position:absolute;top:-14px;left:50%;transform:translateX(-50%);width:120px;height:14px;
+  background:var(--clay);border-radius:60px 60px 0 0 / 14px 14px 0 0}
+.bar a{flex:1;max-width:200px;display:flex;align-items:center;justify-content:center;gap:8px;
+  border:1px solid rgba(239,230,214,.42);color:var(--linen);text-decoration:none;padding:12px 8px;border-radius:999px;
+  font:600 13px/1 'Noto Sans',sans-serif;letter-spacing:.08em;text-transform:uppercase}
+.bar a.p{background:var(--clay);border-color:var(--clay);color:var(--wine);font-weight:700}
+.bar svg{width:16px;height:16px;fill:currentColor;flex:none}
+@media(max-width:900px){
+  .toast{grid-template-columns:1fr;gap:6px}.tno::after{display:none}
+  .duo,.mg,.qs,.two{grid-template-columns:1fr}.trio{grid-template-columns:repeat(2,1fr)}
+  body{font-size:16px}
+}
+@media(max-width:430px){.bar a{font-size:11.5px;padding:11px 5px;letter-spacing:.03em}.bar{gap:7px}}
+</style>
+<meta name="robots" content="noindex,nofollow">
+<style data-mech>*{-webkit-tap-highlight-color:transparent}
+html,body{overflow-x:clip}
+.num{direction:ltr;unicode-bidi:isolate;white-space:nowrap}
+.rev{opacity:0;transform:translateY(18px);transition:opacity .75s ease,transform .75s ease}
+.rev.on{opacity:1;transform:none}
+html.alt .el{display:none!important}
+html:not(.alt) .tr{display:none!important}
+.tr{unicode-bidi:isolate}
+.wrap{padding-inline:5vw!important}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.rev{opacity:1;transform:none}}
+</style>
+<script data-mech>
+function LG(){var h=document.documentElement,a=h.classList.toggle('alt'),L=h.getAttribute('data-alt')||'en';
+h.setAttribute('lang',a?L:'el');if(L==='ar')h.setAttribute('dir',a?'rtl':'ltr');}
+document.addEventListener('DOMContentLoaded',function(){
+var n=document.querySelectorAll('.rev');
+if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){
+if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});
+n.forEach(function(e){io.observe(e)});}
+setTimeout(function(){document.querySelectorAll('.rev').forEach(function(e){e.classList.add('on')})},1100);});
+</script>
+</head>
+<body>
+<button class="lgx" onclick="LG()"><span class="el">ქართული</span><span class="tr" data-edit="t1" data-edit-label="Text — Ελληνικά">Ελληνικά</span></button>
+
+<header>
+  <div class="hero wrap">
+    <div>
+      <p class="kaline"><span class="el" data-edit="t2" data-edit-label="Text — Γεωργιανή κουζίνα · Αγορακρίτου 11">Γεωργιανή κουζίνα · Αγορακρίτου 11</span><span class="tr" data-edit="t3" data-edit-label="Text — ქართული სამზარეულო · აგორაკრიტუ 11">ქართული სამზარეულო · აგორაკრიტუ 11</span></p>
+      <h1><span class="el">LUSHNU<em>ლუშნუ</em></span><span class="tr">ლუშნუ<em data-edit="t4" data-edit-label="Text — LUSHNU">LUSHNU</em></span></h1>
+      <p class="hsub"><span class="el" data-edit="t5" data-edit-label="Text — Χατσαπούρι, χινκάλι και ψωμί από το το…">Χατσαπούρι, χινκάλι και ψωμί από το τονέ — ανοιχτά από τις οκτώ το πρωί μέχρι τις δύο τα ξημερώματα, κάθε μέρα.</span><span class="tr">ხაჭაპური, ხინკალი და თონის პური — ღიაა დილის რვიდან ღამის ორამდე, ყოველდღე.</span></p>
+      <div class="hp">
+        <span class="c num" data-edit="t6" data-edit-label="Text — ★ 4,5">★ 4,5</span>
+        <span><span class="el" data-edit="t7" data-edit-label="Text — 253 κριτικές Google">253 κριτικές Google</span><span class="tr" data-edit="t8" data-edit-label="Text — 253 შეფასება Google-ზე">253 შეფასება Google-ზე</span></span>
+        <span class="num" data-edit="t9" data-edit-label="Text — 08:00–02:00">08:00–02:00</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="toast rev">
+      <div class="tno" data-edit="t10" data-edit-label="Text — I">I</div>
+      <div class="tbody">
+        <p class="tlabel"><span class="el" data-edit="t11" data-edit-label="Text — Πρώτη πρόποση · στους οικοδεσπότες">Πρώτη πρόποση · στους οικοδεσπότες</span><span class="tr">პირველი სადღეგრძელო · მასპინძლებს</span></p>
+        <h2><span class="el" data-edit="t12" data-edit-label="Text — Ο Μαμούκα, η Ία και ο Γκέλα">Ο Μαμούκα, η Ία και ο Γκέλα</span><span class="tr">მამუკა, ია და გელა</span></h2>
+        <p><span class="el" data-edit="t13" data-edit-label="Text — Το Lushnu το κρατούν ένα ζευγάρι από τ…">Το Lushnu το κρατούν ένα ζευγάρι από τη Γεωργία που ζει στην Αθήνα πάνω από δέκα χρόνια, μαζί με έναν φίλο τους που κατάγεται από οικογένεια φούρναρηδων. Ο ένας ζυμώνει, ο άλλος ψήνει, και το μαγαζί μοιάζει κάτι ανάμεσα σε παραδοσιακό γεωργιανό φούρνο και ταβέρνα.</span><span class="tr" data-edit="t14" data-edit-label="Text — Lushnu-ს ატარებს წყვილი საქართველოდან,…">Lushnu-ს ატარებს წყვილი საქართველოდან, რომელიც ათენში ათ წელზე მეტია ცხოვრობს, მათ მეგობართან ერთად, რომელიც მეპურეების ოჯახიდან არის. ერთი ზილავს, მეორე აცხობს, ხოლო ადგილი რაღაც შუალედია ტრადიციულ ქართულ საცხობსა და ტავერნას შორის.</span></p>
+        <div class="tpic"><figure class="fr"><img src="img/06.jpg" alt="Φρεσκοψημένο χατσαπούρι" loading="lazy">
+          <figcaption><span class="el" data-edit="t15" data-edit-label="Text — Χατσαπούρι λίγο μετά τον φούρνο.">Χατσαπούρι λίγο μετά τον φούρνο.</span><span class="tr">ხაჭაპური ღუმელიდან ცოტა ხნის შემდეგ.</span></figcaption></figure></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec wine">
+  <div class="wrap">
+    <div class="toast rev">
+      <div class="tno" data-edit="t16" data-edit-label="Text — II">II</div>
+      <div class="tbody">
+        <p class="tlabel"><span class="el" data-edit="t17" data-edit-label="Text — Δεύτερη πρόποση · στο τραπέζι">Δεύτερη πρόποση · στο τραπέζι</span><span class="tr">მეორე სადღეგრძელო · სუფრას</span></p>
+        <h2><span class="el" data-edit="t18" data-edit-label="Text — Χινκάλι, ένα-ένα">Χινκάλι, ένα-ένα</span><span class="tr">ხინკალი, სათითაოდ</span></h2>
+        <p><span class="el" data-edit="t19" data-edit-label="Text — Τα χινκάλι παραγγέλνονται με το κομμάτ…">Τα χινκάλι παραγγέλνονται με το κομμάτι και τρώγονται με το χέρι: κρατάτε το από την «ουρά», δαγκώνετε λίγο και πίνετε πρώτα τον ζωμό. Η ουρά μένει στο πιάτο — έτσι μετράει κανείς πόσα έφαγε.</span><span class="tr">ხინკალი ცალობით იკვეთება და ხელით იჭმევა: დაიჭირეთ „კუდში“, ოდნავ მოკვნიტეთ და ჯერ წვენი შესვით. კუდი თეფშზე რჩება — ასე ითვლიან რამდენი შეჭამეს.</span></p>
+        <div class="duo">
+          <figure class="fr"><img src="img/07.jpg" alt="Χινκάλι στο πιάτο" loading="lazy"><figcaption><span class="el" data-edit="t20" data-edit-label="Text — Χινκάλι.">Χινκάλι.</span><span class="tr">ხინკალი.</span></figcaption></figure>
+          <figure class="fr"><img src="img/03.jpg" alt="Τραπέζι με χατσαπούρι και χινκάλι" loading="lazy"><figcaption><span class="el" data-edit="t21" data-edit-label="Text — Το τραπέζι στη μέση.">Το τραπέζι στη μέση.</span><span class="tr">სუფრა შუაში.</span></figcaption></figure>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec linen2">
+  <div class="wrap">
+    <div class="toast rev">
+      <div class="tno" data-edit="t22" data-edit-label="Text — III">III</div>
+      <div class="tbody">
+        <p class="tlabel"><span class="el" data-edit="t23" data-edit-label="Text — Τρίτη πρόποση · στο ψωμί">Τρίτη πρόποση · στο ψωμί</span><span class="tr">მესამე სადღეგრძელო · პურს</span></p>
+        <h2><span class="el" data-edit="t24" data-edit-label="Text — Το αδζαρούλι με το αυγό">Το αδζαρούλι με το αυγό</span><span class="tr">აჭარული კვერცხით</span></h2>
+        <p><span class="el" data-edit="t25" data-edit-label="Text — Το αδζαρούλι χατσαπούρι έρχεται σε σχή…">Το αδζαρούλι χατσαπούρι έρχεται σε σχήμα βάρκας, με λιωμένο τυρί και ένα αυγό στη μέση. Ανακατεύετε τα πάντα με το κομμένο άκρο της ζύμης και τρώτε από τις άκρες προς τα μέσα.</span><span class="tr">აჭარული ხაჭაპური მოდის ნავის ფორმით, დამდნარი ყველითა და კვერცხით შუაში. ყველაფერს ურევთ ცომის მოჭრილი წვერით და ჭამთ კიდეებიდან შუაში.</span></p>
+        <div class="trio">
+          <figure class="fr"><img src="img/08.jpg" alt="Αδζαρούλι χατσαπούρι με αυγό" loading="lazy"></figure>
+          <figure class="fr"><img src="img/04.jpg" alt="Ψωμί από το τονέ" loading="lazy"></figure>
+          <figure class="fr"><img src="img/05.jpg" alt="Γεωργιανό πιάτο με μανιτάρια" loading="lazy"></figure>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec wine">
+  <div class="wrap">
+    <div class="toast rev">
+      <div class="tno" data-edit="t26" data-edit-label="Text — IV">IV</div>
+      <div class="tbody">
+        <p class="tlabel"><span class="el" data-edit="t27" data-edit-label="Text — Τέταρτη πρόποση · στις τιμές">Τέταρτη πρόποση · στις τιμές</span><span class="tr">მეოთხე სადღეგრძელო · ფასებს</span></p>
+        <h2><span class="el" data-edit="t28" data-edit-label="Text — Από τον κατάλογο">Από τον κατάλογο</span><span class="tr">მენიუდან</span></h2>
+        <div class="mg">
+          <div>
+            <p class="mh"><span class="el" data-edit="t29" data-edit-label="Text — Γεωργιανά κλασικά">Γεωργιανά κλασικά</span><span class="tr">ქართული კლასიკა</span></p>
+            <div class="mrow"><span data-edit="t30" data-edit-label="Text — Khinkali">Khinkali</span><b class="pr" data-edit="t31" data-edit-label="Text — 1,00 €">1,00 €</b></div>
+            <div class="mrow"><span><span class="el" data-edit="t32" data-edit-label="Text — Khinkali με μανιτάρι">Khinkali με μανιτάρι</span><span class="tr">ხინკალი სოკოთი</span></span><b class="pr" data-edit="t33" data-edit-label="Text — 1,00 €">1,00 €</b></div>
+            <div class="mrow"><span><span class="el" data-edit="t34" data-edit-label="Text — Khinkali με τυρί">Khinkali με τυρί</span><span class="tr">ხინკალი ყველით</span></span><b class="pr" data-edit="t35" data-edit-label="Text — 1,00 €">1,00 €</b></div>
+            <div class="mrow"><span><span class="el" data-edit="t36" data-edit-label="Text — Khinkali με πατάτα">Khinkali με πατάτα</span><span class="tr">ხინკალი კარტოფილით</span></span><b class="pr" data-edit="t37" data-edit-label="Text — 0,80 €">0,80 €</b></div>
+            <div class="mrow"><span data-edit="t38" data-edit-label="Text — Mchadi">Mchadi</span><b class="pr" data-edit="t39" data-edit-label="Text — 1,00 €">1,00 €</b></div>
+            <div class="mrow"><span data-edit="t40" data-edit-label="Text — Chvishtari">Chvishtari</span><b class="pr" data-edit="t41" data-edit-label="Text — 2,50 €">2,50 €</b></div>
+            <div class="mrow"><span><span class="el" data-edit="t42" data-edit-label="Text — Meat pancakes">Meat pancakes</span><span class="tr">ხორცის ბლინები</span></span><b class="pr" data-edit="t43" data-edit-label="Text — 1,00 €">1,00 €</b></div>
+            <div class="mrow"><span data-edit="t44" data-edit-label="Text — Pillman">Pillman</span><b class="pr" data-edit="t45" data-edit-label="Text — 6,00 €">6,00 €</b></div>
+            <div class="mrow"><span><span class="el" data-edit="t46" data-edit-label="Text — Pillman σε πήλινο">Pillman σε πήλινο</span><span class="tr">პელმენი ჭურჭელში</span></span><b class="pr" data-edit="t47" data-edit-label="Text — 7,00 €">7,00 €</b></div>
+            <p class="mh"><span class="el" data-edit="t48" data-edit-label="Text — Φούρνος &amp; γλυκά">Φούρνος &amp; γλυκά</span><span class="tr">საცხობი და ტკბილეული</span></p>
+            <div class="mrow"><span><span class="el" data-edit="t49" data-edit-label="Text — Ψωμί από τον φούρνο">Ψωμί από τον φούρνο</span><span class="tr">თონის პური</span></span><b class="pr" data-edit="t50" data-edit-label="Text — 2,00 €">2,00 €</b></div>
+            <div class="mrow"><span data-edit="t51" data-edit-label="Text — Cake «Ideali» / «Zghapari» / «Sesili» …">Cake «Ideali» / «Zghapari» / «Sesili» / «Napoleoni»</span><b class="pr" data-edit="t52" data-edit-label="Text — 3,00 €">3,00 €</b></div>
+            <div class="mrow"><span data-edit="t53" data-edit-label="Text — Cheesecake">Cheesecake</span><b class="pr" data-edit="t54" data-edit-label="Text — 3,00 €">3,00 €</b></div>
+          </div>
+          <figure class="fr"><img src="img/02.jpg" alt="Ο κατάλογος του Lushnu" loading="lazy">
+            <figcaption><span class="el" data-edit="t55" data-edit-label="Text — Ο κατάλογος στο τραπέζι.">Ο κατάλογος στο τραπέζι.</span><span class="tr">მენიუ მაგიდაზე.</span></figcaption></figure>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="toast rev">
+      <div class="tno" data-edit="t56" data-edit-label="Text — V">V</div>
+      <div class="tbody">
+        <p class="tlabel"><span class="el" data-edit="t57" data-edit-label="Text — Πέμπτη πρόποση · στους καλεσμένους">Πέμπτη πρόποση · στους καλεσμένους</span><span class="tr">მეხუთე სადღეგრძელო · სტუმრებს</span></p>
+        <h2><span class="num" data-edit="t58" data-edit-label="Text — ★ 4,5">★ 4,5</span> <span class="el" data-edit="t59" data-edit-label="Text — από 253 κριτικές Google">από 253 κριτικές Google</span><span class="tr" data-edit="t60" data-edit-label="Text — 253 შეფასებიდან">253 შეფასებიდან</span></h2>
+        <div class="qs">
+          <div class="q"><q dir="ltr" data-edit="t61" data-edit-label="Quote — Έχω επισκεφτεί αρκετές φορές το συγκεκ…">Έχω επισκεφτεί αρκετές φορές το συγκεκριμένο μαγαζί. Το φαγητό είναι καλό και νόστιμο, επειδή τυγχάνει και είμαι γνώστης γεωργιανής κουζίνας.</q><div class="w" data-edit="t62" data-edit-label="Text — genesischris · Google">genesischris · Google</div></div>
+          <div class="q"><q dir="ltr" data-edit="t63" data-edit-label="Quote — Επίσκεψη καλοκαίρι, καθημερινή μεσημέρ…">Επίσκεψη καλοκαίρι, καθημερινή μεσημέρι. Ο εσωτερικός χώρος μου θύμισε ταβέρνα σε χωριό της δεκαετίας του '90.</q><div class="w" data-edit="t64" data-edit-label="Text — Νίκος Μπιρπανάγος · Google">Νίκος Μπιρπανάγος · Google</div></div>
+        </div>
+        <div class="trio">
+          <figure class="fr"><img src="img/09.jpg" alt="Τραπέζι με πιάτα και ψωμί" loading="lazy"></figure>
+          <figure class="fr"><img src="img/01.jpg" alt="Η βεράντα του Lushnu" loading="lazy"></figure>
+          <figure class="fr"><img src="img/05.jpg" alt="Γεωργιανό πιάτο" loading="lazy"></figure>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec linen2">
+  <div class="wrap">
+    <div class="toast rev">
+      <div class="tno" data-edit="t65" data-edit-label="Text — VI">VI</div>
+      <div class="tbody">
+        <p class="tlabel"><span class="el" data-edit="t66" data-edit-label="Text — Τελευταία πρόποση · στον δρόμο για εδώ">Τελευταία πρόποση · στον δρόμο για εδώ</span><span class="tr">ბოლო სადღეგრძელო · აქ მოსვლას</span></p>
+        <h2><span class="el" data-edit="t67" data-edit-label="Text — Αγορακρίτου 11">Αγορακρίτου 11</span><span class="tr" data-edit="t68" data-edit-label="Text — აგორაკრიტუ 11">აგორაკრიტუ 11</span></h2>
+        <div class="two">
+          <div>
+            <p style="font-size:19px"><b class="ad" data-edit="t69" data-edit-label="Text — Αγορακρίτου 11, Αθήνα 104 46">Αγορακρίτου 11, Αθήνα 104 46</b><br>
+              <span class="el" data-edit="t70" data-edit-label="Text — Πλατεία Βικτωρίας · Άγιος Παντελεήμονα…">Πλατεία Βικτωρίας · Άγιος Παντελεήμονας</span><span class="tr">ვიქტორიას მოედანი · აგიოს პანტელეიმონასი</span><br>
+              <b class="ph num" data-edit="t71" data-edit-label="Text — +30 21 1402 0110">+30 21 1402 0110</b></p>
+            <p>
+              <a class="btn" href="tel:+302114020110"><span class="el" data-edit="t72" data-edit-label="Text — Τηλέφωνο">Τηλέφωνο</span><span class="tr">დარეკვა</span></a>
+              <a class="btn c" href="https://www.google.com/maps?cid=9224092961243993886" target="_blank" rel="noopener"><span class="el" data-edit="t73" data-edit-label="Text — Χάρτης">Χάρτης</span><span class="tr">რუკა</span></a>
+              <a class="btn c" href="https://www.facebook.com/profile.php?id=100057331184478" target="_blank" rel="noopener" data-edit="t74" data-edit-label="Button / link — Facebook">Facebook</a>
+            </p>
+          </div>
+          <table>
+            <tr><td><span class="el" data-edit="t75" data-edit-label="Text — Δευτέρα">Δευτέρα</span><span class="tr">ორშაბათი</span></td><td class="num" data-edit="t76" data-edit-label="Menu / table — 08:00–02:00">08:00–02:00</td></tr>
+            <tr><td><span class="el" data-edit="t77" data-edit-label="Text — Τρίτη">Τρίτη</span><span class="tr">სამშაბათი</span></td><td class="num" data-edit="t78" data-edit-label="Menu / table — 08:00–02:00">08:00–02:00</td></tr>
+            <tr><td><span class="el" data-edit="t79" data-edit-label="Text — Τετάρτη">Τετάρτη</span><span class="tr">ოთხშაბათი</span></td><td class="num" data-edit="t80" data-edit-label="Menu / table — 08:00–02:00">08:00–02:00</td></tr>
+            <tr><td><span class="el" data-edit="t81" data-edit-label="Text — Πέμπτη">Πέμπτη</span><span class="tr">ხუთშაბათი</span></td><td class="num" data-edit="t82" data-edit-label="Menu / table — 08:00–02:00">08:00–02:00</td></tr>
+            <tr><td><span class="el" data-edit="t83" data-edit-label="Text — Παρασκευή">Παρασκευή</span><span class="tr">პარასკევი</span></td><td class="num" data-edit="t84" data-edit-label="Menu / table — 08:00–02:00">08:00–02:00</td></tr>
+            <tr><td><span class="el" data-edit="t85" data-edit-label="Text — Σάββατο">Σάββατο</span><span class="tr">შაბათი</span></td><td class="num" data-edit="t86" data-edit-label="Menu / table — 08:00–02:00">08:00–02:00</td></tr>
+            <tr><td><span class="el" data-edit="t87" data-edit-label="Text — Κυριακή">Κυριακή</span><span class="tr">კვირა</span></td><td class="num" data-edit="t88" data-edit-label="Menu / table — 08:00–02:00">08:00–02:00</td></tr>
+          </table>
+        </div>
+      </div>
+    </div>
+    <footer><p><b data-edit="t89" data-edit-label="Text — LUSHNU · ლუშნუ">LUSHNU · ლუშნუ</b> — Αγορακρίτου 11, Αθήνα 104 46 · <span class="num" data-edit="t90" data-edit-label="Text — +30 21 1402 0110">+30 21 1402 0110</span></p></footer>
+  </div>
+</section>
+
+<nav class="bar">
+  <a class="p" href="tel:+302114020110">
+    <svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.4.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C11 21 3 13 3 3c0-.6.4-1 1-1h3.4c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.2 1l-2.2 2.2z"/></svg>
+    <span class="el" data-edit="t91" data-edit-label="Text — Κλήση">Κλήση</span><span class="tr">დარეკვა</span></a>
+  <a href="https://www.facebook.com/profile.php?id=100057331184478" target="_blank" rel="noopener" aria-label="Facebook">
+    <svg viewBox="0 0 24 24"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.3v7A10 10 0 0 0 22 12z"/></svg>
+    Facebook</a>
+  <a href="https://www.google.com/maps?cid=9224092961243993886" target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>
+    <span class="el" data-edit="t92" data-edit-label="Text — Χάρτης">Χάρτης</span><span class="tr">რუკა</span></a>
+</nav>
+</body>
+</html>

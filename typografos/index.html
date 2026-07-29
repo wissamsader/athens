@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="el" data-alt="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ο Τυπογράφος — Κοδράτου 18, Μεταξουργείο</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alegreya+SC:ital,wght@0,400;0,700;1,400&family=Open+Sans:wght@400;600;700&family=Cousine:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{--press:#16151A;--press-2:#22212A;--news:#D9D5CC;--news-2:#C6C1B5;--verm:#D8442C;--paper:#F4F2EC}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--paper);color:var(--press);font:400 17px/1.8 'Open Sans',system-ui,sans-serif}
+.wrap{width:min(1160px,100%);margin-inline:auto;padding-inline:5vw}
+h1,h2,h3{font-family:'Alegreya SC',Georgia,serif;font-weight:700;line-height:1.1}
+a{color:inherit}
+.mono{font-family:Cousine,monospace}
+.lgx{position:fixed;top:14px;inset-inline-end:14px;z-index:60;background:var(--verm);color:#fff;border:0;
+  font:700 12.5px/1 Cousine,monospace;letter-spacing:.14em;padding:12px 16px;cursor:pointer;text-transform:uppercase}
+.lgx:hover{background:var(--press)}
+/* hero — split: type-case panel + the real sign */
+header{display:grid;grid-template-columns:1.02fr .98fr;min-height:clamp(600px,92svh,820px);max-height:880px}
+.hl{position:relative;background:var(--press);color:var(--news);display:flex;flex-direction:column;justify-content:center;
+  padding:clamp(34px,5vw,74px) clamp(26px,5vw,62px);overflow:hidden}
+/* type-case compartments as the hero texture */
+.hl::before{content:"";position:absolute;inset:0;opacity:.5;
+  background-image:
+    linear-gradient(90deg,rgba(217,213,204,.14) 1px,transparent 1px),
+    linear-gradient(180deg,rgba(217,213,204,.14) 1px,transparent 1px);
+  background-size:88px 64px,88px 64px}
+.hl::after{content:"";position:absolute;inset:0;opacity:.5;
+  background-image:linear-gradient(90deg,rgba(217,213,204,.14) 1px,transparent 1px);background-size:44px 100%;
+  -webkit-mask:linear-gradient(180deg,transparent 0 128px,#000 128px 320px,transparent 320px)}
+.hin{position:relative;z-index:2}
+/* registration cross — living ornament */
+.reg{width:44px;height:44px;margin-bottom:18px;position:relative}
+.reg::before,.reg::after{content:"";position:absolute;background:var(--verm)}
+.reg::before{inset-inline:0;top:21px;height:2px}
+.reg::after{inset-block:0;left:21px;width:2px}
+.reg i{position:absolute;inset:8px;border:2px solid var(--verm);border-radius:50%;display:block;
+  animation:pulse 13s ease-in-out infinite}
+@keyframes pulse{0%,100%{transform:scale(1);opacity:.85}50%{transform:scale(1.03);opacity:1}}
+.pre{font:700 11.5px/1 Cousine,monospace;letter-spacing:.3em;text-transform:uppercase;color:var(--verm)}
+h1{font-size:clamp(42px,7.8vw,88px);margin:14px 0 0}
+h1 em{display:block;font-style:normal;font-size:.28em;letter-spacing:.2em;text-transform:uppercase;
+  font-family:Cousine,monospace;color:var(--news-2);margin-top:12px}
+.hl p{margin-top:16px;font-size:clamp(16px,1.9vw,20px);max-width:40ch;color:#BCB8AE}
+.hp{margin-top:22px;display:flex;flex-wrap:wrap;gap:9px}
+.hp span{border:1px solid rgba(217,213,204,.35);padding:8px 14px;font:700 12.5px/1 Cousine,monospace}
+.hp span.v{background:var(--verm);border-color:var(--verm);color:#fff}
+.hr{background:#131217 url('img/01.jpg') center 40%/cover no-repeat}
+/* ===== TYPE-CASE COMPARTMENT GRID ===== */
+.sec{padding-block:clamp(50px,7.2vw,94px)}
+.sec.dark{background:var(--press);color:var(--news)}
+.sec.grey{background:#E9E6DE}
+.kick{font:700 11.5px/1 Cousine,monospace;letter-spacing:.3em;text-transform:uppercase;color:var(--verm);margin-bottom:12px}
+h2{font-size:clamp(29px,5vw,54px);margin-bottom:20px}
+p+p{margin-top:15px}
+.case{display:grid;grid-template-columns:repeat(6,1fr);gap:2px;background:rgba(22,21,26,.22);border:2px solid rgba(22,21,26,.22)}
+.sec.dark .case{background:rgba(217,213,204,.2);border-color:rgba(217,213,204,.2)}
+.cmp{background:var(--paper);padding:22px 20px;display:flex;flex-direction:column;justify-content:center}
+.sec.dark .cmp{background:var(--press-2)}
+.cmp.w2{grid-column:span 2}.cmp.w3{grid-column:span 3}.cmp.w4{grid-column:span 4}.cmp.w6{grid-column:span 6}
+.cmp .sort{font:700 34px/1 'Alegreya SC',serif;color:var(--verm);margin-bottom:8px}
+.cmp h3{font-size:19px;margin-bottom:6px}
+.cmp p{font-size:15px;line-height:1.62;color:#4d4b46}
+.sec.dark .cmp p{color:#B4B0A7}
+.cmp.img{padding:0;overflow:hidden}
+.cmp.img img{width:100%;height:100%;min-height:190px;object-fit:cover;display:block}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,4vw,52px);align-items:center}
+figure.fr{background:#fff;padding:10px;box-shadow:0 14px 30px rgba(22,21,26,.16)}
+.sec.dark figure.fr{background:rgba(244,242,236,.95)}
+figure.fr img{display:block;width:100%;height:auto;max-height:470px;object-fit:cover}
+figure.fr figcaption{font:400 12.5px/1.6 Cousine,monospace;color:#5c5a55;padding:9px 3px 1px}
+.quotebox{border-inline-start:4px solid var(--verm);padding:6px 0 6px 22px;margin-top:8px}
+.quotebox p{font:400 italic 18px/1.7 'Alegreya SC',serif}
+.quotebox .src{margin-top:10px;font:700 11.5px/1 Cousine,monospace;letter-spacing:.12em;text-transform:uppercase;color:var(--verm)}
+.mg{display:grid;grid-template-columns:1.2fr .8fr;gap:clamp(24px,4vw,48px);align-items:start}
+.mh{font:700 11.5px/1 Cousine,monospace;letter-spacing:.24em;text-transform:uppercase;color:var(--verm);
+  margin:24px 0 4px;padding-bottom:8px;border-bottom:2px solid var(--verm)}
+.mh:first-of-type{margin-top:0}
+.mrow{display:grid;grid-template-columns:1fr auto;gap:14px;align-items:baseline;padding:10px 0;
+  border-bottom:1px solid rgba(217,213,204,.16)}
+.sec:not(.dark) .mrow{border-bottom-color:rgba(22,21,26,.13)}
+.mrow .pr{font:700 15.5px/1 Cousine,monospace;white-space:nowrap;color:var(--verm)}
+.qs{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.q{background:#fff;padding:22px 20px;box-shadow:0 10px 22px rgba(22,21,26,.1);border-top:3px solid var(--press)}
+.q q{display:block;quotes:none;font:400 16.5px/1.7 'Alegreya SC',serif}
+.q .w{margin-top:12px;font:700 11.5px/1 Cousine,monospace;letter-spacing:.1em;text-transform:uppercase;color:var(--verm)}
+table{width:100%;border-collapse:collapse}
+td{padding:10px 2px;border-bottom:1px solid rgba(22,21,26,.13);font-size:15.5px}
+td:last-child{text-align:end;font-family:Cousine,monospace;font-weight:700;color:var(--verm)}
+td.cl:last-child{color:#8a8781}
+.btn{display:inline-flex;align-items:center;gap:8px;background:var(--press);color:var(--news);padding:13px 22px;
+  text-decoration:none;font:700 12.5px/1 Cousine,monospace;letter-spacing:.12em;text-transform:uppercase;margin:10px 10px 0 0}
+.btn.v{background:var(--verm);color:#fff}
+footer{padding:28px 0 118px;font-size:14px;color:#5f5d58;text-align:center;font-family:Cousine,monospace}
+/* sticky composing-stick bar */
+.bar{position:fixed;inset-inline:0;bottom:0;z-index:50;background:var(--press);
+  padding:12px 12px calc(12px + env(safe-area-inset-bottom));display:flex;gap:9px;justify-content:center;
+  border-top:4px solid var(--news-2)}
+.bar::before{content:"";position:absolute;top:-4px;inset-inline:0;height:4px;
+  background:repeating-linear-gradient(90deg,var(--verm) 0 5px,transparent 5px 24px)}
+.bar a{flex:1;max-width:200px;display:flex;align-items:center;justify-content:center;gap:8px;
+  background:var(--news);color:var(--press);text-decoration:none;padding:12px 8px;
+  font:700 12.5px/1 Cousine,monospace;letter-spacing:.08em;text-transform:uppercase;
+  box-shadow:inset 0 -3px 0 rgba(22,21,26,.25)}
+.bar a.p{background:var(--verm);color:#fff;box-shadow:inset 0 -3px 0 rgba(0,0,0,.3)}
+.bar svg{width:16px;height:16px;fill:currentColor;flex:none}
+@media(max-width:900px){
+  header{grid-template-columns:1fr;min-height:auto;max-height:none}.hr{min-height:320px}
+  .two,.mg{grid-template-columns:1fr}.qs{grid-template-columns:1fr}
+  .case{grid-template-columns:repeat(2,1fr)}
+  .cmp.w3,.cmp.w4,.cmp.w6{grid-column:span 2}
+  body{font-size:16px}
+}
+@media(max-width:430px){.bar a{font-size:11px;padding:11px 4px;letter-spacing:.02em}.bar{gap:6px}}
+</style>
+<meta name="robots" content="noindex,nofollow">
+<style data-mech>*{-webkit-tap-highlight-color:transparent}
+html,body{overflow-x:clip}
+.num{direction:ltr;unicode-bidi:isolate;white-space:nowrap}
+.rev{opacity:0;transform:translateY(18px);transition:opacity .75s ease,transform .75s ease}
+.rev.on{opacity:1;transform:none}
+html.alt .el{display:none!important}
+html:not(.alt) .tr{display:none!important}
+.tr{unicode-bidi:isolate}
+.wrap{padding-inline:5vw!important}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.rev{opacity:1;transform:none}}
+</style>
+<script data-mech>
+function LG(){var h=document.documentElement,a=h.classList.toggle('alt'),L=h.getAttribute('data-alt')||'en';
+h.setAttribute('lang',a?L:'el');if(L==='ar')h.setAttribute('dir',a?'rtl':'ltr');}
+document.addEventListener('DOMContentLoaded',function(){
+var n=document.querySelectorAll('.rev');
+if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){
+if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});
+n.forEach(function(e){io.observe(e)});}
+setTimeout(function(){document.querySelectorAll('.rev').forEach(function(e){e.classList.add('on')})},1100);});
+</script>
+</head>
+<body>
+<button class="lgx" onclick="LG()"><span class="el" data-edit="t1" data-edit-label="Text — English">English</span><span class="tr" data-edit="t2" data-edit-label="Text — Ελληνικά">Ελληνικά</span></button>
+
+<header>
+  <div class="hl">
+    <div class="hin">
+      <span class="reg"><i></i></span>
+      <p class="pre"><span class="el" data-edit="t3" data-edit-label="Text — Μεταξουργείο · Κοδράτου 18">Μεταξουργείο · Κοδράτου 18</span><span class="tr" data-edit="t4" data-edit-label="Text — Metaxourgeio · Kodratou 18">Metaxourgeio · Kodratou 18</span></p>
+      <h1><span class="el" data-edit="t5" data-edit-label="Text — Ο Τυπογράφος">Ο Τυπογράφος</span><span class="tr" data-edit="t6" data-edit-label="Text — O Typografos">O Typografos</span>
+        <em><span class="el" data-edit="t7" data-edit-label="Text — καλλιγευστικό μεζεδοπωλείο">καλλιγευστικό μεζεδοπωλείο</span><span class="tr" data-edit="t8" data-edit-label="Text — a meze house">a meze house</span></em></h1>
+      <p><span class="el" data-edit="t9" data-edit-label="Text — Στη θέση του παλιού καλλιτεχνικού τυπο…">Στη θέση του παλιού καλλιτεχνικού τυπογραφείου που στεγαζόταν εδώ από το 1977. Σαράντα ένα χρόνια μετά, το ίδιο κτίριο σερβίρει μεζέδες.</span><span class="tr" data-edit="t10" data-edit-label="Text — In the place of the old artistic print…">In the place of the old artistic printing house that stood here from 1977. Forty-one years later, the same building serves meze.</span></p>
+      <div class="hp">
+        <span class="v num" data-edit="t11" data-edit-label="Text — ★ 4,8">★ 4,8</span>
+        <span><span class="el" data-edit="t12" data-edit-label="Text — 709 κριτικές">709 κριτικές</span><span class="tr" data-edit="t13" data-edit-label="Text — 709 reviews">709 reviews</span></span>
+        <span><span class="el" data-edit="t14" data-edit-label="Text — Τετ–Σάβ">Τετ–Σάβ</span><span class="tr" data-edit="t15" data-edit-label="Text — Wed–Sat">Wed–Sat</span></span>
+      </div>
+    </div>
+  </div>
+  <div class="hr" role="img" aria-label="Η πινακίδα «Τυπογράφος» στην Κοδράτου"></div>
+</header>
+
+<section class="sec">
+  <div class="wrap two rev">
+    <div>
+      <p class="kick"><span class="el" data-edit="t16" data-edit-label="Text — Η ιστορία, με τα δικά τους λόγια">Η ιστορία, με τα δικά τους λόγια</span><span class="tr" data-edit="t17" data-edit-label="Text — The story, in their own words">The story, in their own words</span></p>
+      <h2><span class="el" data-edit="t18" data-edit-label="Text — Από το τυπογραφείο στο τραπέζι">Από το τυπογραφείο στο τραπέζι</span><span class="tr" data-edit="t19" data-edit-label="Text — From the press to the table">From the press to the table</span></h2>
+      <div class="quotebox">
+        <p><span class="el" data-edit="t20" data-edit-label="Text — «Το μαγαζί μας πήρε το όνομά του από τ…">«Το μαγαζί μας πήρε το όνομά του από το παλιό καλλιτεχνικό τυπογραφείο του κ. Αχιλλέα που στεγαζόταν εδώ, από το 1977. Τον Νοέμβριο του 2018, 41 χρόνια μετά, πήραμε την απόφαση να φτιάξουμε τον «Τυπογράφο», ένα καλλιγευστικό μεζεδοπωλείο, το οποίο με την αισθητική του μας μεταφέρει σε μια Ελλάδα άλλης εποχής…»</span><span class="tr" data-edit="t21" data-edit-label="Text — “Our place took its name from the old …">“Our place took its name from the old artistic printing house of Mr Achilleas that stood here from 1977. In November 2018, 41 years later, we decided to make ‘O Typografos’, a meze house whose look carries us back to a Greece of another era…”</span></p>
+        <div class="src"><span class="el" data-edit="t22" data-edit-label="Text — από τον κατάλογο του μαγαζιού">από τον κατάλογο του μαγαζιού</span><span class="tr" data-edit="t23" data-edit-label="Text — from the house menu">from the house menu</span></div>
+      </div>
+      <p><span class="el" data-edit="t24" data-edit-label="Text — Ο χώρος κρατά τα σημάδια της παλιάς δο…">Ο χώρος κρατά τα σημάδια της παλιάς δουλειάς: μεταλλικά στοιχεία, πλακάκια εποχής, φωτιστικά που κρέμονται χαμηλά πάνω από τα τραπέζια.</span><span class="tr" data-edit="t25" data-edit-label="Text — The room keeps the marks of the old tr…">The room keeps the marks of the old trade: metal type, period floor tiles, low lamps hanging over the tables.</span></p>
+    </div>
+    <figure class="fr">
+      <img src="img/06.jpg" alt="Ο εσωτερικός χώρος με τα πλακάκια εποχής" loading="lazy">
+      <figcaption><span class="el" data-edit="t26" data-edit-label="Text — Τα πλακάκια και οι ξύλινες καρέκλες.">Τα πλακάκια και οι ξύλινες καρέκλες.</span><span class="tr" data-edit="t27" data-edit-label="Text — The old floor tiles and wooden chairs.">The old floor tiles and wooden chairs.</span></figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="sec dark">
+  <div class="wrap">
+    <p class="kick rev"><span class="el" data-edit="t28" data-edit-label="Text — Η κάσα των στοιχείων">Η κάσα των στοιχείων</span><span class="tr" data-edit="t29" data-edit-label="Text — The type case">The type case</span></p>
+    <h2 class="rev"><span class="el" data-edit="t30" data-edit-label="Text — Έξι θέσεις, έξι πράγματα">Έξι θέσεις, έξι πράγματα</span><span class="tr" data-edit="t31" data-edit-label="Text — Six compartments, six things">Six compartments, six things</span></h2>
+    <div class="case rev">
+      <div class="cmp w2"><span class="sort" data-edit="t32" data-edit-label="Text — Α">Α</span><h3><span class="el" data-edit="t33" data-edit-label="Text — Παραδοσιακά">Παραδοσιακά</span><span class="tr" data-edit="t34" data-edit-label="Text — Traditional">Traditional</span></h3>
+        <p><span class="el" data-edit="t35" data-edit-label="Text — Μεζέδες όπως τους ξέρουμε, φτιαγμένοι …">Μεζέδες όπως τους ξέρουμε, φτιαγμένοι στη στιγμή.</span><span class="tr" data-edit="t36" data-edit-label="Text — Meze as we know them, made to order.">Meze as we know them, made to order.</span></p></div>
+      <div class="cmp w2 img"><img src="img/03.jpg" alt="Πιάτο με ψητά" loading="lazy"></div>
+      <div class="cmp w2"><span class="sort" data-edit="t37" data-edit-label="Text — Β">Β</span><h3><span class="el" data-edit="t38" data-edit-label="Text — Πιο σύγχρονα">Πιο σύγχρονα</span><span class="tr" data-edit="t39" data-edit-label="Text — More contemporary">More contemporary</span></h3>
+        <p><span class="el" data-edit="t40" data-edit-label="Text — Με μια ελαφριά γαλλική πινελιά — ο σεφ…">Με μια ελαφριά γαλλική πινελιά — ο σεφ σπούδασε στη Γαλλία.</span><span class="tr" data-edit="t41" data-edit-label="Text — With a light French touch — the chef t…">With a light French touch — the chef trained in France.</span></p></div>
+      <div class="cmp w2 img"><img src="img/04.jpg" alt="Μαγειρευτό σε πήλινο" loading="lazy"></div>
+      <div class="cmp w2"><span class="sort" data-edit="t42" data-edit-label="Text — Γ">Γ</span><h3><span class="el" data-edit="t43" data-edit-label="Text — Σε πήλινο">Σε πήλινο</span><span class="tr" data-edit="t44" data-edit-label="Text — In clay">In clay</span></h3>
+        <p><span class="el" data-edit="t45" data-edit-label="Text — Μαγειρευτά που έρχονται στο τραπέζι μέ…">Μαγειρευτά που έρχονται στο τραπέζι μέσα στο σκεύος τους.</span><span class="tr" data-edit="t46" data-edit-label="Text — Cooked dishes that arrive in their own…">Cooked dishes that arrive in their own pot.</span></p></div>
+      <div class="cmp w2 img"><img src="img/07.jpg" alt="Τηγανητά και η τοιχογραφία του χώρου" loading="lazy"></div>
+      <div class="cmp w3"><span class="sort" data-edit="t47" data-edit-label="Text — Δ">Δ</span><h3><span class="el" data-edit="t48" data-edit-label="Text — Ελληνικά αποστάγματα">Ελληνικά αποστάγματα</span><span class="tr" data-edit="t49" data-edit-label="Text — Greek spirits">Greek spirits</span></h3>
+        <p><span class="el" data-edit="t50" data-edit-label="Text — Τσιλιλή, Αποστολάκη, Αγιονέρι παλαιωμέ…">Τσιλιλή, Αποστολάκη, Αγιονέρι παλαιωμένο, ρακόμελο σε τρία μεγέθη.</span><span class="tr" data-edit="t51" data-edit-label="Text — Tsilili, Apostolaki, aged Agioneri, ra…">Tsilili, Apostolaki, aged Agioneri, rakomelo in three sizes.</span></p></div>
+      <div class="cmp w3"><span class="sort" data-edit="t52" data-edit-label="Text — Ε">Ε</span><h3><span class="el" data-edit="t53" data-edit-label="Text — Ώρες χαλαρές">Ώρες χαλαρές</span><span class="tr" data-edit="t54" data-edit-label="Text — Unhurried hours">Unhurried hours</span></h3>
+        <p><span class="el" data-edit="t55" data-edit-label="Text — Ανοιχτά Τετάρτη έως Σάββατο, από το απ…">Ανοιχτά Τετάρτη έως Σάββατο, από το απόγευμα ως αργά.</span><span class="tr" data-edit="t56" data-edit-label="Text — Open Wednesday to Saturday, from the a…">Open Wednesday to Saturday, from the afternoon until late.</span></p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec grey">
+  <div class="wrap mg">
+    <div class="rev">
+      <p class="kick"><span class="el" data-edit="t57" data-edit-label="Text — Από τον τιμοκατάλογο">Από τον τιμοκατάλογο</span><span class="tr" data-edit="t58" data-edit-label="Text — From the price list">From the price list</span></p>
+      <h2><span class="el" data-edit="t59" data-edit-label="Text — Τιμές">Τιμές</span><span class="tr" data-edit="t60" data-edit-label="Text — Prices">Prices</span></h2>
+      <p class="mh"><span class="el" data-edit="t61" data-edit-label="Text — Ροφήματα">Ροφήματα</span><span class="tr" data-edit="t62" data-edit-label="Text — Coffee &amp; hot drinks">Coffee &amp; hot drinks</span></p>
+      <div class="mrow"><span><span class="el" data-edit="t63" data-edit-label="Text — Ελληνικός μονός / διπλός">Ελληνικός μονός / διπλός</span><span class="tr" data-edit="t64" data-edit-label="Text — Greek coffee single / double">Greek coffee single / double</span></span><b class="pr" data-edit="t65" data-edit-label="Text — 1,50 / 2,00 €">1,50 / 2,00 €</b></div>
+      <div class="mrow"><span><span class="el" data-edit="t66" data-edit-label="Text — Espresso μονό / διπλό">Espresso μονό / διπλό</span><span class="tr" data-edit="t67" data-edit-label="Text — Espresso single / double">Espresso single / double</span></span><b class="pr" data-edit="t68" data-edit-label="Text — 1,80 / 3,00 €">1,80 / 3,00 €</b></div>
+      <div class="mrow"><span data-edit="t69" data-edit-label="Text — Freddo espresso">Freddo espresso</span><b class="pr" data-edit="t70" data-edit-label="Text — 3,00 €">3,00 €</b></div>
+      <div class="mrow"><span><span class="el" data-edit="t71" data-edit-label="Text — Cappuccino μονό / διπλό">Cappuccino μονό / διπλό</span><span class="tr" data-edit="t72" data-edit-label="Text — Cappuccino single / double">Cappuccino single / double</span></span><b class="pr" data-edit="t73" data-edit-label="Text — 2,50 / 3,20 €">2,50 / 3,20 €</b></div>
+      <div class="mrow"><span><span class="el" data-edit="t74" data-edit-label="Text — Φραπέ &amp; Nes">Φραπέ &amp; Nes</span><span class="tr" data-edit="t75" data-edit-label="Text — Frappé &amp; Nes">Frappé &amp; Nes</span></span><b class="pr" data-edit="t76" data-edit-label="Text — 2,50 €">2,50 €</b></div>
+      <div class="mrow"><span><span class="el" data-edit="t77" data-edit-label="Text — Σπιτική λεμονάδα">Σπιτική λεμονάδα</span><span class="tr" data-edit="t78" data-edit-label="Text — Home-made lemonade">Home-made lemonade</span></span><b class="pr" data-edit="t79" data-edit-label="Text — 3,50 €">3,50 €</b></div>
+      <p class="mh"><span class="el" data-edit="t80" data-edit-label="Text — Αποστάγματα">Αποστάγματα</span><span class="tr" data-edit="t81" data-edit-label="Text — Spirits">Spirits</span></p>
+      <div class="mrow"><span><span class="el" data-edit="t82" data-edit-label="Text — Τσιλιλή 50 / 200ml">Τσιλιλή 50 / 200ml</span><span class="tr" data-edit="t83" data-edit-label="Text — Tsilili 50 / 200ml">Tsilili 50 / 200ml</span></span><b class="pr" data-edit="t84" data-edit-label="Text — 2,20 / 8,80 €">2,20 / 8,80 €</b></div>
+      <div class="mrow"><span><span class="el" data-edit="t85" data-edit-label="Text — Αποστολάκη 50 / 200ml">Αποστολάκη 50 / 200ml</span><span class="tr" data-edit="t86" data-edit-label="Text — Apostolaki 50 / 200ml">Apostolaki 50 / 200ml</span></span><b class="pr" data-edit="t87" data-edit-label="Text — 2,50 / 9,00 €">2,50 / 9,00 €</b></div>
+      <div class="mrow"><span><span class="el" data-edit="t88" data-edit-label="Text — Αγιονέρι παλαιωμένο 200ml">Αγιονέρι παλαιωμένο 200ml</span><span class="tr" data-edit="t89" data-edit-label="Text — Aged Agioneri 200ml">Aged Agioneri 200ml</span></span><b class="pr" data-edit="t90" data-edit-label="Text — 11,50 €">11,50 €</b></div>
+      <div class="mrow"><span><span class="el" data-edit="t91" data-edit-label="Text — Ούζο ποτήρι">Ούζο ποτήρι</span><span class="tr" data-edit="t92" data-edit-label="Text — Ouzo glass">Ouzo glass</span></span><b class="pr" data-edit="t93" data-edit-label="Text — 2,00 €">2,00 €</b></div>
+      <div class="mrow"><span><span class="el" data-edit="t94" data-edit-label="Text — Ούζο καραφάκι 100 / 200ml">Ούζο καραφάκι 100 / 200ml</span><span class="tr" data-edit="t95" data-edit-label="Text — Ouzo carafe 100 / 200ml">Ouzo carafe 100 / 200ml</span></span><b class="pr" data-edit="t96" data-edit-label="Text — 4,50 / 7,50 €">4,50 / 7,50 €</b></div>
+      <div class="mrow"><span><span class="el" data-edit="t97" data-edit-label="Text — Ρακή καραφάκι 100 / 200ml">Ρακή καραφάκι 100 / 200ml</span><span class="tr" data-edit="t98" data-edit-label="Text — Raki carafe 100 / 200ml">Raki carafe 100 / 200ml</span></span><b class="pr" data-edit="t99" data-edit-label="Text — 4,00 / 6,50 €">4,00 / 6,50 €</b></div>
+      <div class="mrow"><span><span class="el" data-edit="t100" data-edit-label="Text — Ρακόμελο 100 / 250 / 500ml">Ρακόμελο 100 / 250 / 500ml</span><span class="tr" data-edit="t101" data-edit-label="Text — Rakomelo 100 / 250 / 500ml">Rakomelo 100 / 250 / 500ml</span></span><b class="pr" data-edit="t102" data-edit-label="Text — 6,00 / 10,00 / 16,00 €">6,00 / 10,00 / 16,00 €</b></div>
+      <p class="mh"><span class="el" data-edit="t103" data-edit-label="Text — Κρασί &amp; μπύρα">Κρασί &amp; μπύρα</span><span class="tr" data-edit="t104" data-edit-label="Text — Wine &amp; beer">Wine &amp; beer</span></p>
+      <div class="mrow"><span><span class="el" data-edit="t105" data-edit-label="Text — Κρασί ξηρό 250 / 500ml">Κρασί ξηρό 250 / 500ml</span><span class="tr" data-edit="t106" data-edit-label="Text — Dry wine 250 / 500ml">Dry wine 250 / 500ml</span></span><b class="pr" data-edit="t107" data-edit-label="Text — 3,50 / 6,00 €">3,50 / 6,00 €</b></div>
+      <div class="mrow"><span><span class="el" data-edit="t108" data-edit-label="Text — Κρασί φιάλη 750ml">Κρασί φιάλη 750ml</span><span class="tr" data-edit="t109" data-edit-label="Text — Bottle of wine 750ml">Bottle of wine 750ml</span></span><b class="pr" data-edit="t110" data-edit-label="Text — 18,00 €">18,00 €</b></div>
+      <div class="mrow"><span><span class="el" data-edit="t111" data-edit-label="Text — Οινόμελο 250 / 500ml">Οινόμελο 250 / 500ml</span><span class="tr" data-edit="t112" data-edit-label="Text — Oinomelo 250 / 500ml">Oinomelo 250 / 500ml</span></span><b class="pr" data-edit="t113" data-edit-label="Text — 5,50 / 9,00 €">5,50 / 9,00 €</b></div>
+      <div class="mrow"><span><span class="el" data-edit="t114" data-edit-label="Text — Άλφα / Άλφα Weiss 500ml">Άλφα / Άλφα Weiss 500ml</span><span class="tr" data-edit="t115" data-edit-label="Text — Alfa / Alfa Weiss 500ml">Alfa / Alfa Weiss 500ml</span></span><b class="pr" data-edit="t116" data-edit-label="Text — 3,50 / 4,00 €">3,50 / 4,00 €</b></div>
+      <div class="mrow"><span><span class="el" data-edit="t117" data-edit-label="Text — Μάμος 500ml">Μάμος 500ml</span><span class="tr" data-edit="t118" data-edit-label="Text — Mamos 500ml">Mamos 500ml</span></span><b class="pr" data-edit="t119" data-edit-label="Text — 4,00 €">4,00 €</b></div>
+      <p style="margin-top:16px;font-size:15.5px"><b><span class="el" data-edit="t120" data-edit-label="Text — Γλυκά: ρωτήστε μας!">Γλυκά: ρωτήστε μας!</span><span class="tr" data-edit="t121" data-edit-label="Text — Desserts: just ask us!">Desserts: just ask us!</span></b></p>
+    </div>
+    <figure class="fr rev">
+      <img src="img/02.jpg" alt="Ο τιμοκατάλογος του Τυπογράφου" loading="lazy">
+      <figcaption><span class="el" data-edit="t122" data-edit-label="Text — Ο κατάλογος με την ιστορία του μαγαζιο…">Ο κατάλογος με την ιστορία του μαγαζιού τυπωμένη κάτω αριστερά.</span><span class="tr" data-edit="t123" data-edit-label="Text — The menu, with the house story printed…">The menu, with the house story printed at the bottom left.</span></figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <p class="kick rev"><span class="el" data-edit="t124" data-edit-label="Text — Ο χώρος">Ο χώρος</span><span class="tr" data-edit="t125" data-edit-label="Text — The room">The room</span></p>
+    <h2 class="rev"><span class="el" data-edit="t126" data-edit-label="Text — Χαμηλά φώτα, μεγάλα τραπέζια">Χαμηλά φώτα, μεγάλα τραπέζια</span><span class="tr" data-edit="t127" data-edit-label="Text — Low lamps, long tables">Low lamps, long tables</span></h2>
+    <div class="case rev" style="margin-top:8px">
+      <div class="cmp w3 img"><img src="img/05.jpg" alt="Τα φωτιστικά πάνω από τα τραπέζια" loading="lazy"></div>
+      <div class="cmp w3 img"><img src="img/06.jpg" alt="Οι ξύλινες καρέκλες και τα πλακάκια" loading="lazy"></div>
+      <div class="cmp w2 img"><img src="img/03.jpg" alt="Ψητά στο πιάτο" loading="lazy"></div>
+      <div class="cmp w2 img"><img src="img/04.jpg" alt="Μαγειρευτό σε πήλινο σκεύος" loading="lazy"></div>
+      <div class="cmp w2 img"><img src="img/01.jpg" alt="Η πινακίδα του Τυπογράφου" loading="lazy"></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec grey">
+  <div class="wrap">
+    <p class="kick rev"><span class="el" data-edit="t128" data-edit-label="Text — Κριτικές Google">Κριτικές Google</span><span class="tr" data-edit="t129" data-edit-label="Text — Google reviews">Google reviews</span></p>
+    <h2 class="rev"><span class="num" data-edit="t130" data-edit-label="Text — ★ 4,8">★ 4,8</span> <span class="el" data-edit="t131" data-edit-label="Text — από 709 κριτικές">από 709 κριτικές</span><span class="tr" data-edit="t132" data-edit-label="Text — from 709 reviews">from 709 reviews</span></h2>
+    <div class="qs rev">
+      <div class="q"><q dir="ltr" data-edit="t133" data-edit-label="Quote — Ένα καλά κρυμμένο μυστικό στην καρδιά …">Ένα καλά κρυμμένο μυστικό στην καρδιά του Μεταξουργείου. Σχετικά απλή αλλά εξαιρετική κουζίνα, δύο βήματα από το κέντρο.</q><div class="w" data-edit="t134" data-edit-label="Text — Peter Pan · Google">Peter Pan · Google</div></div>
+      <div class="q"><q dir="ltr" data-edit="t135" data-edit-label="Quote — Εξαιρετικό μαγαζί, με πολύ φρέσκα και …">Εξαιρετικό μαγαζί, με πολύ φρέσκα και εύγευστα πιάτα! Παραδοσιακές γεύσεις και πιο σύγχρονες, σε ένα ζεστό και παρεΐστικο χώρο!</q><div class="w" data-edit="t136" data-edit-label="Text — Dimitra Desse · Google">Dimitra Desse · Google</div></div>
+      <div class="q"><q dir="ltr" data-edit="t137" data-edit-label="Quote — Μπράβο, πάρα πολύ ωραίο φαγητό, τρομερ…">Μπράβο, πάρα πολύ ωραίο φαγητό, τρομερή εξυπηρέτηση. Ήρθαμε μεσημέρι Κυριακής, καθίσαμε μέσα, πολύ ωραία ατμόσφαιρα.</q><div class="w" data-edit="t138" data-edit-label="Text — Marianna Spyrou · Google">Marianna Spyrou · Google</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap two rev">
+    <div>
+      <p class="kick"><span class="el" data-edit="t139" data-edit-label="Text — Ωράριο">Ωράριο</span><span class="tr" data-edit="t140" data-edit-label="Text — Opening hours">Opening hours</span></p>
+      <h2><span class="el" data-edit="t141" data-edit-label="Text — Τετάρτη έως Σάββατο">Τετάρτη έως Σάββατο</span><span class="tr" data-edit="t142" data-edit-label="Text — Wednesday to Saturday">Wednesday to Saturday</span></h2>
+      <table>
+        <tr class="cl"><td><span class="el" data-edit="t143" data-edit-label="Text — Δευτέρα">Δευτέρα</span><span class="tr" data-edit="t144" data-edit-label="Text — Monday">Monday</span></td><td><span class="el" data-edit="t145" data-edit-label="Text — Κλειστά">Κλειστά</span><span class="tr" data-edit="t146" data-edit-label="Text — Closed">Closed</span></td></tr>
+        <tr class="cl"><td><span class="el" data-edit="t147" data-edit-label="Text — Τρίτη">Τρίτη</span><span class="tr" data-edit="t148" data-edit-label="Text — Tuesday">Tuesday</span></td><td><span class="el" data-edit="t149" data-edit-label="Text — Κλειστά">Κλειστά</span><span class="tr" data-edit="t150" data-edit-label="Text — Closed">Closed</span></td></tr>
+        <tr><td><span class="el" data-edit="t151" data-edit-label="Text — Τετάρτη">Τετάρτη</span><span class="tr" data-edit="t152" data-edit-label="Text — Wednesday">Wednesday</span></td><td class="num" data-edit="t153" data-edit-label="Menu / table — 15:30–00:00">15:30–00:00</td></tr>
+        <tr><td><span class="el" data-edit="t154" data-edit-label="Text — Πέμπτη">Πέμπτη</span><span class="tr" data-edit="t155" data-edit-label="Text — Thursday">Thursday</span></td><td class="num" data-edit="t156" data-edit-label="Menu / table — 14:00–00:00">14:00–00:00</td></tr>
+        <tr><td><span class="el" data-edit="t157" data-edit-label="Text — Παρασκευή">Παρασκευή</span><span class="tr" data-edit="t158" data-edit-label="Text — Friday">Friday</span></td><td class="num" data-edit="t159" data-edit-label="Menu / table — 13:30–00:30">13:30–00:30</td></tr>
+        <tr><td><span class="el" data-edit="t160" data-edit-label="Text — Σάββατο">Σάββατο</span><span class="tr" data-edit="t161" data-edit-label="Text — Saturday">Saturday</span></td><td class="num" data-edit="t162" data-edit-label="Menu / table — 13:30–00:30">13:30–00:30</td></tr>
+        <tr class="cl"><td><span class="el" data-edit="t163" data-edit-label="Text — Κυριακή">Κυριακή</span><span class="tr" data-edit="t164" data-edit-label="Text — Sunday">Sunday</span></td><td><span class="el" data-edit="t165" data-edit-label="Text — Κλειστά">Κλειστά</span><span class="tr" data-edit="t166" data-edit-label="Text — Closed">Closed</span></td></tr>
+      </table>
+    </div>
+    <div>
+      <p class="kick"><span class="el" data-edit="t167" data-edit-label="Text — Πού είμαστε">Πού είμαστε</span><span class="tr" data-edit="t168" data-edit-label="Text — Where we are">Where we are</span></p>
+      <h2><span class="el" data-edit="t169" data-edit-label="Text — Κοδράτου 18">Κοδράτου 18</span><span class="tr" data-edit="t170" data-edit-label="Text — Kodratou 18">Kodratou 18</span></h2>
+      <p style="font-size:19px"><b class="ad" data-edit="t171" data-edit-label="Text — Κοδράτου 18, Αθήνα 104 37">Κοδράτου 18, Αθήνα 104 37</b><br>
+        <span class="el" data-edit="t172" data-edit-label="Text — Μεταξουργείο — δύο βήματα από το κέντρ…">Μεταξουργείο — δύο βήματα από το κέντρο</span><span class="tr" data-edit="t173" data-edit-label="Text — Metaxourgeio — two steps from the cent…">Metaxourgeio — two steps from the centre</span><br>
+        <b class="ph num" data-edit="t174" data-edit-label="Text — +30 21 3099 3067">+30 21 3099 3067</b></p>
+      <p>
+        <a class="btn v" href="tel:+302130993067"><span class="el" data-edit="t175" data-edit-label="Text — Τηλέφωνο">Τηλέφωνο</span><span class="tr" data-edit="t176" data-edit-label="Text — Call">Call</span></a>
+        <a class="btn" href="https://www.google.com/maps?cid=17294938737924150541" target="_blank" rel="noopener"><span class="el" data-edit="t177" data-edit-label="Text — Χάρτης">Χάρτης</span><span class="tr" data-edit="t178" data-edit-label="Text — Map">Map</span></a>
+      </p>
+    </div>
+  </div>
+  <div class="wrap"><footer><p><b><span class="el" data-edit="t179" data-edit-label="Text — Ο Τυπογράφος">Ο Τυπογράφος</span><span class="tr" data-edit="t180" data-edit-label="Text — O Typografos">O Typografos</span></b> — Κοδράτου 18, Αθήνα 104 37 · <span class="num" data-edit="t181" data-edit-label="Text — +30 21 3099 3067">+30 21 3099 3067</span></p></footer></div>
+</section>
+
+<nav class="bar">
+  <a class="p" href="tel:+302130993067">
+    <svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.4.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C11 21 3 13 3 3c0-.6.4-1 1-1h3.4c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.2 1l-2.2 2.2z"/></svg>
+    <span class="el" data-edit="t182" data-edit-label="Text — Κλήση">Κλήση</span><span class="tr" data-edit="t183" data-edit-label="Text — Call">Call</span></a>
+  <a href="https://www.google.com/maps?cid=17294938737924150541" target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>
+    <span class="el" data-edit="t184" data-edit-label="Text — Χάρτης">Χάρτης</span><span class="tr" data-edit="t185" data-edit-label="Text — Map">Map</span></a>
+</nav>
+</body>
+</html>

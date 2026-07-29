@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="el" data-alt="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ραντεβού — Αρκάδων 8 &amp; Καλλισθένους, Άνω Πετράλωνα</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Display:wght@400;600;800&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--plum:#3B2233;--plum-2:#4E2E44;--label:#EAE0CC;--label-2:#DDD0B4;--brass:#B98B3E;--ink:#211722}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--plum);color:var(--label);font:400 17px/1.78 Roboto,system-ui,sans-serif}
+.wrap{width:min(1150px,100%);margin-inline:auto;padding-inline:5vw}
+h1,h2,h3{font-family:'Noto Sans Display',Helvetica,sans-serif;font-weight:800;line-height:1.08;letter-spacing:-.015em}
+a{color:inherit}
+.lgx{position:fixed;top:14px;inset-inline-end:14px;z-index:60;background:var(--brass);color:var(--ink);border:0;
+  font:800 12.5px/1 'Noto Sans Display',sans-serif;letter-spacing:.14em;padding:12px 16px;cursor:pointer;text-transform:uppercase;border-radius:999px}
+.lgx:hover{background:var(--label);color:var(--plum)}
+/* hero */
+header{position:relative;min-height:clamp(600px,92svh,820px);max-height:860px;display:flex;align-items:center;
+  background:#1a1019 url('img/01.jpg') center 50%/cover no-repeat}
+header::after{content:"";position:absolute;inset:0;
+  background:linear-gradient(100deg,rgba(26,16,25,.92) 0%,rgba(26,16,25,.72) 44%,rgba(26,16,25,.34) 100%)}
+.hero{position:relative;z-index:2;width:100%;display:grid;grid-template-columns:auto 1fr;gap:clamp(22px,4vw,50px);
+  align-items:center;padding-block:clamp(36px,6vw,70px)}
+/* the 45rpm record — living ornament */
+.disc{position:relative;width:min(46vw,320px);aspect-ratio:1;border-radius:50%;flex:none;
+  background:radial-gradient(circle at 32% 26%,#4a3446 0 6%,#241826 30%,#140d15 70%,#241826 100%);
+  box-shadow:0 26px 60px rgba(0,0,0,.55),inset 0 0 0 2px rgba(234,224,204,.28),0 0 0 2px rgba(185,139,62,.35);
+  animation:spin 80s linear infinite}
+.disc::before{content:"";position:absolute;inset:0;border-radius:50%;
+  background:repeating-radial-gradient(circle at 50% 50%,rgba(234,224,204,.13) 0 1px,transparent 1px 5px)}
+.disc .lbl{position:absolute;inset:29%;border-radius:50%;background:var(--brass);color:var(--ink);
+  display:grid;place-items:center;text-align:center;font:800 13px/1.2 'Noto Sans Display',sans-serif;letter-spacing:.08em;padding:10px}
+.disc .lbl::after{content:"";position:absolute;width:9%;height:9%;border-radius:50%;background:#1a1019}
+@keyframes spin{to{transform:rotate(360deg)}}
+h1{font-size:clamp(46px,9.6vw,108px);margin:0}
+.hsub{margin-top:14px;font-size:clamp(16px,2.1vw,21px);max-width:44ch;color:#D8CBBE}
+.hp{margin-top:20px;display:flex;flex-wrap:wrap;gap:9px}
+.hp span{border:1px solid rgba(234,224,204,.4);border-radius:999px;padding:8px 15px;font:500 13px/1 Roboto,sans-serif}
+.hp span.b{background:var(--brass);border-color:var(--brass);color:var(--ink);font-weight:700}
+/* ===== RECORD-LABEL DISC SECTIONS ===== */
+.sec{padding-block:clamp(52px,7.4vw,96px)}
+.sec.light{background:var(--label);color:var(--ink)}
+.sec.mid{background:var(--plum-2)}
+.lbhead{display:flex;align-items:center;gap:18px;margin-bottom:22px}
+.lbdisc{width:78px;height:78px;flex:none;border-radius:50%;background:var(--brass);color:var(--ink);
+  display:grid;place-items:center;text-align:center;font:800 11px/1.15 'Noto Sans Display',sans-serif;letter-spacing:.06em;
+  padding:8px;position:relative;box-shadow:0 0 0 6px rgba(185,139,62,.18)}
+.lbdisc::after{content:"";position:absolute;width:9px;height:9px;border-radius:50%;background:var(--plum)}
+.sec.light .lbdisc::after{background:var(--label)}
+h2{font-size:clamp(29px,5vw,54px);margin:0}
+p+p{margin-top:15px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,4vw,52px);align-items:center}
+figure.fr{background:var(--label);padding:10px;box-shadow:0 14px 30px rgba(0,0,0,.3)}
+.sec.light figure.fr{background:#fff;box-shadow:0 12px 26px rgba(33,23,34,.14)}
+figure.fr img{display:block;width:100%;height:auto;max-height:470px;object-fit:cover}
+figure.fr figcaption{font:400 13px/1.6 Roboto,sans-serif;color:#5d5148;padding:9px 3px 1px}
+.prog{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:22px}
+.pcard{border:1px solid rgba(234,224,204,.28);padding:22px 20px;background:rgba(234,224,204,.05)}
+.sec.light .pcard{border-color:rgba(33,23,34,.2);background:rgba(59,34,51,.05)}
+.pcard .d{font:800 12px/1 'Noto Sans Display',sans-serif;letter-spacing:.2em;text-transform:uppercase;color:var(--brass);margin-bottom:8px}
+.pcard h3{font-size:21px;margin-bottom:6px}
+.pcard p{font-size:15.5px;line-height:1.62;color:#C9BBAD}
+.sec.light .pcard p{color:#544a52}
+.gal{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:22px}
+.gal figure.fr img{height:215px}
+.mg{display:grid;grid-template-columns:1.2fr .8fr;gap:clamp(24px,4vw,48px);align-items:start;margin-top:22px}
+.mrow{display:grid;grid-template-columns:1fr auto;gap:14px;align-items:baseline;padding:11px 0;
+  border-bottom:1px solid rgba(33,23,34,.13)}
+.mrow .pr{font:800 16px/1 'Noto Sans Display',sans-serif;color:#7a4a1f;white-space:nowrap}
+.note{margin-top:16px;font-size:15.5px;padding:14px 16px;border-inline-start:3px solid var(--brass);background:rgba(185,139,62,.14)}
+.qs{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:22px}
+.q{border-top:2px solid var(--brass);padding:18px 2px 0}
+.q q{display:block;quotes:none;font:400 16.5px/1.7 Roboto,sans-serif}
+.q .w{margin-top:12px;font:800 12px/1 'Noto Sans Display',sans-serif;letter-spacing:.1em;text-transform:uppercase;color:var(--brass)}
+table{width:100%;border-collapse:collapse}
+td{padding:10px 2px;border-bottom:1px solid rgba(234,224,204,.16);font-size:15.5px}
+.sec.light td{border-bottom-color:rgba(33,23,34,.13)}
+td:last-child{text-align:end;font-weight:700;color:var(--brass)}
+.sec.light td:last-child{color:#7a4a1f}
+.btn{display:inline-flex;align-items:center;gap:8px;background:var(--brass);color:var(--ink);padding:13px 22px;
+  border-radius:999px;text-decoration:none;font:800 13px/1 'Noto Sans Display',sans-serif;letter-spacing:.1em;
+  text-transform:uppercase;margin:10px 10px 0 0}
+.btn.o{background:transparent;border:1.5px solid var(--brass);color:var(--brass)}
+footer{padding:28px 0 118px;font-size:14.5px;color:#A99B8D;text-align:center}
+/* sticky tonearm bar */
+.bar{position:fixed;inset-inline:0;bottom:0;z-index:50;background:var(--ink);
+  padding:12px 12px calc(12px + env(safe-area-inset-bottom));display:flex;gap:10px;justify-content:center}
+.bar::before{content:"";position:absolute;top:-2px;inset-inline-start:6%;width:56%;height:3px;background:var(--brass);
+  transform-origin:0 50%;transform:rotate(-1.4deg);border-radius:2px}
+.bar::after{content:"";position:absolute;top:-9px;inset-inline-start:5%;width:14px;height:14px;border-radius:50%;
+  background:var(--brass)}
+.bar a{flex:1;max-width:200px;display:flex;align-items:center;justify-content:center;gap:8px;border-radius:999px;
+  border:1px solid rgba(234,224,204,.4);color:var(--label);text-decoration:none;padding:12px 8px;
+  font:800 12.5px/1 'Noto Sans Display',sans-serif;letter-spacing:.08em;text-transform:uppercase}
+.bar a.p{background:var(--brass);border-color:var(--brass);color:var(--ink)}
+.bar svg{width:16px;height:16px;fill:currentColor;flex:none}
+@media(max-width:900px){
+  .hero{grid-template-columns:1fr}.disc{width:min(58vw,260px)}
+  .two,.mg{grid-template-columns:1fr}.prog,.qs{grid-template-columns:1fr}
+  .gal{grid-template-columns:repeat(2,1fr)}
+  body{font-size:16px}
+}
+@media(max-width:430px){.bar a{font-size:11px;padding:11px 5px;letter-spacing:.02em}.bar{gap:7px}}
+</style>
+<meta name="robots" content="noindex,nofollow">
+<style data-mech>*{-webkit-tap-highlight-color:transparent}
+html,body{overflow-x:clip}
+.num{direction:ltr;unicode-bidi:isolate;white-space:nowrap}
+.rev{opacity:0;transform:translateY(18px);transition:opacity .75s ease,transform .75s ease}
+.rev.on{opacity:1;transform:none}
+html.alt .el{display:none!important}
+html:not(.alt) .tr{display:none!important}
+.tr{unicode-bidi:isolate}
+.wrap{padding-inline:5vw!important}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.rev{opacity:1;transform:none}}
+</style>
+<script data-mech>
+function LG(){var h=document.documentElement,a=h.classList.toggle('alt'),L=h.getAttribute('data-alt')||'en';
+h.setAttribute('lang',a?L:'el');if(L==='ar')h.setAttribute('dir',a?'rtl':'ltr');}
+document.addEventListener('DOMContentLoaded',function(){
+var n=document.querySelectorAll('.rev');
+if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){
+if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});
+n.forEach(function(e){io.observe(e)});}
+setTimeout(function(){document.querySelectorAll('.rev').forEach(function(e){e.classList.add('on')})},1100);});
+</script>
+</head>
+<body>
+<button class="lgx" onclick="LG()"><span class="el" data-edit="t1" data-edit-label="Text — English">English</span><span class="tr" data-edit="t2" data-edit-label="Text — Ελληνικά">Ελληνικά</span></button>
+
+<header>
+  <div class="hero wrap">
+    <div class="disc"><span class="lbl"><span class="el">ΑΦΙΕΡΩΣΗ<br>45 rpm</span><span class="tr">DEDICATION<br>45 rpm</span></span></div>
+    <div>
+      <h1><span class="el" data-edit="t3" data-edit-label="Text — Ραντεβού">Ραντεβού</span><span class="tr" data-edit="t4" data-edit-label="Text — Rantevou">Rantevou</span></h1>
+      <p class="hsub"><span class="el" data-edit="t5" data-edit-label="Text — Οινομαγειρείο στην Πλατεία Μερκούρη — …">Οινομαγειρείο στην Πλατεία Μερκούρη — μεζέδες, τσίπουρο και ζωντανό ρεμπέτικο Τετάρτη και Σάββατο.</span><span class="tr" data-edit="t6" data-edit-label="Text — A wine-and-cook house on Merkouri Squa…">A wine-and-cook house on Merkouri Square — meze, tsipouro and live rebetiko on Wednesdays and Saturdays.</span></p>
+      <div class="hp">
+        <span class="b num" data-edit="t7" data-edit-label="Text — ★ 4,5">★ 4,5</span>
+        <span><span class="el" data-edit="t8" data-edit-label="Text — 1.587 κριτικές Google">1.587 κριτικές Google</span><span class="tr" data-edit="t9" data-edit-label="Text — 1,587 Google reviews">1,587 Google reviews</span></span>
+        <span><span class="el" data-edit="t10" data-edit-label="Text — Κάθε μέρα 13:00–02:00">Κάθε μέρα 13:00–02:00</span><span class="tr" data-edit="t11" data-edit-label="Text — Daily 13:00–02:00">Daily 13:00–02:00</span></span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="lbhead rev"><span class="lbdisc"><span class="el" data-edit="t12" data-edit-label="Text — ΠΛΕΥΡΑ Α">ΠΛΕΥΡΑ Α</span><span class="tr" data-edit="t13" data-edit-label="Text — SIDE A">SIDE A</span></span>
+      <h2><span class="el" data-edit="t14" data-edit-label="Text — Παλιό και διαχρονικό">Παλιό και διαχρονικό</span><span class="tr" data-edit="t15" data-edit-label="Text — Old and lasting">Old and lasting</span></h2></div>
+    <div class="two rev">
+      <div>
+        <p><span class="el" data-edit="t16" data-edit-label="Text — Το Ραντεβού κάθεται στη γωνιά Αρκάδων …">Το Ραντεβού κάθεται στη γωνιά Αρκάδων και Καλλισθένους, στην Πλατεία Μερκούρη — από τα σημεία που κρατούν ακόμα τον χαρακτήρα της παλιάς αθηναϊκής γειτονιάς. Μοιάζει με καφενείο άλλης εποχής και δουλεύει σαν οινομαγειρείο.</span><span class="tr" data-edit="t17" data-edit-label="Text — Rantevou sits on the corner of Arkadon…">Rantevou sits on the corner of Arkadon and Kallisthenous, on Merkouri Square — one of the places that still keep the character of the old Athenian neighbourhood. It looks like a kafeneio from another era and works as an oinomageireio.</span></p>
+        <p><span class="el" data-edit="t18" data-edit-label="Text — Η κουζίνα στηρίζεται στην ελληνική παρ…">Η κουζίνα στηρίζεται στην ελληνική παράδοση: μεζέδες φτιαγμένοι με προσοχή, φρέσκες σαλάτες και πιάτα ημέρας, σε τιμές που δεν έχουν αλλάξει πολύ. Το κατάστημα σερβίρει αλκοόλ μόνο με συνοδεία φαγητού.</span><span class="tr" data-edit="t19" data-edit-label="Text — The kitchen rests on Greek tradition: …">The kitchen rests on Greek tradition: carefully made meze, fresh salads and daily specials, at prices that have not changed much. Alcohol is served only with food.</span></p>
+      </div>
+      <figure class="fr">
+        <img src="img/01.jpg" alt="Ο εσωτερικός χώρος του Ραντεβού" loading="lazy">
+        <figcaption><span class="el" data-edit="t20" data-edit-label="Text — Ο χώρος στη γωνιά της Πλατείας Μερκούρ…">Ο χώρος στη γωνιά της Πλατείας Μερκούρη.</span><span class="tr" data-edit="t21" data-edit-label="Text — The room on the corner of Merkouri Squ…">The room on the corner of Merkouri Square.</span></figcaption>
+      </figure>
+    </div>
+    <div class="prog rev">
+      <div class="pcard"><span class="d"><span class="el" data-edit="t22" data-edit-label="Text — Τετάρτη βράδυ">Τετάρτη βράδυ</span><span class="tr" data-edit="t23" data-edit-label="Text — Wednesday night">Wednesday night</span></span>
+        <h3><span class="el" data-edit="t24" data-edit-label="Text — Ζωντανό ρεμπέτικο">Ζωντανό ρεμπέτικο</span><span class="tr" data-edit="t25" data-edit-label="Text — Live rebetiko">Live rebetiko</span></h3>
+        <p><span class="el" data-edit="t26" data-edit-label="Text — Μουσικοί που παίζουν λαϊκά και ρεμπέτι…">Μουσικοί που παίζουν λαϊκά και ρεμπέτικα — κάποιες φορές το τραγούδι ξεκινά από ένα τραπέζι.</span><span class="tr" data-edit="t27" data-edit-label="Text — Musicians playing laika and rebetika —…">Musicians playing laika and rebetika — sometimes the singing starts from a table.</span></p></div>
+      <div class="pcard"><span class="d"><span class="el" data-edit="t28" data-edit-label="Text — Σάββατο βράδυ">Σάββατο βράδυ</span><span class="tr" data-edit="t29" data-edit-label="Text — Saturday night">Saturday night</span></span>
+        <h3><span class="el" data-edit="t30" data-edit-label="Text — Η παρέα μεγαλώνει">Η παρέα μεγαλώνει</span><span class="tr" data-edit="t31" data-edit-label="Text — The company grows">The company grows</span></h3>
+        <p><span class="el" data-edit="t32" data-edit-label="Text — Το πιο γεμάτο βράδυ της εβδομάδας — κα…">Το πιο γεμάτο βράδυ της εβδομάδας — καλό είναι να κλείσετε τραπέζι.</span><span class="tr" data-edit="t33" data-edit-label="Text — The busiest night of the week — it is …">The busiest night of the week — it is worth booking a table.</span></p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec light">
+  <div class="wrap">
+    <div class="lbhead rev"><span class="lbdisc"><span class="el" data-edit="t34" data-edit-label="Text — ΠΛΕΥΡΑ Β">ΠΛΕΥΡΑ Β</span><span class="tr" data-edit="t35" data-edit-label="Text — SIDE B">SIDE B</span></span>
+      <h2><span class="el" data-edit="t36" data-edit-label="Text — Ο τιμοκατάλογος">Ο τιμοκατάλογος</span><span class="tr" data-edit="t37" data-edit-label="Text — The price list">The price list</span></h2></div>
+    <div class="mg">
+      <div class="rev">
+        <div class="mrow"><span><span class="el" data-edit="t38" data-edit-label="Text — Άργος — ελληνική μικροζυθοποιία 500ml">Άργος — ελληνική μικροζυθοποιία 500ml</span><span class="tr" data-edit="t39" data-edit-label="Text — Argos — Greek microbrewery 500ml">Argos — Greek microbrewery 500ml</span></span><b class="pr" data-edit="t40" data-edit-label="Text — 3,00 €">3,00 €</b></div>
+        <div class="mrow"><span><span class="el" data-edit="t41" data-edit-label="Text — Μπύρες 500ml (Άλφα, Φιξ, Βεργίνα, Kais…">Μπύρες 500ml (Άλφα, Φιξ, Βεργίνα, Kaiser, Amstel, Heineken)</span><span class="tr" data-edit="t42" data-edit-label="Text — Beers 500ml (Alfa, Fix, Vergina, Kaise…">Beers 500ml (Alfa, Fix, Vergina, Kaiser, Amstel, Heineken)</span></span><b class="pr" data-edit="t43" data-edit-label="Text — 3,00 €">3,00 €</b></div>
+        <div class="mrow"><span><span class="el" data-edit="t44" data-edit-label="Text — Μπύρα χωρίς αλκοόλ 500ml">Μπύρα χωρίς αλκοόλ 500ml</span><span class="tr" data-edit="t45" data-edit-label="Text — Alcohol-free beer 500ml">Alcohol-free beer 500ml</span></span><b class="pr" data-edit="t46" data-edit-label="Text — 3,00 €">3,00 €</b></div>
+        <div class="mrow"><span><span class="el" data-edit="t47" data-edit-label="Text — Ρακή Βελεγράκης, Ηράκλειο 100 / 200ml">Ρακή Βελεγράκης, Ηράκλειο 100 / 200ml</span><span class="tr" data-edit="t48" data-edit-label="Text — Raki Velegrakis, Heraklion 100 / 200ml">Raki Velegrakis, Heraklion 100 / 200ml</span></span><b class="pr" data-edit="t49" data-edit-label="Text — 2,50 / 4,50 €">2,50 / 4,50 €</b></div>
+        <div class="mrow"><span><span class="el" data-edit="t50" data-edit-label="Text — Τσίπουρο Μπακαβέλου, Λάρισα 100 / 200m…">Τσίπουρο Μπακαβέλου, Λάρισα 100 / 200ml</span><span class="tr" data-edit="t51" data-edit-label="Text — Tsipouro Bakavelou, Larissa 100 / 200m…">Tsipouro Bakavelou, Larissa 100 / 200ml</span></span><b class="pr" data-edit="t52" data-edit-label="Text — 3,50 / 6,00 €">3,50 / 6,00 €</b></div>
+        <div class="mrow"><span><span class="el" data-edit="t53" data-edit-label="Text — Ούζο μεζέ">Ούζο μεζέ</span><span class="tr" data-edit="t54" data-edit-label="Text — Ouzo meze">Ouzo meze</span></span><b class="pr" data-edit="t55" data-edit-label="Text — 3,50 €">3,50 €</b></div>
+        <div class="mrow"><span><span class="el" data-edit="t56" data-edit-label="Text — Ούζα διάφορα 200ml">Ούζα διάφορα 200ml</span><span class="tr" data-edit="t57" data-edit-label="Text — Assorted ouzo 200ml">Assorted ouzo 200ml</span></span><b class="pr" data-edit="t58" data-edit-label="Text — 7,50 €">7,50 €</b></div>
+        <div class="mrow"><span><span class="el" data-edit="t59" data-edit-label="Text — Λευκό κρασί Κορωναίος, Αττική — ποτήρι">Λευκό κρασί Κορωναίος, Αττική — ποτήρι</span><span class="tr" data-edit="t60" data-edit-label="Text — White wine Koronaios, Attica — glass">White wine Koronaios, Attica — glass</span></span><b class="pr" data-edit="t61" data-edit-label="Text — 1,50 €">1,50 €</b></div>
+        <div class="mrow"><span><span class="el" data-edit="t62" data-edit-label="Text — Κρασί ερυθρό Συνεταιρισμός Τυρνάβου — …">Κρασί ερυθρό Συνεταιρισμός Τυρνάβου — ποτήρι</span><span class="tr" data-edit="t63" data-edit-label="Text — Red wine Tyrnavos co-op — glass">Red wine Tyrnavos co-op — glass</span></span><b class="pr" data-edit="t64" data-edit-label="Text — 1,50 €">1,50 €</b></div>
+        <div class="mrow"><span><span class="el" data-edit="t65" data-edit-label="Text — Ρετσίνα Μαλαματίνα 250 / 500ml">Ρετσίνα Μαλαματίνα 250 / 500ml</span><span class="tr" data-edit="t66" data-edit-label="Text — Retsina Malamatina 250 / 500ml">Retsina Malamatina 250 / 500ml</span></span><b class="pr" data-edit="t67" data-edit-label="Text — 2,50 / 4,00 €">2,50 / 4,00 €</b></div>
+        <div class="mrow"><span><span class="el" data-edit="t68" data-edit-label="Text — Ρακόμελο 100 / 200ml">Ρακόμελο 100 / 200ml</span><span class="tr" data-edit="t69" data-edit-label="Text — Rakomelo 100 / 200ml">Rakomelo 100 / 200ml</span></span><b class="pr" data-edit="t70" data-edit-label="Text — 4,00 / 6,00 €">4,00 / 6,00 €</b></div>
+        <div class="mrow"><span><span class="el" data-edit="t71" data-edit-label="Text — Γραβιέρα με μέλι">Γραβιέρα με μέλι</span><span class="tr" data-edit="t72" data-edit-label="Text — Graviera with honey">Graviera with honey</span></span><b class="pr" data-edit="t73" data-edit-label="Text — 5,50 €">5,50 €</b></div>
+        <div class="mrow"><span><span class="el" data-edit="t74" data-edit-label="Text — Γλυκά του κουταλιού">Γλυκά του κουταλιού</span><span class="tr" data-edit="t75" data-edit-label="Text — Spoon sweets">Spoon sweets</span></span><b class="pr" data-edit="t76" data-edit-label="Text — 2,00 €">2,00 €</b></div>
+        <div class="mrow"><span><span class="el" data-edit="t77" data-edit-label="Text — Χαλβάς σιμιγδαλένιος">Χαλβάς σιμιγδαλένιος</span><span class="tr" data-edit="t78" data-edit-label="Text — Semolina halva">Semolina halva</span></span><b class="pr" data-edit="t79" data-edit-label="Text — 2,00 €">2,00 €</b></div>
+        <div class="mrow"><span><span class="el" data-edit="t80" data-edit-label="Text — Υποβρύχιο">Υποβρύχιο</span><span class="tr" data-edit="t81" data-edit-label="Text — Ypovrychio (submarine)">Ypovrychio (submarine)</span></span><b class="pr" data-edit="t82" data-edit-label="Text — 2,00 €">2,00 €</b></div>
+        <div class="mrow"><span><span class="el" data-edit="t83" data-edit-label="Text — Ελληνικός καφές μονός / διπλός">Ελληνικός καφές μονός / διπλός</span><span class="tr" data-edit="t84" data-edit-label="Text — Greek coffee single / double">Greek coffee single / double</span></span><b class="pr" data-edit="t85" data-edit-label="Text — 1,00 / 2,00 €">1,00 / 2,00 €</b></div>
+        <p class="note"><span class="el" data-edit="t86" data-edit-label="Text — Το κατάστημα σερβίρει αλκοόλ μόνο με σ…">Το κατάστημα σερβίρει αλκοόλ μόνο με συνοδεία φαγητού. Για τα μαγειρευτά και τους μεζέδες της ημέρας ρωτήστε μας.</span><span class="tr" data-edit="t87" data-edit-label="Text — Alcohol is served only with food. For …">Alcohol is served only with food. For the cooked dishes and the meze of the day, just ask us.</span></p>
+      </div>
+      <figure class="fr rev">
+        <img src="img/02.jpg" alt="Ο κίτρινος τιμοκατάλογος του Ραντεβού" loading="lazy">
+        <figcaption><span class="el" data-edit="t88" data-edit-label="Text — Ο τιμοκατάλογος του μαγαζιού.">Ο τιμοκατάλογος του μαγαζιού.</span><span class="tr" data-edit="t89" data-edit-label="Text — The house price list.">The house price list.</span></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="sec mid">
+  <div class="wrap">
+    <div class="lbhead rev"><span class="lbdisc"><span class="el" data-edit="t90" data-edit-label="Text — ΜΕΖΕΣ">ΜΕΖΕΣ</span><span class="tr" data-edit="t91" data-edit-label="Text — MEZE">MEZE</span></span>
+      <h2><span class="el" data-edit="t92" data-edit-label="Text — Ό,τι έρχεται στο τραπέζι">Ό,τι έρχεται στο τραπέζι</span><span class="tr" data-edit="t93" data-edit-label="Text — What comes to the table">What comes to the table</span></h2></div>
+    <div class="gal rev">
+      <figure class="fr"><img src="img/03.jpg" alt="Πιάτα με πίτες και μεζέδες" loading="lazy"><figcaption><span class="el" data-edit="t94" data-edit-label="Text — Πιτάκια και σαλάτες.">Πιτάκια και σαλάτες.</span><span class="tr" data-edit="t95" data-edit-label="Text — Small pies and salads.">Small pies and salads.</span></figcaption></figure>
+      <figure class="fr"><img src="img/09.jpg" alt="Καλαμάκια στη σχάρα" loading="lazy"><figcaption><span class="el" data-edit="t96" data-edit-label="Text — Καλαμάκια στη σχάρα.">Καλαμάκια στη σχάρα.</span><span class="tr" data-edit="t97" data-edit-label="Text — Skewers on the grill.">Skewers on the grill.</span></figcaption></figure>
+      <figure class="fr"><img src="img/05.jpg" alt="Τηγανητά ψαράκια" loading="lazy"><figcaption><span class="el" data-edit="t98" data-edit-label="Text — Τηγανητά ψαράκια.">Τηγανητά ψαράκια.</span><span class="tr" data-edit="t99" data-edit-label="Text — Small fried fish.">Small fried fish.</span></figcaption></figure>
+      <figure class="fr"><img src="img/06.jpg" alt="Πιάτο με τυριά" loading="lazy"><figcaption><span class="el" data-edit="t100" data-edit-label="Text — Τυριά και γλυκά του κουταλιού.">Τυριά και γλυκά του κουταλιού.</span><span class="tr" data-edit="t101" data-edit-label="Text — Cheese and spoon sweets.">Cheese and spoon sweets.</span></figcaption></figure>
+      <figure class="fr"><img src="img/07.jpg" alt="Τραπέζι με πολλά πιάτα" loading="lazy"><figcaption><span class="el" data-edit="t102" data-edit-label="Text — Τραπέζι για παρέα.">Τραπέζι για παρέα.</span><span class="tr" data-edit="t103" data-edit-label="Text — A table for company.">A table for company.</span></figcaption></figure>
+      <figure class="fr"><img src="img/11.jpg" alt="Γαύρος μαρινάτος" loading="lazy"><figcaption><span class="el" data-edit="t104" data-edit-label="Text — Γαύρος μαρινάτος.">Γαύρος μαρινάτος.</span><span class="tr" data-edit="t105" data-edit-label="Text — Marinated anchovies.">Marinated anchovies.</span></figcaption></figure>
+      <figure class="fr"><img src="img/04.jpg" alt="Καλαμάκια με πιπεριές" loading="lazy"><figcaption><span class="el" data-edit="t106" data-edit-label="Text — Καλαμάκια με πιπεριές.">Καλαμάκια με πιπεριές.</span><span class="tr" data-edit="t107" data-edit-label="Text — Skewers with peppers.">Skewers with peppers.</span></figcaption></figure>
+      <figure class="fr"><img src="img/08.jpg" alt="Πιάτο με ψητά" loading="lazy"><figcaption><span class="el" data-edit="t108" data-edit-label="Text — Πιάτο της ημέρας.">Πιάτο της ημέρας.</span><span class="tr" data-edit="t109" data-edit-label="Text — Dish of the day.">Dish of the day.</span></figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="sec light">
+  <div class="wrap">
+    <div class="lbhead rev"><span class="lbdisc"><span class="el" data-edit="t110" data-edit-label="Text — ΚΟΙΝΟ">ΚΟΙΝΟ</span><span class="tr" data-edit="t111" data-edit-label="Text — AUDIENCE">AUDIENCE</span></span>
+      <h2><span class="num" data-edit="t112" data-edit-label="Text — ★ 4,5">★ 4,5</span> <span class="el" data-edit="t113" data-edit-label="Text — από 1.587 κριτικές">από 1.587 κριτικές</span><span class="tr" data-edit="t114" data-edit-label="Text — from 1,587 reviews">from 1,587 reviews</span></h2></div>
+    <div class="qs rev">
+      <div class="q"><q dir="ltr" data-edit="t115" data-edit-label="Quote — Παλιό και διαχρονικό μαγαζί. Καλή ποιό…">Παλιό και διαχρονικό μαγαζί. Καλή ποιότητα φαγητού, ιδιαίτερες γεύσεις, καλές τιμές και ευγενικό προσωπικό.</q><div class="w" data-edit="t116" data-edit-label="Text — Anastasia Kaitsa · Google">Anastasia Kaitsa · Google</div></div>
+      <div class="q"><q dir="ltr" data-edit="t117" data-edit-label="Quote — Ό,τι καλύτερο για να φας ένα μεζεδάκι …">Ό,τι καλύτερο για να φας ένα μεζεδάκι με τσίπουρο με την παρέα! Πεντανόστιμο φαγητό, εξυπηρέτηση πολύ φιλική, ευγενική και γρήγορη!</q><div class="w" data-edit="t118" data-edit-label="Text — Elena · Google">Elena · Google</div></div>
+      <div class="q"><q dir="ltr" data-edit="t119" data-edit-label="Quote — Ζεστός ο χώρος. Ευγενικό το προσωπικό.…">Ζεστός ο χώρος. Ευγενικό το προσωπικό. Ωραία και γευστικά μεζεδάκια.</q><div class="w" data-edit="t120" data-edit-label="Text — Μάνος Ριτζάκης · Google">Μάνος Ριτζάκης · Google</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="lbhead rev"><span class="lbdisc"><span class="el" data-edit="t121" data-edit-label="Text — ΡΑΝΤΕΒΟΥ">ΡΑΝΤΕΒΟΥ</span><span class="tr" data-edit="t122" data-edit-label="Text — MEET US">MEET US</span></span>
+      <h2><span class="el" data-edit="t123" data-edit-label="Text — Αρκάδων 8 &amp; Καλλισθένους">Αρκάδων 8 &amp; Καλλισθένους</span><span class="tr" data-edit="t124" data-edit-label="Text — Arkadon 8 &amp; Kallisthenous">Arkadon 8 &amp; Kallisthenous</span></h2></div>
+    <div class="two rev">
+      <div>
+        <p style="font-size:19px"><b class="ad" data-edit="t125" data-edit-label="Text — Αρκάδων 8 &amp; Καλλισθένους, Αθήνα 11…">Αρκάδων 8 &amp; Καλλισθένους, Αθήνα 118 52</b><br>
+          <span class="el" data-edit="t126" data-edit-label="Text — Άνω Πετράλωνα · Πλατεία Μερκούρη">Άνω Πετράλωνα · Πλατεία Μερκούρη</span><span class="tr" data-edit="t127" data-edit-label="Text — Ano Petralona · Merkouri Square">Ano Petralona · Merkouri Square</span><br>
+          <b class="ph num" data-edit="t128" data-edit-label="Text — +30 21 0347 7961">+30 21 0347 7961</b></p>
+        <p>
+          <a class="btn" href="tel:+302103477961"><span class="el" data-edit="t129" data-edit-label="Text — Τηλέφωνο">Τηλέφωνο</span><span class="tr" data-edit="t130" data-edit-label="Text — Call">Call</span></a>
+          <a class="btn o" href="https://www.google.com/maps?cid=1294948831807633761" target="_blank" rel="noopener"><span class="el" data-edit="t131" data-edit-label="Text — Χάρτης">Χάρτης</span><span class="tr" data-edit="t132" data-edit-label="Text — Map">Map</span></a>
+        </p>
+        <figure class="fr" style="margin-top:20px"><img src="img/10.jpg" alt="Πιάτο μεζέ" loading="lazy"></figure>
+      </div>
+      <table>
+        <tr><td><span class="el" data-edit="t133" data-edit-label="Text — Δευτέρα">Δευτέρα</span><span class="tr" data-edit="t134" data-edit-label="Text — Monday">Monday</span></td><td class="num" data-edit="t135" data-edit-label="Menu / table — 13:00–02:00">13:00–02:00</td></tr>
+        <tr><td><span class="el" data-edit="t136" data-edit-label="Text — Τρίτη">Τρίτη</span><span class="tr" data-edit="t137" data-edit-label="Text — Tuesday">Tuesday</span></td><td class="num" data-edit="t138" data-edit-label="Menu / table — 13:00–02:00">13:00–02:00</td></tr>
+        <tr><td><span class="el" data-edit="t139" data-edit-label="Text — Τετάρτη">Τετάρτη</span><span class="tr" data-edit="t140" data-edit-label="Text — Wednesday">Wednesday</span></td><td class="num" data-edit="t141" data-edit-label="Menu / table — 13:00–02:00">13:00–02:00</td></tr>
+        <tr><td><span class="el" data-edit="t142" data-edit-label="Text — Πέμπτη">Πέμπτη</span><span class="tr" data-edit="t143" data-edit-label="Text — Thursday">Thursday</span></td><td class="num" data-edit="t144" data-edit-label="Menu / table — 13:00–02:00">13:00–02:00</td></tr>
+        <tr><td><span class="el" data-edit="t145" data-edit-label="Text — Παρασκευή">Παρασκευή</span><span class="tr" data-edit="t146" data-edit-label="Text — Friday">Friday</span></td><td class="num" data-edit="t147" data-edit-label="Menu / table — 13:00–02:00">13:00–02:00</td></tr>
+        <tr><td><span class="el" data-edit="t148" data-edit-label="Text — Σάββατο">Σάββατο</span><span class="tr" data-edit="t149" data-edit-label="Text — Saturday">Saturday</span></td><td class="num" data-edit="t150" data-edit-label="Menu / table — 13:00–02:00">13:00–02:00</td></tr>
+        <tr><td><span class="el" data-edit="t151" data-edit-label="Text — Κυριακή">Κυριακή</span><span class="tr" data-edit="t152" data-edit-label="Text — Sunday">Sunday</span></td><td class="num" data-edit="t153" data-edit-label="Menu / table — 13:00–02:00">13:00–02:00</td></tr>
+      </table>
+    </div>
+    <footer><p><b><span class="el" data-edit="t154" data-edit-label="Text — Ραντεβού">Ραντεβού</span><span class="tr" data-edit="t155" data-edit-label="Text — Rantevou">Rantevou</span></b> — Αρκάδων 8 &amp; Καλλισθένους, Αθήνα 118 52 · <span class="num" data-edit="t156" data-edit-label="Text — +30 21 0347 7961">+30 21 0347 7961</span></p></footer>
+  </div>
+</section>
+
+<nav class="bar">
+  <a class="p" href="tel:+302103477961">
+    <svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.4.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C11 21 3 13 3 3c0-.6.4-1 1-1h3.4c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.2 1l-2.2 2.2z"/></svg>
+    <span class="el" data-edit="t157" data-edit-label="Text — Κλήση">Κλήση</span><span class="tr" data-edit="t158" data-edit-label="Text — Call">Call</span></a>
+  <a href="https://www.google.com/maps?cid=1294948831807633761" target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>
+    <span class="el" data-edit="t159" data-edit-label="Text — Χάρτης">Χάρτης</span><span class="tr" data-edit="t160" data-edit-label="Text — Map">Map</span></a>
+</nav>
+</body>
+</html>
