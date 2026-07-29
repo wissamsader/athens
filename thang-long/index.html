@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Thang Long — βιετναμέζικο εστιατόριο, Μεγ. Αλεξάνδρου 1</title>
+<title>Thang Long · βιετναμέζικο εστιατόριο, Μεγ. Αλεξάνδρου 1</title>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Gentium+Plus:ital,wght@0,400;0,700;1,400&family=Noto+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
 <style>
@@ -28,24 +28,44 @@ a{color:inherit}
 .kick{font:700 12px/1 'Noto Sans',sans-serif;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin-bottom:12px}
 h2{font-size:clamp(30px,5.2vw,56px);margin-bottom:20px}
 p+p{margin-top:15px}
-/* hero */
-header{display:grid;grid-template-columns:1.02fr .98fr;min-height:clamp(600px,92svh,820px);max-height:880px}
-.hl{position:relative;display:flex;flex-direction:column;justify-content:center;background:var(--lac);
-  padding:clamp(34px,5vw,74px) clamp(26px,5vw,62px);overflow:hidden}
-.hl::before{content:"";position:absolute;inset:18px;border:1px solid rgba(201,162,39,.35)}
-.hl::after{content:"";position:absolute;inset-inline-end:-60px;top:-60px;width:280px;height:280px;border-radius:50%;
-  border:1px solid rgba(201,162,39,.22)}
-.hin{position:relative;z-index:2}
-.dragon{width:120px;height:34px;margin-bottom:18px;display:block}
+/* hero: VERTICAL BANNER DROP, silk banners hanging from a gold rail */
+header{position:relative;display:flex;justify-content:center;align-items:flex-start;
+  min-height:clamp(600px,92svh,820px);max-height:860px;overflow:hidden;
+  padding:0 5vw clamp(44px,6vh,64px);
+  background:radial-gradient(circle at 50% -8%,rgba(201,162,39,.14),transparent 52%),
+    linear-gradient(180deg,#16130F,#100E0C)}
+.hang{position:relative;width:min(100%,1060px);display:flex;flex-direction:column}
+.rail{position:relative;height:10px;margin-top:clamp(30px,5vh,52px);border-radius:6px;
+  background:linear-gradient(180deg,var(--gold-l),var(--gold) 60%,#8E6F22);box-shadow:0 4px 14px rgba(0,0,0,.5)}
+.rail::before,.rail::after{content:"";position:absolute;top:-7px;width:22px;height:22px;border-radius:50%;
+  background:radial-gradient(circle at 35% 30%,var(--gold-l),#8E6F22 70%)}
+.rail::before{inset-inline-start:-9px}.rail::after{inset-inline-end:-9px}
+.banners{display:grid;grid-template-columns:1.25fr 1fr 1fr;gap:clamp(14px,2.4vw,26px);
+  align-items:start;padding:0 clamp(14px,2.4vw,34px)}
+.bn{position:relative;box-shadow:0 24px 48px rgba(0,0,0,.45);
+  clip-path:polygon(0 0,100% 0,100% 100%,50% calc(100% - 26px),0 100%)}
+.bn.name{min-height:clamp(460px,62vh,620px);background:linear-gradient(180deg,#143329,#0F2620);
+  border:1px solid rgba(201,162,39,.55);display:flex;flex-direction:column;align-items:center;justify-content:center;
+  gap:6px;text-align:center;padding:clamp(28px,4vh,44px) 20px 62px}
+.bn.name::after{content:"";position:absolute;top:10px;left:10px;right:10px;bottom:36px;
+  border:1px solid rgba(201,162,39,.4);pointer-events:none}
+.bfoot{position:absolute;bottom:52px;inset-inline:22px;font:600 12px/1.6 'Noto Sans',sans-serif;
+  letter-spacing:.22em;text-transform:uppercase;color:var(--gold);opacity:.9}
+.dragon{width:120px;height:34px;margin-bottom:14px;display:block}
 .dragon path{fill:none;stroke:var(--gold);stroke-width:1.4;stroke-linecap:round}
-h1{font-size:clamp(44px,8vw,92px);margin:0;color:var(--paper)}
-h1 em{display:block;font-style:italic;font-size:.36em;color:var(--gold);margin-top:8px;letter-spacing:.03em}
-.hl p{margin-top:16px;font-size:clamp(16px,1.9vw,20px);max-width:40ch;color:#D5CFC3}
-.hp{margin-top:22px;display:flex;flex-wrap:wrap;gap:9px}
-.hp span{border:1px solid rgba(242,237,226,.34);padding:8px 14px;font:600 13px/1 'Noto Sans',sans-serif}
-.hp span.g{background:var(--gold);border-color:var(--gold);color:var(--lac);font-weight:700}
-.hr{background:#0d0c0a url('img/01.jpg') center/cover no-repeat;position:relative}
-.hr::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(18,16,14,.75),transparent 42%)}
+h1{font-size:clamp(42px,5.2vw,68px);margin:0;color:var(--paper);line-height:1.04}
+h1 em{display:block;font-style:italic;font-size:.4em;color:var(--gold);margin-top:10px;letter-spacing:.03em}
+.bn.photo{min-height:clamp(390px,54vh,540px);background:var(--lac-2);border:1px solid rgba(201,162,39,.4);
+  padding:11px 11px 44px;display:flex;flex-direction:column}
+.bn.photo img{flex:1;width:100%;min-height:0;object-fit:cover;display:block}
+.bn.info{min-height:clamp(350px,47vh,480px);background:var(--paper);color:var(--lac);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;text-align:center;
+  padding:clamp(24px,3.5vh,34px) 20px 56px}
+.bn.info p{font-size:clamp(15px,1.5vw,17px);color:#2F3B32;max-width:30ch}
+.bn.info p b{color:var(--jade)}
+.hp{display:flex;flex-direction:column;gap:9px;align-items:center}
+.hp > span{border:1px solid rgba(18,16,14,.4);padding:8px 14px;font:600 13px/1 'Noto Sans',sans-serif}
+.hp > span.g{background:var(--gold);border-color:var(--gold);color:var(--lac);font-weight:700}
 /* content */
 .two{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,4vw,52px);align-items:center}
 figure.fr{border:1px solid rgba(201,162,39,.4);padding:9px;background:rgba(201,162,39,.05)}
@@ -90,25 +110,50 @@ td.cl:last-child{color:#c0563f}
 .btn.o{background:transparent;border:1px solid var(--gold);color:var(--gold-l)}
 .sec.paper .btn.o{color:var(--jade);border-color:var(--jade)}
 footer{padding:28px 0 118px;font-size:14.5px;color:#9d9385;text-align:center}
-/* sticky gold scroll bar */
-.bar{position:fixed;inset-inline:0;bottom:0;z-index:50;background:var(--lac-2);
-  padding:14px 12px calc(12px + env(safe-area-inset-bottom));display:flex;gap:10px;justify-content:center;
-  border-top:1px solid var(--gold)}
-.bar::before{content:"";position:absolute;top:-1px;inset-inline:0;height:1px;
-  background:repeating-linear-gradient(90deg,var(--gold-l) 0 12px,transparent 12px 22px)}
-.bar a{flex:1;max-width:200px;display:flex;align-items:center;justify-content:center;gap:8px;
-  border:1px solid rgba(201,162,39,.5);color:var(--paper);text-decoration:none;padding:12px 8px;
-  font:600 13px/1 'Noto Sans',sans-serif;letter-spacing:.08em;text-transform:uppercase}
-.bar a.p{background:var(--gold);border-color:var(--gold);color:var(--lac);font-weight:700}
+/* sticky bar: the gold rail lands here, lacquer field, corner-bracket buttons */
+.bar{position:fixed;inset-inline:0;bottom:0;z-index:50;background:linear-gradient(180deg,#1C1916,#12100E);
+  padding:15px 12px calc(13px + env(safe-area-inset-bottom));display:flex;gap:11px;justify-content:center;
+  border-top:1px solid rgba(201,162,39,.55)}
+.bar::before{content:"";position:absolute;top:-6px;inset-inline-start:clamp(20px,4.2vw,58px);width:11px;height:11px;
+  transform:rotate(45deg);background:var(--gold);box-shadow:0 0 14px rgba(201,162,39,.6)}
+.bar a{position:relative;flex:1;max-width:200px;display:flex;align-items:center;justify-content:center;gap:8px;
+  color:var(--paper);text-decoration:none;padding:13px 8px;
+  font:600 13px/1 'Noto Sans',sans-serif;letter-spacing:.08em;text-transform:uppercase;
+  background-color:rgba(201,162,39,.08);background-repeat:no-repeat;
+  background-image:linear-gradient(var(--gold) 0 0),linear-gradient(var(--gold) 0 0),
+    linear-gradient(var(--gold) 0 0),linear-gradient(var(--gold) 0 0),
+    linear-gradient(var(--gold) 0 0),linear-gradient(var(--gold) 0 0),
+    linear-gradient(var(--gold) 0 0),linear-gradient(var(--gold) 0 0);
+  background-position:0 0,0 0,100% 0,100% 0,0 100%,0 100%,100% 100%,100% 100%;
+  background-size:14px 2px,2px 14px,14px 2px,2px 14px,14px 2px,2px 14px,14px 2px,2px 14px}
+.bar a.p{background-color:var(--gold);color:var(--lac);font-weight:700;
+  background-image:linear-gradient(#12100E 0 0),linear-gradient(#12100E 0 0),
+    linear-gradient(#12100E 0 0),linear-gradient(#12100E 0 0),
+    linear-gradient(#12100E 0 0),linear-gradient(#12100E 0 0),
+    linear-gradient(#12100E 0 0),linear-gradient(#12100E 0 0)}
 .bar svg{width:16px;height:16px;fill:currentColor;flex:none}
 @media(max-width:900px){
-  header{grid-template-columns:1fr;min-height:auto;max-height:none}.hr{min-height:300px}
+  header{min-height:auto;max-height:none;padding-bottom:56px}
+  .banners{grid-template-columns:1fr 1fr}
+  .bn.name{grid-column:1/3;min-height:clamp(300px,44vw,420px)}
+  .bn.photo{min-height:300px}
+  .bn.info{min-height:300px}
   .two,.mg{grid-template-columns:1fr}.cards,.qs{grid-template-columns:1fr}
   .trio{grid-template-columns:repeat(2,1fr)}
   .sec{padding-inline-start:clamp(34px,7vw,60px)}
   body{font-size:16px}
 }
+@media(max-width:560px){
+  .banners{grid-template-columns:1fr}
+  .bn.name{grid-column:auto}
+}
 @media(max-width:430px){.bar a{font-size:11.5px;padding:11px 5px;letter-spacing:.03em}.bar{gap:7px}}
+</style>
+<style data-fx-orn>
+/* data-fx-orn : the ONE living ornament, the drawn dragon line breathes a gold glow, 7s */
+.dragon{animation:tlGlow 7s ease-in-out infinite}
+@keyframes tlGlow{0%,100%{filter:drop-shadow(0 0 0 rgba(224,192,90,0))}50%{filter:drop-shadow(0 0 7px rgba(224,192,90,.85))}}
+@media (prefers-reduced-motion: reduce){.dragon{animation:none}}
 </style>
 <meta name="robots" content="noindex,nofollow">
 <style data-mech>*{-webkit-tap-highlight-color:transparent}
@@ -134,22 +179,30 @@ setTimeout(function(){document.querySelectorAll('.rev').forEach(function(e){e.cl
 </script>
 </head>
 <body>
-<button class="lgx" onclick="LG()"><span class="el" data-edit="t1" data-edit-label="Text — Tiếng Việt">Tiếng Việt</span><span class="tr" data-edit="t2" data-edit-label="Text — Ελληνικά">Ελληνικά</span></button>
+<button class="lgx" onclick="LG()"><span class="el" data-edit="t1" data-edit-label="Text: Tiếng Việt">Tiếng Việt</span><span class="tr" data-edit="t2" data-edit-label="Text: Ελληνικά">Ελληνικά</span></button>
 
 <header>
-  <div class="hl">
-    <div class="hin">
-      <svg class="dragon" viewBox="0 0 120 34" aria-hidden="true"><path d="M2 30c10 0 12-10 22-10s12 10 22 10 12-14 22-14 12 10 22 10 12-8 28-14"/></svg>
-      <h1><span class="el">Thang Long<em data-edit="t3" data-edit-label="Text — Thăng Long — «ο δράκος που ανεβαίνει»">Thăng Long — «ο δράκος που ανεβαίνει»</em></span><span class="tr">Thăng Long<em data-edit="t4" data-edit-label="Text — «Rồng bay lên»">«Rồng bay lên»</em></span></h1>
-      <p><span class="el" data-edit="t5" data-edit-label="Text — Αυθεντική βιετναμέζικη κουζίνα στο Μετ…">Αυθεντική βιετναμέζικη κουζίνα στο Μεταξουργείο: pho, φρέσκα και τηγανητά ρολά, noodles και κάρυ με ρύζι στον ατμό.</span><span class="tr" data-edit="t6" data-edit-label="Text — Ẩm thực Việt Nam đích thực tại Metaxou…">Ẩm thực Việt Nam đích thực tại Metaxourgeio: phở, gỏi cuốn và chả giò, mì xào và cà ri với cơm trắng.</span></p>
-      <div class="hp">
-        <span class="g num" data-edit="t7" data-edit-label="Text — ★ 4,9">★ 4,9</span>
-        <span><span class="el" data-edit="t8" data-edit-label="Text — 1.916 κριτικές Google">1.916 κριτικές Google</span><span class="tr" data-edit="t9" data-edit-label="Text — 1.916 đánh giá Google">1.916 đánh giá Google</span></span>
-        <span><span class="el" data-edit="t10" data-edit-label="Text — Τετάρτη κλειστά">Τετάρτη κλειστά</span><span class="tr" data-edit="t11" data-edit-label="Text — Thứ Tư nghỉ">Thứ Tư nghỉ</span></span>
+  <div class="hang">
+    <div class="rail" aria-hidden="true"></div>
+    <div class="banners">
+      <div class="bn name">
+        <svg class="dragon" viewBox="0 0 120 34" aria-hidden="true"><path d="M2 30c10 0 12-10 22-10s12 10 22 10 12-14 22-14 12 10 22 10 12-8 28-14"/></svg>
+        <h1><span class="el">Thang Long<em data-edit="t3" data-edit-label="Text: Thăng Long · «ο δράκος που ανεβαίνει»">Thăng Long · «ο δράκος που ανεβαίνει»</em></span><span class="tr">Thăng Long<em data-edit="t4" data-edit-label="Text: «Rồng bay lên»">«Rồng bay lên»</em></span></h1>
+        <p class="bfoot"><span class="el" data-edit="t5" data-edit-label="Text: Μεγ. Αλεξάνδρου 1 · Μεταξουργείο">Μεγ. Αλεξάνδρου 1 · Μεταξουργείο</span><span class="tr" data-edit="t6" data-edit-label="Text: Meg. Alexandrou 1 · Metaxourgeio">Meg. Alexandrou 1 · Metaxourgeio</span></p>
+      </div>
+      <div class="bn photo">
+        <img src="img/01.jpg" alt="Η πρόσοψη του Thang Long στη Μεγ. Αλεξάνδρου" loading="eager">
+      </div>
+      <div class="bn info">
+        <p><span class="el">Αυθεντική βιετναμέζικη κουζίνα στο Μεταξουργείο: <b data-edit="t7" data-edit-label="Text: pho">pho</b>, φρέσκα και τηγανητά ρολά, noodles και κάρυ με ρύζι στον ατμό.</span><span class="tr">Ẩm thực Việt Nam đích thực tại Metaxourgeio: <b data-edit="t8" data-edit-label="Text: phở">phở</b>, gỏi cuốn và chả giò, mì xào và cà ri với cơm trắng.</span></p>
+        <div class="hp">
+          <span class="g num" data-edit="t9" data-edit-label="Text: ★ 4,9">★ 4,9</span>
+          <span><span class="el" data-edit="t10" data-edit-label="Text: 1.916 κριτικές Google">1.916 κριτικές Google</span><span class="tr" data-edit="t11" data-edit-label="Text: 1.916 đánh giá Google">1.916 đánh giá Google</span></span>
+          <span><span class="el" data-edit="t12" data-edit-label="Text: Τετάρτη κλειστά">Τετάρτη κλειστά</span><span class="tr" data-edit="t13" data-edit-label="Text: Thứ Tư nghỉ">Thứ Tư nghỉ</span></span>
+        </div>
       </div>
     </div>
   </div>
-  <div class="hr" role="img" aria-label="Η πρόσοψη του Thang Long στη Μεγ. Αλεξάνδρου"></div>
 </header>
 
 <div class="scroll">
@@ -157,29 +210,29 @@ setTimeout(function(){document.querySelectorAll('.rev').forEach(function(e){e.cl
   <section class="sec">
     <div class="wrap two rev">
       <div>
-        <p class="kick"><span class="el" data-edit="t12" data-edit-label="Text — Το όνομα">Το όνομα</span><span class="tr" data-edit="t13" data-edit-label="Text — Cái tên">Cái tên</span></p>
-        <h2><span class="el" data-edit="t14" data-edit-label="Text — Thăng Long: το παλιό όνομα του Ανόι">Thăng Long: το παλιό όνομα του Ανόι</span><span class="tr" data-edit="t15" data-edit-label="Text — Thăng Long: tên cũ của Hà Nội">Thăng Long: tên cũ của Hà Nội</span></h2>
-        <p><span class="el" data-edit="t16" data-edit-label="Text — Thăng Long σημαίνει «ο δράκος που ανεβ…">Thăng Long σημαίνει «ο δράκος που ανεβαίνει» — έτσι λεγόταν το Ανόι για αιώνες. Το εστιατόριο άνοιξε τον Απρίλιο του 2024 στην πλατεία της Μεγ. Αλεξάνδρου και μέσα σε λίγους μήνες μάζεψε σχεδόν δύο χιλιάδες κριτικές.</span><span class="tr" data-edit="t17" data-edit-label="Text — Thăng Long nghĩa là «rồng bay lên» — t…">Thăng Long nghĩa là «rồng bay lên» — tên gọi của Hà Nội suốt nhiều thế kỷ. Nhà hàng mở tháng 4 năm 2024 tại quảng trường Megalou Alexandrou và chỉ trong vài tháng đã nhận gần hai nghìn đánh giá.</span></p>
-        <p><span class="el" data-edit="t18" data-edit-label="Text — Η κουζίνα δουλεύει με φρέσκα μυρωδικά,…">Η κουζίνα δουλεύει με φρέσκα μυρωδικά, ζωμούς που σιγοβράζουν και σάλτσα κάρυ φτιαγμένη στο μαγαζί. Στον κατάλογο υπάρχει και ξεχωριστή σειρά vegan πιάτων.</span><span class="tr" data-edit="t19" data-edit-label="Text — Bếp dùng rau thơm tươi, nước dùng ninh…">Bếp dùng rau thơm tươi, nước dùng ninh lâu và sốt cà ri tự làm. Thực đơn có riêng một phần các món chay.</span></p>
+        <p class="kick"><span class="el" data-edit="t14" data-edit-label="Text: Το όνομα">Το όνομα</span><span class="tr" data-edit="t15" data-edit-label="Text: Cái tên">Cái tên</span></p>
+        <h2><span class="el" data-edit="t16" data-edit-label="Text: Thăng Long: το παλιό όνομα του Ανόι">Thăng Long: το παλιό όνομα του Ανόι</span><span class="tr" data-edit="t17" data-edit-label="Text: Thăng Long: tên cũ của Hà Nội">Thăng Long: tên cũ của Hà Nội</span></h2>
+        <p><span class="el" data-edit="t18" data-edit-label="Text: Thăng Long σημαίνει «ο δράκος που ανεβ…">Thăng Long σημαίνει «ο δράκος που ανεβαίνει»: έτσι λεγόταν το Ανόι για αιώνες. Το εστιατόριο άνοιξε τον Απρίλιο του 2024 στην πλατεία της Μεγ. Αλεξάνδρου και μέσα σε λίγους μήνες μάζεψε σχεδόν δύο χιλιάδες κριτικές.</span><span class="tr" data-edit="t19" data-edit-label="Text: Thăng Long nghĩa là «rồng bay lên», tê…">Thăng Long nghĩa là «rồng bay lên», tên gọi của Hà Nội suốt nhiều thế kỷ. Nhà hàng mở tháng 4 năm 2024 tại quảng trường Megalou Alexandrou và chỉ trong vài tháng đã nhận gần hai nghìn đánh giá.</span></p>
+        <p><span class="el" data-edit="t20" data-edit-label="Text: Η κουζίνα δουλεύει με φρέσκα μυρωδικά,…">Η κουζίνα δουλεύει με φρέσκα μυρωδικά, ζωμούς που σιγοβράζουν και σάλτσα κάρυ φτιαγμένη στο μαγαζί. Στον κατάλογο υπάρχει και ξεχωριστή σειρά vegan πιάτων.</span><span class="tr" data-edit="t21" data-edit-label="Text: Bếp dùng rau thơm tươi, nước dùng ninh…">Bếp dùng rau thơm tươi, nước dùng ninh lâu và sốt cà ri tự làm. Thực đơn có riêng một phần các món chay.</span></p>
       </div>
       <figure class="fr">
         <img src="img/05.jpg" alt="Ο εσωτερικός χώρος με τους πορτοκαλί καναπέδες" loading="lazy">
-        <figcaption><span class="el" data-edit="t20" data-edit-label="Text — Ο χώρος με τα πορτοκαλί booths.">Ο χώρος με τα πορτοκαλί booths.</span><span class="tr" data-edit="t21" data-edit-label="Text — Không gian với ghế sofa cam.">Không gian với ghế sofa cam.</span></figcaption>
+        <figcaption><span class="el" data-edit="t22" data-edit-label="Text: Ο χώρος με τα πορτοκαλί booths.">Ο χώρος με τα πορτοκαλί booths.</span><span class="tr" data-edit="t23" data-edit-label="Text: Không gian với ghế sofa cam.">Không gian với ghế sofa cam.</span></figcaption>
       </figure>
     </div>
   </section>
 
   <section class="sec jade">
     <div class="wrap">
-      <p class="kick rev"><span class="el" data-edit="t22" data-edit-label="Text — Τρία πιάτα-υπογραφή">Τρία πιάτα-υπογραφή</span><span class="tr" data-edit="t23" data-edit-label="Text — Ba món đặc trưng">Ba món đặc trưng</span></p>
-      <h2 class="rev"><span class="el" data-edit="t24" data-edit-label="Text — Από πού να αρχίσετε">Από πού να αρχίσετε</span><span class="tr" data-edit="t25" data-edit-label="Text — Bắt đầu từ đâu">Bắt đầu từ đâu</span></h2>
+      <p class="kick rev"><span class="el" data-edit="t24" data-edit-label="Text: Τρία πιάτα-υπογραφή">Τρία πιάτα-υπογραφή</span><span class="tr" data-edit="t25" data-edit-label="Text: Ba món đặc trưng">Ba món đặc trưng</span></p>
+      <h2 class="rev"><span class="el" data-edit="t26" data-edit-label="Text: Από πού να αρχίσετε">Από πού να αρχίσετε</span><span class="tr" data-edit="t27" data-edit-label="Text: Bắt đầu từ đâu">Bắt đầu từ đâu</span></h2>
       <div class="cards rev">
         <div class="card"><img src="img/10.jpg" alt="Pho με noodles ρυζιού" loading="lazy">
-          <div class="b"><h3 data-edit="t26" data-edit-label="Heading — Phở">Phở</h3><p><span class="el" data-edit="t27" data-edit-label="Text — Ζωμός που βράζει ώρες, noodles ρυζιού,…">Ζωμός που βράζει ώρες, noodles ρυζιού, φρέσκα μυρωδικά και λάιμ.</span><span class="tr" data-edit="t28" data-edit-label="Text — Nước dùng ninh nhiều giờ, bánh phở, ra…">Nước dùng ninh nhiều giờ, bánh phở, rau thơm và chanh.</span></p></div></div>
+          <div class="b"><h3 data-edit="t28" data-edit-label="Heading: Phở">Phở</h3><p><span class="el" data-edit="t29" data-edit-label="Text: Ζωμός που βράζει ώρες, noodles ρυζιού,…">Ζωμός που βράζει ώρες, noodles ρυζιού, φρέσκα μυρωδικά και λάιμ.</span><span class="tr" data-edit="t30" data-edit-label="Text: Nước dùng ninh nhiều giờ, bánh phở, ra…">Nước dùng ninh nhiều giờ, bánh phở, rau thơm và chanh.</span></p></div></div>
         <div class="card"><img src="img/03.jpg" alt="Τηγανητά ρολά με σως" loading="lazy">
-          <div class="b"><h3 data-edit="t29" data-edit-label="Heading — Chả giò">Chả giò</h3><p><span class="el" data-edit="t30" data-edit-label="Text — Τραγανά ρολά με σως εμβάπτισης — το πι…">Τραγανά ρολά με σως εμβάπτισης — το πιο συνηθισμένο ξεκίνημα.</span><span class="tr" data-edit="t31" data-edit-label="Text — Chả giò giòn với nước chấm — món khai …">Chả giò giòn với nước chấm — món khai vị phổ biến nhất.</span></p></div></div>
+          <div class="b"><h3 data-edit="t31" data-edit-label="Heading: Chả giò">Chả giò</h3><p><span class="el" data-edit="t32" data-edit-label="Text: Τραγανά ρολά με σως εμβάπτισης: το πιο…">Τραγανά ρολά με σως εμβάπτισης: το πιο συνηθισμένο ξεκίνημα.</span><span class="tr" data-edit="t33" data-edit-label="Text: Chả giò giòn với nước chấm: món khai v…">Chả giò giòn với nước chấm: món khai vị phổ biến nhất.</span></p></div></div>
         <div class="card"><img src="img/08.jpg" alt="Κάρυ με ρύζι στον ατμό" loading="lazy">
-          <div class="b"><h3 data-edit="t32" data-edit-label="Heading — Cà ri">Cà ri</h3><p><span class="el" data-edit="t33" data-edit-label="Text — Σάλτσα κάρυ με λαχανικά, μπαμπού και ρ…">Σάλτσα κάρυ με λαχανικά, μπαμπού και ρύζι στον ατμό.</span><span class="tr" data-edit="t34" data-edit-label="Text — Sốt cà ri với rau củ, măng và cơm trắn…">Sốt cà ri với rau củ, măng và cơm trắng.</span></p></div></div>
+          <div class="b"><h3 data-edit="t34" data-edit-label="Heading: Cà ri">Cà ri</h3><p><span class="el" data-edit="t35" data-edit-label="Text: Σάλτσα κάρυ με λαχανικά, μπαμπού και ρ…">Σάλτσα κάρυ με λαχανικά, μπαμπού και ρύζι στον ατμό.</span><span class="tr" data-edit="t36" data-edit-label="Text: Sốt cà ri với rau củ, măng và cơm trắn…">Sốt cà ri với rau củ, măng và cơm trắng.</span></p></div></div>
       </div>
     </div>
   </section>
@@ -187,55 +240,55 @@ setTimeout(function(){document.querySelectorAll('.rev').forEach(function(e){e.cl
   <section class="sec paper">
     <div class="wrap mg">
       <div class="rev">
-        <p class="kick" style="color:#2F6E5B"><span class="el" data-edit="t35" data-edit-label="Text — Από τον κατάλογο">Από τον κατάλογο</span><span class="tr" data-edit="t36" data-edit-label="Text — Từ thực đơn">Từ thực đơn</span></p>
-        <h2><span class="el" data-edit="t37" data-edit-label="Text — Η σειρά με τη σάλτσα κάρυ">Η σειρά με τη σάλτσα κάρυ</span><span class="tr" data-edit="t38" data-edit-label="Text — Dòng món sốt cà ri">Dòng món sốt cà ri</span></h2>
+        <p class="kick" style="color:#2F6E5B"><span class="el" data-edit="t37" data-edit-label="Text: Από τον κατάλογο">Από τον κατάλογο</span><span class="tr" data-edit="t38" data-edit-label="Text: Từ thực đơn">Từ thực đơn</span></p>
+        <h2><span class="el" data-edit="t39" data-edit-label="Text: Η σειρά με τη σάλτσα κάρυ">Η σειρά με τη σάλτσα κάρυ</span><span class="tr" data-edit="t40" data-edit-label="Text: Dòng món sốt cà ri">Dòng món sốt cà ri</span></h2>
         <div class="mrow" style="border-bottom-color:rgba(18,16,14,.14)">
-          <span class="mno" style="color:#2F6E5B" data-edit="t39" data-edit-label="Text — M25">M25</span>
-          <span class="n"><b><span class="el" data-edit="t40" data-edit-label="Text — Βοδινό με σάλτσα κάρυ">Βοδινό με σάλτσα κάρυ</span><span class="tr" data-edit="t41" data-edit-label="Text — Bò sốt cà ri">Bò sốt cà ri</span></b>
-            <i><span class="el" data-edit="t42" data-edit-label="Text — Καρότα, κολοκύθι, πιπεριά, κρεμμύδια, …">Καρότα, κολοκύθι, πιπεριά, κρεμμύδια, μανιτάρια, μπαμπού, ρύζι στον ατμό</span><span class="tr" data-edit="t43" data-edit-label="Text — Cà rốt, bí, ớt chuông, hành, nấm, măng…">Cà rốt, bí, ớt chuông, hành, nấm, măng, cơm trắng</span></i></span>
-          <b class="pr" data-edit="t44" data-edit-label="Text — 13,75 €">13,75 €</b></div>
+          <span class="mno" style="color:#2F6E5B" data-edit="t41" data-edit-label="Text: M25">M25</span>
+          <span class="n"><b><span class="el" data-edit="t42" data-edit-label="Text: Βοδινό με σάλτσα κάρυ">Βοδινό με σάλτσα κάρυ</span><span class="tr" data-edit="t43" data-edit-label="Text: Bò sốt cà ri">Bò sốt cà ri</span></b>
+            <i><span class="el" data-edit="t44" data-edit-label="Text: Καρότα, κολοκύθι, πιπεριά, κρεμμύδια, …">Καρότα, κολοκύθι, πιπεριά, κρεμμύδια, μανιτάρια, μπαμπού, ρύζι στον ατμό</span><span class="tr" data-edit="t45" data-edit-label="Text: Cà rốt, bí, ớt chuông, hành, nấm, măng…">Cà rốt, bí, ớt chuông, hành, nấm, măng, cơm trắng</span></i></span>
+          <b class="pr" data-edit="t46" data-edit-label="Text: 13,75 €">13,75 €</b></div>
         <div class="mrow" style="border-bottom-color:rgba(18,16,14,.14)">
-          <span class="mno" style="color:#2F6E5B" data-edit="t45" data-edit-label="Text — M27">M27</span>
-          <span class="n"><b><span class="el" data-edit="t46" data-edit-label="Text — Γαρίδες με σάλτσα κάρυ">Γαρίδες με σάλτσα κάρυ</span><span class="tr" data-edit="t47" data-edit-label="Text — Tôm sốt cà ri">Tôm sốt cà ri</span></b>
-            <i><span class="el" data-edit="t48" data-edit-label="Text — Καρότα, κολοκύθι, πιπεριά, μανιτάρια, …">Καρότα, κολοκύθι, πιπεριά, μανιτάρια, μπαμπού, μπρόκολο, ρύζι στον ατμό</span><span class="tr" data-edit="t49" data-edit-label="Text — Cà rốt, bí, ớt chuông, nấm, măng, bông…">Cà rốt, bí, ớt chuông, nấm, măng, bông cải, cơm trắng</span></i></span>
-          <b class="pr" data-edit="t50" data-edit-label="Text — 15,40 €">15,40 €</b></div>
+          <span class="mno" style="color:#2F6E5B" data-edit="t47" data-edit-label="Text: M27">M27</span>
+          <span class="n"><b><span class="el" data-edit="t48" data-edit-label="Text: Γαρίδες με σάλτσα κάρυ">Γαρίδες με σάλτσα κάρυ</span><span class="tr" data-edit="t49" data-edit-label="Text: Tôm sốt cà ri">Tôm sốt cà ri</span></b>
+            <i><span class="el" data-edit="t50" data-edit-label="Text: Καρότα, κολοκύθι, πιπεριά, μανιτάρια, …">Καρότα, κολοκύθι, πιπεριά, μανιτάρια, μπαμπού, μπρόκολο, ρύζι στον ατμό</span><span class="tr" data-edit="t51" data-edit-label="Text: Cà rốt, bí, ớt chuông, nấm, măng, bông…">Cà rốt, bí, ớt chuông, nấm, măng, bông cải, cơm trắng</span></i></span>
+          <b class="pr" data-edit="t52" data-edit-label="Text: 15,40 €">15,40 €</b></div>
         <div class="mrow" style="border-bottom-color:rgba(18,16,14,.14)">
-          <span class="mno" style="color:#2F6E5B" data-edit="t51" data-edit-label="Text — M28">M28</span>
-          <span class="n"><b><span class="el" data-edit="t52" data-edit-label="Text — Πάπια με σάλτσα κάρυ">Πάπια με σάλτσα κάρυ</span><span class="tr" data-edit="t53" data-edit-label="Text — Vịt sốt cà ri">Vịt sốt cà ri</span></b>
-            <i><span class="el" data-edit="t54" data-edit-label="Text — Καρότα, κολοκύθι, πιπεριά, κρεμμύδια, …">Καρότα, κολοκύθι, πιπεριά, κρεμμύδια, μανιτάρια, μπαμπού, ρύζι στον ατμό</span><span class="tr" data-edit="t55" data-edit-label="Text — Cà rốt, bí, ớt chuông, hành, nấm, măng…">Cà rốt, bí, ớt chuông, hành, nấm, măng, cơm trắng</span></i></span>
-          <b class="pr" data-edit="t56" data-edit-label="Text — 16,50 €">16,50 €</b></div>
-        <p class="note" style="background:rgba(47,110,91,.1);border-inline-start-color:#2F6E5B"><span class="el" data-edit="t57" data-edit-label="Text — Ο πλήρης κατάλογος έχει πάνω από εξήντ…">Ο πλήρης κατάλογος έχει πάνω από εξήντα πιάτα — pho, noodles, ρολά, ψητά και χορτοφαγικές επιλογές. Ρωτήστε στο μαγαζί ή τηλεφωνήστε μας.</span><span class="tr" data-edit="t58" data-edit-label="Text — Thực đơn đầy đủ có hơn sáu mươi món — …">Thực đơn đầy đủ có hơn sáu mươi món — phở, mì, cuốn, món nướng và các lựa chọn chay. Hỏi tại nhà hàng hoặc gọi cho chúng tôi.</span></p>
+          <span class="mno" style="color:#2F6E5B" data-edit="t53" data-edit-label="Text: M28">M28</span>
+          <span class="n"><b><span class="el" data-edit="t54" data-edit-label="Text: Πάπια με σάλτσα κάρυ">Πάπια με σάλτσα κάρυ</span><span class="tr" data-edit="t55" data-edit-label="Text: Vịt sốt cà ri">Vịt sốt cà ri</span></b>
+            <i><span class="el" data-edit="t56" data-edit-label="Text: Καρότα, κολοκύθι, πιπεριά, κρεμμύδια, …">Καρότα, κολοκύθι, πιπεριά, κρεμμύδια, μανιτάρια, μπαμπού, ρύζι στον ατμό</span><span class="tr" data-edit="t57" data-edit-label="Text: Cà rốt, bí, ớt chuông, hành, nấm, măng…">Cà rốt, bí, ớt chuông, hành, nấm, măng, cơm trắng</span></i></span>
+          <b class="pr" data-edit="t58" data-edit-label="Text: 16,50 €">16,50 €</b></div>
+        <p class="note" style="background:rgba(47,110,91,.1);border-inline-start-color:#2F6E5B"><span class="el" data-edit="t59" data-edit-label="Text: Ο πλήρης κατάλογος έχει πάνω από εξήντ…">Ο πλήρης κατάλογος έχει πάνω από εξήντα πιάτα: pho, noodles, ρολά, ψητά και χορτοφαγικές επιλογές. Ρωτήστε στο μαγαζί ή τηλεφωνήστε μας.</span><span class="tr" data-edit="t60" data-edit-label="Text: Thực đơn đầy đủ có hơn sáu mươi món: p…">Thực đơn đầy đủ có hơn sáu mươi món: phở, mì, cuốn, món nướng và các lựa chọn chay. Hỏi tại nhà hàng hoặc gọi cho chúng tôi.</span></p>
       </div>
       <figure class="fr rev">
         <img src="img/02.jpg" alt="Ο κατάλογος με τη σειρά κάρυ" loading="lazy">
-        <figcaption><span class="el" data-edit="t59" data-edit-label="Text — Ο κατάλογος — κάθε πιάτο με φωτογραφία…">Ο κατάλογος — κάθε πιάτο με φωτογραφία, στα ελληνικά και στα αγγλικά.</span><span class="tr" data-edit="t60" data-edit-label="Text — Thực đơn — mỗi món có ảnh, tiếng Hy Lạ…">Thực đơn — mỗi món có ảnh, tiếng Hy Lạp và tiếng Anh.</span></figcaption>
+        <figcaption><span class="el" data-edit="t61" data-edit-label="Text: Ο κατάλογος: κάθε πιάτο με φωτογραφία,…">Ο κατάλογος: κάθε πιάτο με φωτογραφία, στα ελληνικά και στα αγγλικά.</span><span class="tr" data-edit="t62" data-edit-label="Text: Thực đơn: mỗi món có ảnh, tiếng Hy Lạp…">Thực đơn: mỗi món có ảnh, tiếng Hy Lạp và tiếng Anh.</span></figcaption>
       </figure>
     </div>
   </section>
 
   <section class="sec">
     <div class="wrap">
-      <p class="kick rev"><span class="el" data-edit="t61" data-edit-label="Text — Στο τραπέζι">Στο τραπέζι</span><span class="tr" data-edit="t62" data-edit-label="Text — Trên bàn ăn">Trên bàn ăn</span></p>
-      <h2 class="rev"><span class="el" data-edit="t63" data-edit-label="Text — Ό,τι βγαίνει από την κουζίνα">Ό,τι βγαίνει από την κουζίνα</span><span class="tr" data-edit="t64" data-edit-label="Text — Những gì ra khỏi bếp">Những gì ra khỏi bếp</span></h2>
+      <p class="kick rev"><span class="el" data-edit="t63" data-edit-label="Text: Στο τραπέζι">Στο τραπέζι</span><span class="tr" data-edit="t64" data-edit-label="Text: Trên bàn ăn">Trên bàn ăn</span></p>
+      <h2 class="rev"><span class="el" data-edit="t65" data-edit-label="Text: Ό,τι βγαίνει από την κουζίνα">Ό,τι βγαίνει από την κουζίνα</span><span class="tr" data-edit="t66" data-edit-label="Text: Những gì ra khỏi bếp">Những gì ra khỏi bếp</span></h2>
       <div class="trio rev">
-        <figure class="fr"><img src="img/07.jpg" alt="Τραπέζι με πολλά πιάτα" loading="lazy"><figcaption><span class="el" data-edit="t65" data-edit-label="Text — Τραπέζι για παρέα.">Τραπέζι για παρέα.</span><span class="tr" data-edit="t66" data-edit-label="Text — Bàn cho nhóm.">Bàn cho nhóm.</span></figcaption></figure>
-        <figure class="fr"><img src="img/04.jpg" alt="Τηγανητά noodles με λαχανικά" loading="lazy"><figcaption><span class="el" data-edit="t67" data-edit-label="Text — Noodles με λαχανικά.">Noodles με λαχανικά.</span><span class="tr" data-edit="t68" data-edit-label="Text — Mì xào rau.">Mì xào rau.</span></figcaption></figure>
-        <figure class="fr"><img src="img/09.jpg" alt="Πιάτο με ρύζι και λαχανικά" loading="lazy"><figcaption><span class="el" data-edit="t69" data-edit-label="Text — Ρύζι με σάλτσα.">Ρύζι με σάλτσα.</span><span class="tr" data-edit="t70" data-edit-label="Text — Cơm với sốt.">Cơm với sốt.</span></figcaption></figure>
-        <figure class="fr"><img src="img/06.jpg" alt="Πιάτο με ρύζι και σαλάτα" loading="lazy"><figcaption><span class="el" data-edit="t71" data-edit-label="Text — Μερίδα με ρύζι.">Μερίδα με ρύζι.</span><span class="tr" data-edit="t72" data-edit-label="Text — Phần cơm.">Phần cơm.</span></figcaption></figure>
-        <figure class="fr"><img src="img/03.jpg" alt="Ρολά με σως" loading="lazy"><figcaption><span class="el" data-edit="t73" data-edit-label="Text — Ρολά με σως.">Ρολά με σως.</span><span class="tr" data-edit="t74" data-edit-label="Text — Cuốn với nước chấm.">Cuốn với nước chấm.</span></figcaption></figure>
-        <figure class="fr"><img src="img/10.jpg" alt="Pho σε μπολ" loading="lazy"><figcaption><span class="el" data-edit="t75" data-edit-label="Text — Pho σε μπολ.">Pho σε μπολ.</span><span class="tr" data-edit="t76" data-edit-label="Text — Phở trong tô.">Phở trong tô.</span></figcaption></figure>
+        <figure class="fr"><img src="img/07.jpg" alt="Τραπέζι με πολλά πιάτα" loading="lazy"><figcaption><span class="el" data-edit="t67" data-edit-label="Text: Τραπέζι για παρέα.">Τραπέζι για παρέα.</span><span class="tr" data-edit="t68" data-edit-label="Text: Bàn cho nhóm.">Bàn cho nhóm.</span></figcaption></figure>
+        <figure class="fr"><img src="img/04.jpg" alt="Τηγανητά noodles με λαχανικά" loading="lazy"><figcaption><span class="el" data-edit="t69" data-edit-label="Text: Noodles με λαχανικά.">Noodles με λαχανικά.</span><span class="tr" data-edit="t70" data-edit-label="Text: Mì xào rau.">Mì xào rau.</span></figcaption></figure>
+        <figure class="fr"><img src="img/09.jpg" alt="Πιάτο με ρύζι και λαχανικά" loading="lazy"><figcaption><span class="el" data-edit="t71" data-edit-label="Text: Ρύζι με σάλτσα.">Ρύζι με σάλτσα.</span><span class="tr" data-edit="t72" data-edit-label="Text: Cơm với sốt.">Cơm với sốt.</span></figcaption></figure>
+        <figure class="fr"><img src="img/06.jpg" alt="Πιάτο με ρύζι και σαλάτα" loading="lazy"><figcaption><span class="el" data-edit="t73" data-edit-label="Text: Μερίδα με ρύζι.">Μερίδα με ρύζι.</span><span class="tr" data-edit="t74" data-edit-label="Text: Phần cơm.">Phần cơm.</span></figcaption></figure>
+        <figure class="fr"><img src="img/03.jpg" alt="Ρολά με σως" loading="lazy"><figcaption><span class="el" data-edit="t75" data-edit-label="Text: Ρολά με σως.">Ρολά με σως.</span><span class="tr" data-edit="t76" data-edit-label="Text: Cuốn với nước chấm.">Cuốn với nước chấm.</span></figcaption></figure>
+        <figure class="fr"><img src="img/10.jpg" alt="Pho σε μπολ" loading="lazy"><figcaption><span class="el" data-edit="t77" data-edit-label="Text: Pho σε μπολ.">Pho σε μπολ.</span><span class="tr" data-edit="t78" data-edit-label="Text: Phở trong tô.">Phở trong tô.</span></figcaption></figure>
       </div>
     </div>
   </section>
 
   <section class="sec jade">
     <div class="wrap">
-      <p class="kick rev"><span class="el" data-edit="t77" data-edit-label="Text — Κριτικές Google">Κριτικές Google</span><span class="tr" data-edit="t78" data-edit-label="Text — Đánh giá Google">Đánh giá Google</span></p>
-      <h2 class="rev"><span class="num" data-edit="t79" data-edit-label="Text — ★ 4,9">★ 4,9</span> <span class="el" data-edit="t80" data-edit-label="Text — από 1.916 κριτικές">από 1.916 κριτικές</span><span class="tr" data-edit="t81" data-edit-label="Text — từ 1.916 đánh giá">từ 1.916 đánh giá</span></h2>
+      <p class="kick rev"><span class="el" data-edit="t79" data-edit-label="Text: Κριτικές Google">Κριτικές Google</span><span class="tr" data-edit="t80" data-edit-label="Text: Đánh giá Google">Đánh giá Google</span></p>
+      <h2 class="rev"><span class="num" data-edit="t81" data-edit-label="Text: ★ 4,9">★ 4,9</span> <span class="el" data-edit="t82" data-edit-label="Text: από 1.916 κριτικές">από 1.916 κριτικές</span><span class="tr" data-edit="t83" data-edit-label="Text: từ 1.916 đánh giá">từ 1.916 đánh giá</span></h2>
       <div class="qs rev">
-        <div class="q"><q dir="ltr" data-edit="t82" data-edit-label="Quote — Δεν το περιμένεις στη συγκεκριμένη πλα…">Δεν το περιμένεις στη συγκεκριμένη πλατεία να βρεις τόσο καλό φαγητό!! Πράγματι, ό,τι έχουμε πάρει είναι πεντανόστιμο.</q><div class="w" data-edit="t83" data-edit-label="Text — Έλενα Παπαδοπούλου · Google">Έλενα Παπαδοπούλου · Google</div></div>
-        <div class="q"><q dir="ltr" data-edit="t84" data-edit-label="Quote — Νοστιμότατο, καθαρές γεύσεις, εξαιρετι…">Νοστιμότατο, καθαρές γεύσεις, εξαιρετικό σέρβις! Κάνε χάρη στον εαυτό σου και δοκίμασέ το.</q><div class="w" data-edit="t85" data-edit-label="Text — Dionyssis Bourazanis · Google">Dionyssis Bourazanis · Google</div></div>
-        <div class="q"><q dir="ltr" data-edit="t86" data-edit-label="Quote — Πήγα για φαγητό μόνος μου. Ήταν πολύ γ…">Πήγα για φαγητό μόνος μου. Ήταν πολύ γευστικά πιάτα, πήρα μια σαλάτα με μοσχάρι και λαχανικά.</q><div class="w" data-edit="t87" data-edit-label="Text — Ilias Aslan · Google">Ilias Aslan · Google</div></div>
+        <div class="q"><q dir="ltr" data-edit="t84" data-edit-label="Quote: Δεν το περιμένεις στη συγκεκριμένη πλα…">Δεν το περιμένεις στη συγκεκριμένη πλατεία να βρεις τόσο καλό φαγητό!! Πράγματι, ό,τι έχουμε πάρει είναι πεντανόστιμο.</q><div class="w" data-edit="t85" data-edit-label="Text: Έλενα Παπαδοπούλου · Google">Έλενα Παπαδοπούλου · Google</div></div>
+        <div class="q"><q dir="ltr" data-edit="t86" data-edit-label="Quote: Νοστιμότατο, καθαρές γεύσεις, εξαιρετι…">Νοστιμότατο, καθαρές γεύσεις, εξαιρετικό σέρβις! Κάνε χάρη στον εαυτό σου και δοκίμασέ το.</q><div class="w" data-edit="t87" data-edit-label="Text: Dionyssis Bourazanis · Google">Dionyssis Bourazanis · Google</div></div>
+        <div class="q"><q dir="ltr" data-edit="t88" data-edit-label="Quote: Πήγα για φαγητό μόνος μου. Ήταν πολύ γ…">Πήγα για φαγητό μόνος μου. Ήταν πολύ γευστικά πιάτα, πήρα μια σαλάτα με μοσχάρι και λαχανικά.</q><div class="w" data-edit="t89" data-edit-label="Text: Ilias Aslan · Google">Ilias Aslan · Google</div></div>
       </div>
     </div>
   </section>
@@ -243,45 +296,45 @@ setTimeout(function(){document.querySelectorAll('.rev').forEach(function(e){e.cl
   <section class="sec">
     <div class="wrap two rev">
       <div>
-        <p class="kick"><span class="el" data-edit="t88" data-edit-label="Text — Ωράριο">Ωράριο</span><span class="tr" data-edit="t89" data-edit-label="Text — Giờ mở cửa">Giờ mở cửa</span></p>
-        <h2><span class="el" data-edit="t90" data-edit-label="Text — Πότε είμαστε ανοιχτά">Πότε είμαστε ανοιχτά</span><span class="tr" data-edit="t91" data-edit-label="Text — Khi nào chúng tôi mở cửa">Khi nào chúng tôi mở cửa</span></h2>
+        <p class="kick"><span class="el" data-edit="t90" data-edit-label="Text: Ωράριο">Ωράριο</span><span class="tr" data-edit="t91" data-edit-label="Text: Giờ mở cửa">Giờ mở cửa</span></p>
+        <h2><span class="el" data-edit="t92" data-edit-label="Text: Πότε είμαστε ανοιχτά">Πότε είμαστε ανοιχτά</span><span class="tr" data-edit="t93" data-edit-label="Text: Khi nào chúng tôi mở cửa">Khi nào chúng tôi mở cửa</span></h2>
         <table>
-          <tr><td><span class="el" data-edit="t92" data-edit-label="Text — Δευτέρα">Δευτέρα</span><span class="tr" data-edit="t93" data-edit-label="Text — Thứ Hai">Thứ Hai</span></td><td class="num" data-edit="t94" data-edit-label="Menu / table — 12:00–00:00">12:00–00:00</td></tr>
-          <tr><td><span class="el" data-edit="t95" data-edit-label="Text — Τρίτη">Τρίτη</span><span class="tr" data-edit="t96" data-edit-label="Text — Thứ Ba">Thứ Ba</span></td><td class="num" data-edit="t97" data-edit-label="Menu / table — 12:00–00:00">12:00–00:00</td></tr>
-          <tr class="cl"><td><span class="el" data-edit="t98" data-edit-label="Text — Τετάρτη">Τετάρτη</span><span class="tr" data-edit="t99" data-edit-label="Text — Thứ Tư">Thứ Tư</span></td><td><span class="el" data-edit="t100" data-edit-label="Text — Κλειστά">Κλειστά</span><span class="tr" data-edit="t101" data-edit-label="Text — Nghỉ">Nghỉ</span></td></tr>
-          <tr><td><span class="el" data-edit="t102" data-edit-label="Text — Πέμπτη">Πέμπτη</span><span class="tr" data-edit="t103" data-edit-label="Text — Thứ Năm">Thứ Năm</span></td><td class="num" data-edit="t104" data-edit-label="Menu / table — 12:00–00:00">12:00–00:00</td></tr>
-          <tr><td><span class="el" data-edit="t105" data-edit-label="Text — Παρασκευή">Παρασκευή</span><span class="tr" data-edit="t106" data-edit-label="Text — Thứ Sáu">Thứ Sáu</span></td><td class="num" data-edit="t107" data-edit-label="Menu / table — 12:00–00:00">12:00–00:00</td></tr>
-          <tr><td><span class="el" data-edit="t108" data-edit-label="Text — Σάββατο">Σάββατο</span><span class="tr" data-edit="t109" data-edit-label="Text — Thứ Bảy">Thứ Bảy</span></td><td class="num" data-edit="t110" data-edit-label="Menu / table — 12:00–00:00">12:00–00:00</td></tr>
-          <tr><td><span class="el" data-edit="t111" data-edit-label="Text — Κυριακή">Κυριακή</span><span class="tr" data-edit="t112" data-edit-label="Text — Chủ Nhật">Chủ Nhật</span></td><td class="num" data-edit="t113" data-edit-label="Menu / table — 12:00–00:00">12:00–00:00</td></tr>
+          <tr><td><span class="el" data-edit="t94" data-edit-label="Text: Δευτέρα">Δευτέρα</span><span class="tr" data-edit="t95" data-edit-label="Text: Thứ Hai">Thứ Hai</span></td><td class="num" data-edit="t96" data-edit-label="Menu / table: 12:00–00:00">12:00–00:00</td></tr>
+          <tr><td><span class="el" data-edit="t97" data-edit-label="Text: Τρίτη">Τρίτη</span><span class="tr" data-edit="t98" data-edit-label="Text: Thứ Ba">Thứ Ba</span></td><td class="num" data-edit="t99" data-edit-label="Menu / table: 12:00–00:00">12:00–00:00</td></tr>
+          <tr class="cl"><td><span class="el" data-edit="t100" data-edit-label="Text: Τετάρτη">Τετάρτη</span><span class="tr" data-edit="t101" data-edit-label="Text: Thứ Tư">Thứ Tư</span></td><td><span class="el" data-edit="t102" data-edit-label="Text: Κλειστά">Κλειστά</span><span class="tr" data-edit="t103" data-edit-label="Text: Nghỉ">Nghỉ</span></td></tr>
+          <tr><td><span class="el" data-edit="t104" data-edit-label="Text: Πέμπτη">Πέμπτη</span><span class="tr" data-edit="t105" data-edit-label="Text: Thứ Năm">Thứ Năm</span></td><td class="num" data-edit="t106" data-edit-label="Menu / table: 12:00–00:00">12:00–00:00</td></tr>
+          <tr><td><span class="el" data-edit="t107" data-edit-label="Text: Παρασκευή">Παρασκευή</span><span class="tr" data-edit="t108" data-edit-label="Text: Thứ Sáu">Thứ Sáu</span></td><td class="num" data-edit="t109" data-edit-label="Menu / table: 12:00–00:00">12:00–00:00</td></tr>
+          <tr><td><span class="el" data-edit="t110" data-edit-label="Text: Σάββατο">Σάββατο</span><span class="tr" data-edit="t111" data-edit-label="Text: Thứ Bảy">Thứ Bảy</span></td><td class="num" data-edit="t112" data-edit-label="Menu / table: 12:00–00:00">12:00–00:00</td></tr>
+          <tr><td><span class="el" data-edit="t113" data-edit-label="Text: Κυριακή">Κυριακή</span><span class="tr" data-edit="t114" data-edit-label="Text: Chủ Nhật">Chủ Nhật</span></td><td class="num" data-edit="t115" data-edit-label="Menu / table: 12:00–00:00">12:00–00:00</td></tr>
         </table>
       </div>
       <div>
-        <p class="kick"><span class="el" data-edit="t114" data-edit-label="Text — Πού είμαστε">Πού είμαστε</span><span class="tr" data-edit="t115" data-edit-label="Text — Địa chỉ">Địa chỉ</span></p>
-        <h2><span class="el" data-edit="t116" data-edit-label="Text — Μεγ. Αλεξάνδρου 1">Μεγ. Αλεξάνδρου 1</span><span class="tr" data-edit="t117" data-edit-label="Text — Meg. Alexandrou 1">Meg. Alexandrou 1</span></h2>
-        <p style="font-size:19px"><b class="ad" data-edit="t118" data-edit-label="Text — Μεγ. Αλεξάνδρου 1, Αθήνα 104 37">Μεγ. Αλεξάνδρου 1, Αθήνα 104 37</b><br>
-          <span class="el" data-edit="t119" data-edit-label="Text — Μεταξουργείο — στην πλατεία, δίπλα στο…">Μεταξουργείο — στην πλατεία, δίπλα στο μετρό</span><span class="tr" data-edit="t120" data-edit-label="Text — Metaxourgeio — ngay quảng trường, cạnh…">Metaxourgeio — ngay quảng trường, cạnh ga tàu điện ngầm</span><br>
-          <b class="ph num" data-edit="t121" data-edit-label="Text — +30 21 0523 1803">+30 21 0523 1803</b></p>
+        <p class="kick"><span class="el" data-edit="t116" data-edit-label="Text: Πού είμαστε">Πού είμαστε</span><span class="tr" data-edit="t117" data-edit-label="Text: Địa chỉ">Địa chỉ</span></p>
+        <h2><span class="el" data-edit="t118" data-edit-label="Text: Μεγ. Αλεξάνδρου 1">Μεγ. Αλεξάνδρου 1</span><span class="tr" data-edit="t119" data-edit-label="Text: Meg. Alexandrou 1">Meg. Alexandrou 1</span></h2>
+        <p style="font-size:19px"><b class="ad" data-edit="t120" data-edit-label="Text: Μεγ. Αλεξάνδρου 1, Αθήνα 104 37">Μεγ. Αλεξάνδρου 1, Αθήνα 104 37</b><br>
+          <span class="el" data-edit="t121" data-edit-label="Text: Μεταξουργείο · στην πλατεία, δίπλα στο…">Μεταξουργείο · στην πλατεία, δίπλα στο μετρό</span><span class="tr" data-edit="t122" data-edit-label="Text: Metaxourgeio · ngay quảng trường, cạnh…">Metaxourgeio · ngay quảng trường, cạnh ga tàu điện ngầm</span><br>
+          <b class="ph num" data-edit="t123" data-edit-label="Text: +30 21 0523 1803">+30 21 0523 1803</b></p>
         <p>
-          <a class="btn" href="tel:+302105231803"><span class="el" data-edit="t122" data-edit-label="Text — Τηλέφωνο">Τηλέφωνο</span><span class="tr" data-edit="t123" data-edit-label="Text — Gọi điện">Gọi điện</span></a>
-          <a class="btn o" href="https://www.instagram.com/thanglong_athens/" target="_blank" rel="noopener" data-edit="t124" data-edit-label="Button / link — Instagram">Instagram</a>
-          <a class="btn o" href="https://www.google.com/maps?cid=2957705058175548557" target="_blank" rel="noopener"><span class="el" data-edit="t125" data-edit-label="Text — Χάρτης">Χάρτης</span><span class="tr" data-edit="t126" data-edit-label="Text — Bản đồ">Bản đồ</span></a>
+          <a class="btn" href="tel:+302105231803"><span class="el" data-edit="t124" data-edit-label="Text: Τηλέφωνο">Τηλέφωνο</span><span class="tr" data-edit="t125" data-edit-label="Text: Gọi điện">Gọi điện</span></a>
+          <a class="btn o" href="https://www.instagram.com/thanglong_athens/" target="_blank" rel="noopener" data-edit="t126" data-edit-label="Button / link: Instagram">Instagram</a>
+          <a class="btn o" href="https://www.google.com/maps?cid=2957705058175548557" target="_blank" rel="noopener"><span class="el" data-edit="t127" data-edit-label="Text: Χάρτης">Χάρτης</span><span class="tr" data-edit="t128" data-edit-label="Text: Bản đồ">Bản đồ</span></a>
         </p>
       </div>
     </div>
-    <div class="wrap"><footer><p><b data-edit="t127" data-edit-label="Text — Thang Long · Thăng Long">Thang Long · Thăng Long</b> — Μεγ. Αλεξάνδρου 1, Αθήνα 104 37 · <span class="num" data-edit="t128" data-edit-label="Text — +30 21 0523 1803">+30 21 0523 1803</span></p></footer></div>
+    <div class="wrap"><footer><p><b data-edit="t129" data-edit-label="Text: Thang Long · Thăng Long">Thang Long · Thăng Long</b> · Μεγ. Αλεξάνδρου 1, Αθήνα 104 37 · <span class="num" data-edit="t130" data-edit-label="Text: +30 21 0523 1803">+30 21 0523 1803</span></p></footer></div>
   </section>
 </div>
 
 <nav class="bar">
   <a class="p" href="tel:+302105231803">
     <svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.4.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C11 21 3 13 3 3c0-.6.4-1 1-1h3.4c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.2 1l-2.2 2.2z"/></svg>
-    <span class="el" data-edit="t129" data-edit-label="Text — Κλήση">Κλήση</span><span class="tr" data-edit="t130" data-edit-label="Text — Gọi">Gọi</span></a>
+    <span class="el" data-edit="t131" data-edit-label="Text: Κλήση">Κλήση</span><span class="tr" data-edit="t132" data-edit-label="Text: Gọi">Gọi</span></a>
   <a href="https://www.instagram.com/thanglong_athens/" target="_blank" rel="noopener" aria-label="Instagram">
     <svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.3 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .3-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.3-1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.3 2.2-.4C8.4 2.2 8.8 2.2 12 2.2zm0 3.2A6.6 6.6 0 1 0 18.6 12 6.6 6.6 0 0 0 12 5.4zm0 10.9A4.3 4.3 0 1 1 16.3 12 4.3 4.3 0 0 1 12 16.3zm6.9-11.1a1.5 1.5 0 1 1-1.5-1.5 1.5 1.5 0 0 1 1.5 1.5z"/></svg>
     Instagram</a>
   <a href="https://www.google.com/maps?cid=2957705058175548557" target="_blank" rel="noopener">
     <svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>
-    <span class="el" data-edit="t131" data-edit-label="Text — Χάρτης">Χάρτης</span><span class="tr" data-edit="t132" data-edit-label="Text — Bản đồ">Bản đồ</span></a>
+    <span class="el" data-edit="t133" data-edit-label="Text: Χάρτης">Χάρτης</span><span class="tr" data-edit="t134" data-edit-label="Text: Bản đồ">Bản đồ</span></a>
 </nav>
 </body>
 </html>

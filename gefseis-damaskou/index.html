@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Γεύσεις της Δαμασκού — Φωκίωνος Νέγρη 19, Κυψέλη</title>
+<title>Γεύσεις της Δαμασκού · Φωκίωνος Νέγρη 19, Κυψέλη</title>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@500;600;700&family=Fira+Sans:wght@300;400;500;700&family=Readex+Pro:wght@300;400;600&display=swap" rel="stylesheet">
 <style>
-:root{--green:#14685C;--green-d:#0C4A41;--green-l:#1F8577;--gold:#C9A227;--cream:#EFE7DA;--ink:#1B211F}
+:root{--green:#14685C;--green-d:#0C4A41;--green-l:#1F8577;--gold:#C9A227;--gold-l:#EBC55A;--cream:#EFE7DA;--ink:#1B211F}
 *{margin:0;padding:0;box-sizing:border-box}
 body{background:var(--cream);color:var(--ink);font:400 17px/1.78 'Fira Sans',system-ui,sans-serif}
 html.alt body{font-family:'Readex Pro','Fira Sans',sans-serif}
@@ -30,27 +30,47 @@ a{color:inherit}
   background-size:180px 180px,260px 260px,220px 220px,300px 300px,190px 190px,240px 240px}
 .slab+.slab{border-top:6px solid rgba(27,33,31,.10)}
 .slab.deep{background-color:var(--green);color:var(--cream);border-top-color:rgba(239,231,218,.16)}
-.slab.deep .kick{color:var(--gold)}
+.slab.deep .kick{color:var(--gold-l)}
 .kick{font:700 12px/1 'Fira Sans',sans-serif;letter-spacing:.3em;text-transform:uppercase;color:var(--green);margin-bottom:12px}
 h2{font-size:clamp(30px,5.2vw,58px);margin-bottom:20px}
 p+p{margin-top:15px}
-/* hero */
-header{display:grid;grid-template-columns:1.05fr .95fr;min-height:clamp(600px,92svh,820px);max-height:880px}
-.hl{background:var(--green);color:var(--cream);display:flex;flex-direction:column;justify-content:center;
-  padding:clamp(34px,5vw,74px) clamp(26px,5vw,62px);position:relative;overflow:hidden}
-.hl::after{content:"";position:absolute;inset-inline-end:-90px;bottom:-90px;width:320px;height:320px;
-  border:22px solid rgba(201,162,39,.16);border-radius:50%}
-.leaf{width:56px;height:56px;fill:none;stroke:var(--gold);stroke-width:1.6;margin-bottom:16px;
+/* hero: DIAGONAL BAND, one deep-green ribbon crossing the terrazzo court */
+header{position:relative;min-height:clamp(600px,92svh,820px);max-height:860px;overflow:hidden}
+.hfield{position:absolute;inset:0;background-color:var(--cream);background-image:
+    radial-gradient(circle at 12% 22%,rgba(201,162,39,.22) 0 3px,transparent 4px),
+    radial-gradient(circle at 34% 68%,rgba(20,104,92,.18) 0 4px,transparent 5px),
+    radial-gradient(circle at 61% 18%,rgba(27,33,31,.15) 0 3px,transparent 4px),
+    radial-gradient(circle at 78% 74%,rgba(201,162,39,.16) 0 5px,transparent 6px),
+    radial-gradient(circle at 88% 36%,rgba(20,104,92,.15) 0 3px,transparent 4px),
+    radial-gradient(circle at 47% 92%,rgba(27,33,31,.12) 0 4px,transparent 5px);
+  background-size:180px 180px,260px 260px,220px 220px,300px 300px,190px 190px,240px 240px}
+.htop{position:absolute;z-index:3;top:clamp(20px,3.2vw,38px);inset-inline-start:clamp(20px,4vw,56px);
+  display:flex;align-items:center;gap:14px}
+.leaf{width:44px;height:44px;fill:none;stroke:var(--green);stroke-width:1.6;flex:none;
   animation:sway 14s ease-in-out infinite;transform-origin:50% 100%}
-@keyframes sway{0%,100%{transform:rotate(-1.1deg)}50%{transform:rotate(1.1deg)}}
-h1{font-size:clamp(38px,6.6vw,74px);margin:0}
-h1 em{display:block;font-style:normal;font-size:.5em;color:var(--gold);letter-spacing:.02em;margin-top:8px}
-.hl p{margin-top:16px;font-size:clamp(16px,1.9vw,20px);max-width:40ch;color:#D8E5E1}
-.hb{margin-top:24px;display:flex;flex-wrap:wrap;gap:9px}
-.hb span{border:1px solid rgba(239,231,218,.42);border-radius:999px;padding:8px 14px;font:500 13px/1 'Fira Sans',sans-serif}
+@keyframes sway{0%,100%{transform:rotate(-1.1deg)}50%{transform:rotate(1.1deg)}} /* data-fx-orn */
+.htop .hk{font:700 12px/1.5 'Fira Sans',sans-serif;letter-spacing:.26em;text-transform:uppercase;color:var(--green-d)}
+.hband{position:absolute;z-index:1;top:53%;inset-inline:-5vw;transform:translateY(-50%) rotate(4deg);
+  background:var(--green);color:var(--cream);border-block:3px solid var(--gold);
+  box-shadow:0 30px 60px rgba(12,74,65,.30);
+  padding:clamp(26px,3.4vw,46px) clamp(56px,10vw,150px) clamp(30px,3.8vw,52px)}
+.hband::before{content:"";position:absolute;inset:7px 0;border-block:1px solid rgba(235,197,90,.4);pointer-events:none}
+.bin{width:min(58%,640px)}
+.bin .bk{font:700 12px/1 'Fira Sans',sans-serif;letter-spacing:.3em;text-transform:uppercase;color:var(--gold-l);margin-bottom:12px}
+h1{font-size:clamp(36px,5vw,68px);margin:0}
+h1 em{display:block;font-style:normal;font-size:.46em;color:var(--gold-l);letter-spacing:.02em;margin-top:8px}
+.hphoto{position:absolute;z-index:2;top:clamp(22px,4vw,50px);inset-inline-end:clamp(20px,4vw,56px);
+  height:min(40%,340px);aspect-ratio:16/10;filter:drop-shadow(0 22px 34px rgba(27,33,31,.30))}
+.hphoto .pe{position:absolute;inset:12px -12px -12px 12px;background:var(--gold);opacity:.85;
+  clip-path:polygon(0 0,100% 13%,100% 100%,0 87%)}
+.hphoto img{position:relative;width:100%;height:100%;object-fit:cover;display:block;
+  clip-path:polygon(0 0,100% 13%,100% 100%,0 87%)}
+.hsub{position:absolute;z-index:3;bottom:clamp(24px,4.2vw,50px);inset-inline-start:clamp(20px,4vw,56px);width:min(52%,600px)}
+.hsub p{font-size:clamp(15.5px,1.7vw,19px);color:#39423f;max-width:52ch}
+.hb{margin-top:16px;display:flex;flex-wrap:wrap;gap:9px}
+.hb span{border:1px solid rgba(27,33,31,.34);border-radius:999px;padding:8px 14px;font:500 13px/1 'Fira Sans',sans-serif;
+  background:rgba(255,255,255,.55);color:var(--ink)}
 .hb span.g{background:var(--gold);color:#2A2308;border-color:var(--gold);font-weight:700}
-.hr{background:#0d1513 url('img/01.jpg') center 38%/cover no-repeat;position:relative}
-.hr::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(20,104,92,.30),transparent 45%)}
 /* content */
 .two{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,4vw,52px);align-items:center}
 figure.fr{background:var(--cream);padding:10px;border-radius:4px;box-shadow:0 12px 28px rgba(27,33,31,.14)}
@@ -104,7 +124,13 @@ footer{padding:28px 0 118px;font-size:14.5px;color:#5c6663;text-align:center}
 .bar a.p{background:var(--gold);border-color:var(--gold);color:#2A2308}
 .bar svg{width:16px;height:16px;fill:currentColor;flex:none}
 @media(max-width:900px){
-  header{grid-template-columns:1fr;min-height:auto;max-height:none}.hr{min-height:300px}
+  header{min-height:auto;max-height:none;padding:84px 0 54px}
+  .htop{position:static;margin:0 5vw 18px}
+  .hband{position:static;transform:rotate(2.5deg);margin:16px -6vw 32px;padding:28px 11vw 32px}
+  .bin{width:100%}
+  .hphoto{position:relative;inset:auto;height:auto;width:min(88%,520px);margin:4px auto 26px;
+    filter:drop-shadow(0 16px 26px rgba(27,33,31,.28))}
+  .hsub{position:static;width:auto;padding:0 5vw}
   .two,.mg{grid-template-columns:1fr}.trio,.qs{grid-template-columns:1fr}
   .gal{grid-template-columns:repeat(2,1fr)}.gal figure.fr:nth-child(1){grid-column:span 2}
   body{font-size:16px}
@@ -135,53 +161,62 @@ setTimeout(function(){document.querySelectorAll('.rev').forEach(function(e){e.cl
 </script>
 </head>
 <body>
-<button class="lgx" onclick="LG()"><span class="el" data-edit="t1" data-edit-label="Text — العربية">العربية</span><span class="tr" data-edit="t2" data-edit-label="Text — Ελληνικά">Ελληνικά</span></button>
+<button class="lgx" onclick="LG()"><span class="el" data-edit="t1" data-edit-label="Text: العربية">العربية</span><span class="tr" data-edit="t2" data-edit-label="Text: Ελληνικά">Ελληνικά</span></button>
 
 <header>
-  <div class="hl">
+  <div class="hfield" aria-hidden="true"></div>
+  <div class="htop">
     <svg class="leaf" viewBox="0 0 40 40" aria-hidden="true"><path d="M34 6C18 6 8 15 8 26c0 3 1 6 3 8 2-14 10-21 20-24-8 5-14 12-16 24 12 1 21-8 21-22 0-3-1-5-2-6z"/></svg>
-    <h1><span class="el">Γεύσεις της Δαμασκού<em data-edit="t3" data-edit-label="Text — Ανατολίτικη κουζίνα · Κυψέλη">Ανατολίτικη κουζίνα · Κυψέλη</em></span><span class="tr">نكهات دمشق<em data-edit="t4" data-edit-label="Text — مطبخ شرقي · كيبسيلي">مطبخ شرقي · كيبسيلي</em></span></h1>
-    <p><span class="el" data-edit="t5" data-edit-label="Text — Στον πεζόδρομο της Φωκίωνος Νέγρη — φα…">Στον πεζόδρομο της Φωκίωνος Νέγρη — φαλάφελ με συριακή συνταγή, μεζέδες, γλυκά Δαμασκού και επιλογές vegan σε κάθε πιάτο.</span><span class="tr" data-edit="t6" data-edit-label="Text — في شارع فوكيونوس نيغري للمشاة — فلافل …">في شارع فوكيونوس نيغري للمشاة — فلافل بوصفة سورية، ومازة، وحلويات دمشقية، وخيارات نباتية في كل طبق.</span></p>
-    <div class="hb">
-      <span class="g num" data-edit="t7" data-edit-label="Text — ★ 4,6">★ 4,6</span>
-      <span><span class="el" data-edit="t8" data-edit-label="Text — 705 κριτικές Google">705 κριτικές Google</span><span class="tr" data-edit="t9" data-edit-label="Text — ٧٠٥ تقييم على Google">٧٠٥ تقييم على Google</span></span>
-      <span><span class="el" data-edit="t10" data-edit-label="Text — Ανοιχτά 12:30–00:30">Ανοιχτά 12:30–00:30</span><span class="tr" data-edit="t11" data-edit-label="Text — مفتوح ١٢:٣٠–٠٠:٣٠">مفتوح ١٢:٣٠–٠٠:٣٠</span></span>
+    <p class="hk"><span class="el" data-edit="t3" data-edit-label="Text: Φωκίωνος Νέγρη 19 · Κυψέλη">Φωκίωνος Νέγρη 19 · Κυψέλη</span><span class="tr" data-edit="t4" data-edit-label="Text: فوكيونوس نيغري 19 · كيبسيلي">فوكيونوس نيغري 19 · كيبسيلي</span></p>
+  </div>
+  <div class="hband">
+    <div class="bin">
+      <p class="bk"><span class="el" data-edit="t5" data-edit-label="Text: Συριακή κουζίνα στον πεζόδρομο">Συριακή κουζίνα στον πεζόδρομο</span><span class="tr" data-edit="t6" data-edit-label="Text: مطبخ سوري على شارع المشاة">مطبخ سوري على شارع المشاة</span></p>
+      <h1><span class="el">Γεύσεις της Δαμασκού<em data-edit="t7" data-edit-label="Text: Ανατολίτικη κουζίνα · Κυψέλη">Ανατολίτικη κουζίνα · Κυψέλη</em></span><span class="tr">نكهات دمشق<em data-edit="t8" data-edit-label="Text: مطبخ شرقي · كيبسيلي">مطبخ شرقي · كيبسيلي</em></span></h1>
     </div>
   </div>
-  <div class="hr" role="img" aria-label="Η πινακίδα του καταστήματος στη Φωκίωνος Νέγρη"></div>
+  <div class="hphoto"><i class="pe" aria-hidden="true"></i><img src="img/01.jpg" alt="Η πινακίδα του καταστήματος στη Φωκίωνος Νέγρη"></div>
+  <div class="hsub">
+    <p><span class="el" data-edit="t9" data-edit-label="Text: Στον πεζόδρομο της Φωκίωνος Νέγρη, φαλ…">Στον πεζόδρομο της Φωκίωνος Νέγρη, φαλάφελ με συριακή συνταγή, μεζέδες, γλυκά Δαμασκού και επιλογές vegan σε κάθε πιάτο.</span><span class="tr" data-edit="t10" data-edit-label="Text: في شارع فوكيونوس نيغري للمشاة, فلافل ب…">في شارع فوكيونوس نيغري للمشاة, فلافل بوصفة سورية، ومازة، وحلويات دمشقية، وخيارات نباتية في كل طبق.</span></p>
+    <div class="hb">
+      <span class="g num" data-edit="t11" data-edit-label="Text: ★ 4,6">★ 4,6</span>
+      <span><span class="el" data-edit="t12" data-edit-label="Text: 705 κριτικές Google">705 κριτικές Google</span><span class="tr" data-edit="t13" data-edit-label="Text: 705 تقييم على Google">705 تقييم على Google</span></span>
+      <span><span class="el" data-edit="t14" data-edit-label="Text: Ανοιχτά 12:30–00:30">Ανοιχτά 12:30–00:30</span><span class="tr" data-edit="t15" data-edit-label="Text: مفتوح 12:30–00:30">مفتوح 12:30–00:30</span></span>
+    </div>
+  </div>
 </header>
 
 <section class="slab">
   <div class="wrap two rev">
     <div>
-      <p class="kick"><span class="el" data-edit="t12" data-edit-label="Text — Ο πεζόδρομος">Ο πεζόδρομος</span><span class="tr" data-edit="t13" data-edit-label="Text — شارع المشاة">شارع المشاة</span></p>
-      <h2><span class="el" data-edit="t14" data-edit-label="Text — Νέγρη 19, με τα τραπέζια έξω">Νέγρη 19, με τα τραπέζια έξω</span><span class="tr" data-edit="t15" data-edit-label="Text — نيغري ١٩، والطاولات في الخارج">نيغري ١٩، والطاولات في الخارج</span></h2>
-      <p><span class="el" data-edit="t16" data-edit-label="Text — Η Φωκίωνος Νέγρη είναι ο πιο ζωντανός …">Η Φωκίωνος Νέγρη είναι ο πιο ζωντανός πεζόδρομος της Κυψέλης, και το μαγαζί κάθεται ακριβώς πάνω του. Τα τραπέζια βγαίνουν έξω, οι μυρωδιές πάνε μέχρι τη γωνία και η γειτονιά κάθεται για ώρα.</span><span class="tr" data-edit="t17" data-edit-label="Text — شارع فوكيونوس نيغري هو أكثر شوارع كيبس…">شارع فوكيونوس نيغري هو أكثر شوارع كيبسيلي حيوية، والمحل يقع عليه تماماً. تخرج الطاولات إلى الخارج، وتصل الروائح حتى الزاوية، ويجلس الحي طويلاً.</span></p>
-      <p><span class="el" data-edit="t18" data-edit-label="Text — Η κουζίνα είναι συριακή και δίνει ιδια…">Η κουζίνα είναι συριακή και δίνει ιδιαίτερο βάρος στα χορτοφαγικά και vegan πιάτα: φαλάφελ, χούμους, μοντάμπαλ, μουχαμάρα, ταμπουλέ — και σως ταχινιού με λεμόνι για όσους δεν τρώνε γιαούρτι.</span><span class="tr" data-edit="t19" data-edit-label="Text — المطبخ سوري ويُولي اهتماماً خاصاً بالأ…">المطبخ سوري ويُولي اهتماماً خاصاً بالأطباق النباتية: فلافل، حمّص، متبّل، محمّرة، تبولة — وصلصة طحينة بالليمون لمن لا يأكلون اللبن.</span></p>
+      <p class="kick"><span class="el" data-edit="t16" data-edit-label="Text: Ο πεζόδρομος">Ο πεζόδρομος</span><span class="tr" data-edit="t17" data-edit-label="Text: شارع المشاة">شارع المشاة</span></p>
+      <h2><span class="el" data-edit="t18" data-edit-label="Text: Νέγρη 19, με τα τραπέζια έξω">Νέγρη 19, με τα τραπέζια έξω</span><span class="tr" data-edit="t19" data-edit-label="Text: نيغري 19، والطاولات في الخارج">نيغري 19، والطاولات في الخارج</span></h2>
+      <p><span class="el" data-edit="t20" data-edit-label="Text: Η Φωκίωνος Νέγρη είναι ο πιο ζωντανός …">Η Φωκίωνος Νέγρη είναι ο πιο ζωντανός πεζόδρομος της Κυψέλης, και το μαγαζί κάθεται ακριβώς πάνω του. Τα τραπέζια βγαίνουν έξω, οι μυρωδιές πάνε μέχρι τη γωνία και η γειτονιά κάθεται για ώρα.</span><span class="tr" data-edit="t21" data-edit-label="Text: شارع فوكيونوس نيغري هو أكثر شوارع كيبس…">شارع فوكيونوس نيغري هو أكثر شوارع كيبسيلي حيوية، والمحل يقع عليه تماماً. تخرج الطاولات إلى الخارج، وتصل الروائح حتى الزاوية، ويجلس الحي طويلاً.</span></p>
+      <p><span class="el" data-edit="t22" data-edit-label="Text: Η κουζίνα είναι συριακή και δίνει ιδια…">Η κουζίνα είναι συριακή και δίνει ιδιαίτερο βάρος στα χορτοφαγικά και vegan πιάτα: φαλάφελ, χούμους, μοντάμπαλ, μουχαμάρα, ταμπουλέ, και σως ταχινιού με λεμόνι για όσους δεν τρώνε γιαούρτι.</span><span class="tr" data-edit="t23" data-edit-label="Text: المطبخ سوري ويُولي اهتماماً خاصاً بالأ…">المطبخ سوري ويُولي اهتماماً خاصاً بالأطباق النباتية: فلافل، حمّص، متبّل، محمّرة، تبولة, وصلصة طحينة بالليمون لمن لا يأكلون اللبن.</span></p>
     </div>
     <figure class="fr">
       <img src="img/07.jpg" alt="Τα τραπέζια στον πεζόδρομο της Φωκίωνος Νέγρη" loading="lazy">
-      <figcaption><span class="el" data-edit="t20" data-edit-label="Text — Τα τραπέζια στον πεζόδρομο.">Τα τραπέζια στον πεζόδρομο.</span><span class="tr" data-edit="t21" data-edit-label="Text — الطاولات على الرصيف.">الطاولات على الرصيف.</span></figcaption>
+      <figcaption><span class="el" data-edit="t24" data-edit-label="Text: Τα τραπέζια στον πεζόδρομο.">Τα τραπέζια στον πεζόδρομο.</span><span class="tr" data-edit="t25" data-edit-label="Text: الطاولات على الرصيف.">الطاولات على الرصيف.</span></figcaption>
     </figure>
   </div>
 </section>
 
 <section class="slab deep">
   <div class="wrap">
-    <p class="kick rev"><span class="el" data-edit="t22" data-edit-label="Text — Το τραπέζι">Το τραπέζι</span><span class="tr" data-edit="t23" data-edit-label="Text — الطاولة">الطاولة</span></p>
-    <h2 class="rev"><span class="el" data-edit="t24" data-edit-label="Text — Τρία πράγματα που ζητάνε όλοι">Τρία πράγματα που ζητάνε όλοι</span><span class="tr" data-edit="t25" data-edit-label="Text — ثلاثة أشياء يطلبها الجميع">ثلاثة أشياء يطلبها الجميع</span></h2>
+    <p class="kick rev"><span class="el" data-edit="t26" data-edit-label="Text: Το τραπέζι">Το τραπέζι</span><span class="tr" data-edit="t27" data-edit-label="Text: الطاولة">الطاولة</span></p>
+    <h2 class="rev"><span class="el" data-edit="t28" data-edit-label="Text: Τρία πράγματα που ζητάνε όλοι">Τρία πράγματα που ζητάνε όλοι</span><span class="tr" data-edit="t29" data-edit-label="Text: ثلاثة أشياء يطلبها الجميع">ثلاثة أشياء يطلبها الجميع</span></h2>
     <div class="trio rev">
       <div class="tile"><img src="img/05.jpg" alt="Μερίδα φαλάφελ με σως" loading="lazy">
-        <div class="b"><h3><span class="el" data-edit="t26" data-edit-label="Text — Το φαλάφελ">Το φαλάφελ</span><span class="tr" data-edit="t27" data-edit-label="Text — الفلافل">الفلافل</span></h3>
-          <p><span class="el" data-edit="t28" data-edit-label="Text — Έξι τεμάχια, συνταγή από τη Συρία, με …">Έξι τεμάχια, συνταγή από τη Συρία, με σως ταχινιού και γιαουρτιού — ή vegan με ταχίνι και λεμόνι.</span><span class="tr" data-edit="t29" data-edit-label="Text — ستّ حبّات، بوصفة من سوريا، مع صلصة طحي…">ستّ حبّات، بوصفة من سوريا، مع صلصة طحينة ولبن — أو نباتية بالطحينة والليمون.</span></p></div>
+        <div class="b"><h3><span class="el" data-edit="t30" data-edit-label="Text: Το φαλάφελ">Το φαλάφελ</span><span class="tr" data-edit="t31" data-edit-label="Text: الفلافل">الفلافل</span></h3>
+          <p><span class="el" data-edit="t32" data-edit-label="Text: Έξι τεμάχια, συνταγή από τη Συρία, με …">Έξι τεμάχια, συνταγή από τη Συρία, με σως ταχινιού και γιαουρτιού, ή vegan με ταχίνι και λεμόνι.</span><span class="tr" data-edit="t33" data-edit-label="Text: ستّ حبّات، بوصفة من سوريا، مع صلصة طحي…">ستّ حبّات، بوصفة من سوريا، مع صلصة طحينة ولبن, أو نباتية بالطحينة والليمون.</span></p></div>
       </div>
       <div class="tile"><img src="img/06.jpg" alt="Ποικιλία μεζέδων" loading="lazy">
-        <div class="b"><h3><span class="el" data-edit="t30" data-edit-label="Text — Η ποικιλία">Η ποικιλία</span><span class="tr" data-edit="t31" data-edit-label="Text — المازة">المازة</span></h3>
-          <p><span class="el" data-edit="t32" data-edit-label="Text — Χούμους, μοντάμπαλ και μουχαμάρα μαζί …">Χούμους, μοντάμπαλ και μουχαμάρα μαζί με φαλάφελ — το πιάτο για να μοιραστείτε.</span><span class="tr" data-edit="t33" data-edit-label="Text — حمّص ومتبّل ومحمّرة مع الفلافل — الطبق…">حمّص ومتبّل ومحمّرة مع الفلافل — الطبق الذي يُقتسم.</span></p></div>
+        <div class="b"><h3><span class="el" data-edit="t34" data-edit-label="Text: Η ποικιλία">Η ποικιλία</span><span class="tr" data-edit="t35" data-edit-label="Text: المازة">المازة</span></h3>
+          <p><span class="el" data-edit="t36" data-edit-label="Text: Χούμους, μοντάμπαλ και μουχαμάρα μαζί …">Χούμους, μοντάμπαλ και μουχαμάρα μαζί με φαλάφελ, το πιάτο για να μοιραστείτε.</span><span class="tr" data-edit="t37" data-edit-label="Text: حمّص ومتبّل ومحمّرة مع الفلافل, الطبق …">حمّص ومتبّل ومحمّرة مع الفلافل, الطبق الذي يُقتسم.</span></p></div>
       </div>
       <div class="tile"><img src="img/11.jpg" alt="Γλυκά Δαμασκού στο τραπέζι" loading="lazy">
-        <div class="b"><h3><span class="el" data-edit="t34" data-edit-label="Text — Τα γλυκά">Τα γλυκά</span><span class="tr" data-edit="t35" data-edit-label="Text — الحلويات">الحلويات</span></h3>
-          <p><span class="el" data-edit="t36" data-edit-label="Text — Κανταΐφι Δαμασκού με φυστίκι Αιγίνης κ…">Κανταΐφι Δαμασκού με φυστίκι Αιγίνης και κρέμα μουχαλεμπί με ανθόνερο.</span><span class="tr" data-edit="t37" data-edit-label="Text — كنافة دمشقية بفستق إيجينا وكريمة مهلبي…">كنافة دمشقية بفستق إيجينا وكريمة مهلبية بماء الزهر.</span></p></div>
+        <div class="b"><h3><span class="el" data-edit="t38" data-edit-label="Text: Τα γλυκά">Τα γλυκά</span><span class="tr" data-edit="t39" data-edit-label="Text: الحلويات">الحلويات</span></h3>
+          <p><span class="el" data-edit="t40" data-edit-label="Text: Κανταΐφι Δαμασκού με φυστίκι Αιγίνης κ…">Κανταΐφι Δαμασκού με φυστίκι Αιγίνης και κρέμα μουχαλεμπί με ανθόνερο.</span><span class="tr" data-edit="t41" data-edit-label="Text: كنافة دمشقية بفستق إيجينا وكريمة مهلبي…">كنافة دمشقية بفستق إيجينا وكريمة مهلبية بماء الزهر.</span></p></div>
       </div>
     </div>
   </div>
@@ -190,47 +225,47 @@ setTimeout(function(){document.querySelectorAll('.rev').forEach(function(e){e.cl
 <section class="slab">
   <div class="wrap mg">
     <div class="rev">
-      <p class="kick"><span class="el" data-edit="t38" data-edit-label="Text — Από τον κατάλογό μας">Από τον κατάλογό μας</span><span class="tr" data-edit="t39" data-edit-label="Text — من قائمتنا">من قائمتنا</span></p>
-      <h2><span class="el" data-edit="t40" data-edit-label="Text — Τι θα φάτε και πόσο κάνει">Τι θα φάτε και πόσο κάνει</span><span class="tr" data-edit="t41" data-edit-label="Text — ماذا تأكلون وكم يُكلّف">ماذا تأكلون وكم يُكلّف</span></h2>
-      <div class="mrow" style="border-bottom-color:rgba(27,33,31,.13)"><span class="n"><span class="el" data-edit="t42" data-edit-label="Text — Φαλάφελ (μερίδα)">Φαλάφελ (μερίδα)</span><span class="tr" data-edit="t43" data-edit-label="Text — فلافل (صحن)">فلافل (صحن)</span><i><span class="el" data-edit="t44" data-edit-label="Text — Το παραδοσιακό — έξι τεμάχια, συνταγή …">Το παραδοσιακό — έξι τεμάχια, συνταγή από τη Συρία</span><span class="tr" data-edit="t45" data-edit-label="Text — التقليدي — ست حبّات، وصفة من سوريا">التقليدي — ست حبّات، وصفة من سوريا</span></i></span><b class="pr" data-edit="t46" data-edit-label="Text — 5,00 €">5,00 €</b></div>
-      <div class="mrow" style="border-bottom-color:rgba(27,33,31,.13)"><span class="n"><span class="el" data-edit="t47" data-edit-label="Text — Φαλάφελ σε αραβική πίτα">Φαλάφελ σε αραβική πίτα</span><span class="tr" data-edit="t48" data-edit-label="Text — فلافل بخبز عربي">فلافل بخبز عربي</span><i><span class="el" data-edit="t49" data-edit-label="Text — Χούμους, μαρούλι, ντομάτα, τουρσί">Χούμους, μαρούλι, ντομάτα, τουρσί</span><span class="tr" data-edit="t50" data-edit-label="Text — حمّص، خس، بندورة، مخلل">حمّص، خس، بندورة، مخلل</span></i></span><b class="pr" data-edit="t51" data-edit-label="Text — 3,80 €">3,80 €</b></div>
-      <div class="mrow" style="border-bottom-color:rgba(27,33,31,.13)"><span class="n"><span class="el" data-edit="t52" data-edit-label="Text — Μερίδα φαλάφελ με ποικιλία μεζέδων">Μερίδα φαλάφελ με ποικιλία μεζέδων</span><span class="tr" data-edit="t53" data-edit-label="Text — صحن فلافل مع مازة">صحن فلافل مع مازة</span><i><span class="el" data-edit="t54" data-edit-label="Text — Χούμους, μοντάμπαλ, μουχαμάρα">Χούμους, μοντάμπαλ, μουχαμάρα</span><span class="tr" data-edit="t55" data-edit-label="Text — حمّص، متبّل، محمّرة">حمّص، متبّل، محمّرة</span></i></span><b class="pr" data-edit="t56" data-edit-label="Text — 8,00 €">8,00 €</b></div>
-      <div class="mrow" style="border-bottom-color:rgba(27,33,31,.13)"><span class="n"><span class="el" data-edit="t57" data-edit-label="Text — Κανταΐφι Δαμασκού με φυστίκι Αιγίνης">Κανταΐφι Δαμασκού με φυστίκι Αιγίνης</span><span class="tr" data-edit="t58" data-edit-label="Text — كنافة دمشقية بالفستق">كنافة دمشقية بالفستق</span></span><b class="pr" data-edit="t59" data-edit-label="Text — 4,70 €">4,70 €</b></div>
-      <div class="mrow" style="border-bottom-color:rgba(27,33,31,.13)"><span class="n"><span class="el" data-edit="t60" data-edit-label="Text — Κρέμα μουχαλεμπί με ινδική καρύδα και …">Κρέμα μουχαλεμπί με ινδική καρύδα και ανθόνερο</span><span class="tr" data-edit="t61" data-edit-label="Text — مهلبية بجوز الهند وماء الزهر">مهلبية بجوز الهند وماء الزهر</span></span><b class="pr" data-edit="t62" data-edit-label="Text — 3,50 €">3,50 €</b></div>
-      <div class="mrow" style="border-bottom-color:rgba(27,33,31,.13)"><span class="n"><span class="el" data-edit="t63" data-edit-label="Text — Σιροπιαστά Δαμασκού — 5 κομματάκια μιξ">Σιροπιαστά Δαμασκού — 5 κομματάκια μιξ</span><span class="tr" data-edit="t64" data-edit-label="Text — حلويات دمشقية — ٥ قطع مشكّلة">حلويات دمشقية — ٥ قطع مشكّلة</span></span><b class="pr" data-edit="t65" data-edit-label="Text — 3,80 €">3,80 €</b></div>
-      <div class="mrow" style="border-bottom-color:rgba(27,33,31,.13)"><span class="n"><span class="el" data-edit="t66" data-edit-label="Text — Σπιτική λεμονάδα με δυόσμο και λάιμ">Σπιτική λεμονάδα με δυόσμο και λάιμ</span><span class="tr" data-edit="t67" data-edit-label="Text — ليموناضة منزلية بالنعناع والليمون">ليموناضة منزلية بالنعناع والليمون</span></span><b class="pr" data-edit="t68" data-edit-label="Text — 2,50 €">2,50 €</b></div>
-      <div class="mrow" style="border-bottom-color:rgba(27,33,31,.13)"><span class="n"><span class="el" data-edit="t69" data-edit-label="Text — Αϊράνι">Αϊράνι</span><span class="tr" data-edit="t70" data-edit-label="Text — عيران">عيران</span></span><b class="pr" data-edit="t71" data-edit-label="Text — 2,00 €">2,00 €</b></div>
+      <p class="kick"><span class="el" data-edit="t42" data-edit-label="Text: Από τον κατάλογό μας">Από τον κατάλογό μας</span><span class="tr" data-edit="t43" data-edit-label="Text: من قائمتنا">من قائمتنا</span></p>
+      <h2><span class="el" data-edit="t44" data-edit-label="Text: Τι θα φάτε και πόσο κάνει">Τι θα φάτε και πόσο κάνει</span><span class="tr" data-edit="t45" data-edit-label="Text: ماذا تأكلون وكم يُكلّف">ماذا تأكلون وكم يُكلّف</span></h2>
+      <div class="mrow" style="border-bottom-color:rgba(27,33,31,.13)"><span class="n"><span class="el" data-edit="t46" data-edit-label="Text: Φαλάφελ (μερίδα)">Φαλάφελ (μερίδα)</span><span class="tr" data-edit="t47" data-edit-label="Text: فلافل (صحن)">فلافل (صحن)</span><i><span class="el" data-edit="t48" data-edit-label="Text: Το παραδοσιακό, έξι τεμάχια, συνταγή α…">Το παραδοσιακό, έξι τεμάχια, συνταγή από τη Συρία</span><span class="tr" data-edit="t49" data-edit-label="Text: التقليدي, ست حبّات، وصفة من سوريا">التقليدي, ست حبّات، وصفة من سوريا</span></i></span><b class="pr" data-edit="t50" data-edit-label="Text: 5,00 €">5,00 €</b></div>
+      <div class="mrow" style="border-bottom-color:rgba(27,33,31,.13)"><span class="n"><span class="el" data-edit="t51" data-edit-label="Text: Φαλάφελ σε αραβική πίτα">Φαλάφελ σε αραβική πίτα</span><span class="tr" data-edit="t52" data-edit-label="Text: فلافل بخبز عربي">فلافل بخبز عربي</span><i><span class="el" data-edit="t53" data-edit-label="Text: Χούμους, μαρούλι, ντομάτα, τουρσί">Χούμους, μαρούλι, ντομάτα, τουρσί</span><span class="tr" data-edit="t54" data-edit-label="Text: حمّص، خس، بندورة، مخلل">حمّص، خس، بندورة، مخلل</span></i></span><b class="pr" data-edit="t55" data-edit-label="Text: 3,80 €">3,80 €</b></div>
+      <div class="mrow" style="border-bottom-color:rgba(27,33,31,.13)"><span class="n"><span class="el" data-edit="t56" data-edit-label="Text: Μερίδα φαλάφελ με ποικιλία μεζέδων">Μερίδα φαλάφελ με ποικιλία μεζέδων</span><span class="tr" data-edit="t57" data-edit-label="Text: صحن فلافل مع مازة">صحن فلافل مع مازة</span><i><span class="el" data-edit="t58" data-edit-label="Text: Χούμους, μοντάμπαλ, μουχαμάρα">Χούμους, μοντάμπαλ, μουχαμάρα</span><span class="tr" data-edit="t59" data-edit-label="Text: حمّص، متبّل، محمّرة">حمّص، متبّل، محمّرة</span></i></span><b class="pr" data-edit="t60" data-edit-label="Text: 8,00 €">8,00 €</b></div>
+      <div class="mrow" style="border-bottom-color:rgba(27,33,31,.13)"><span class="n"><span class="el" data-edit="t61" data-edit-label="Text: Κανταΐφι Δαμασκού με φυστίκι Αιγίνης">Κανταΐφι Δαμασκού με φυστίκι Αιγίνης</span><span class="tr" data-edit="t62" data-edit-label="Text: كنافة دمشقية بالفستق">كنافة دمشقية بالفستق</span></span><b class="pr" data-edit="t63" data-edit-label="Text: 4,70 €">4,70 €</b></div>
+      <div class="mrow" style="border-bottom-color:rgba(27,33,31,.13)"><span class="n"><span class="el" data-edit="t64" data-edit-label="Text: Κρέμα μουχαλεμπί με ινδική καρύδα και …">Κρέμα μουχαλεμπί με ινδική καρύδα και ανθόνερο</span><span class="tr" data-edit="t65" data-edit-label="Text: مهلبية بجوز الهند وماء الزهر">مهلبية بجوز الهند وماء الزهر</span></span><b class="pr" data-edit="t66" data-edit-label="Text: 3,50 €">3,50 €</b></div>
+      <div class="mrow" style="border-bottom-color:rgba(27,33,31,.13)"><span class="n"><span class="el" data-edit="t67" data-edit-label="Text: Σιροπιαστά Δαμασκού, 5 κομματάκια μιξ">Σιροπιαστά Δαμασκού, 5 κομματάκια μιξ</span><span class="tr" data-edit="t68" data-edit-label="Text: حلويات دمشقية, 5 قطع مشكّلة">حلويات دمشقية, 5 قطع مشكّلة</span></span><b class="pr" data-edit="t69" data-edit-label="Text: 3,80 €">3,80 €</b></div>
+      <div class="mrow" style="border-bottom-color:rgba(27,33,31,.13)"><span class="n"><span class="el" data-edit="t70" data-edit-label="Text: Σπιτική λεμονάδα με δυόσμο και λάιμ">Σπιτική λεμονάδα με δυόσμο και λάιμ</span><span class="tr" data-edit="t71" data-edit-label="Text: ليموناضة منزلية بالنعناع والليمون">ليموناضة منزلية بالنعناع والليمون</span></span><b class="pr" data-edit="t72" data-edit-label="Text: 2,50 €">2,50 €</b></div>
+      <div class="mrow" style="border-bottom-color:rgba(27,33,31,.13)"><span class="n"><span class="el" data-edit="t73" data-edit-label="Text: Αϊράνι">Αϊράνι</span><span class="tr" data-edit="t74" data-edit-label="Text: عيران">عيران</span></span><b class="pr" data-edit="t75" data-edit-label="Text: 2,00 €">2,00 €</b></div>
     </div>
     <figure class="fr rev">
       <img src="img/02.jpg" alt="Ο κατάλογος του καταστήματος" loading="lazy">
-      <figcaption><span class="el" data-edit="t72" data-edit-label="Text — Ο κατάλογος όπως τον δίνουν στο τραπέζ…">Ο κατάλογος όπως τον δίνουν στο τραπέζι.</span><span class="tr" data-edit="t73" data-edit-label="Text — القائمة كما تُقدَّم على الطاولة.">القائمة كما تُقدَّم على الطاولة.</span></figcaption>
+      <figcaption><span class="el" data-edit="t76" data-edit-label="Text: Ο κατάλογος όπως τον δίνουν στο τραπέζ…">Ο κατάλογος όπως τον δίνουν στο τραπέζι.</span><span class="tr" data-edit="t77" data-edit-label="Text: القائمة كما تُقدَّم على الطاولة.">القائمة كما تُقدَّم على الطاولة.</span></figcaption>
     </figure>
   </div>
 </section>
 
 <section class="slab">
   <div class="wrap">
-    <p class="kick rev"><span class="el" data-edit="t74" data-edit-label="Text — Στο πιάτο">Στο πιάτο</span><span class="tr" data-edit="t75" data-edit-label="Text — في الطبق">في الطبق</span></p>
-    <h2 class="rev"><span class="el" data-edit="t76" data-edit-label="Text — Από την κουζίνα μας">Από την κουζίνα μας</span><span class="tr" data-edit="t77" data-edit-label="Text — من مطبخنا">من مطبخنا</span></h2>
+    <p class="kick rev"><span class="el" data-edit="t78" data-edit-label="Text: Στο πιάτο">Στο πιάτο</span><span class="tr" data-edit="t79" data-edit-label="Text: في الطبق">في الطبق</span></p>
+    <h2 class="rev"><span class="el" data-edit="t80" data-edit-label="Text: Από την κουζίνα μας">Από την κουζίνα μας</span><span class="tr" data-edit="t81" data-edit-label="Text: من مطبخنا">من مطبخنا</span></h2>
     <div class="gal rev">
-      <figure class="fr"><img src="img/10.jpg" alt="Τραπέζι με μεζέδες" loading="lazy"><figcaption><span class="el" data-edit="t78" data-edit-label="Text — Τραπέζι για δύο.">Τραπέζι για δύο.</span><span class="tr" data-edit="t79" data-edit-label="Text — طاولة لاثنين.">طاولة لاثنين.</span></figcaption></figure>
-      <figure class="fr"><img src="img/09.jpg" alt="Τυλιχτό σε δίσκο" loading="lazy"><figcaption><span class="el" data-edit="t80" data-edit-label="Text — Τυλιχτό φαλάφελ.">Τυλιχτό φαλάφελ.</span><span class="tr" data-edit="t81" data-edit-label="Text — لفّة فلافل.">لفّة فلافل.</span></figcaption></figure>
-      <figure class="fr"><img src="img/03.jpg" alt="Φαλάφελ και χούμους" loading="lazy"><figcaption><span class="el" data-edit="t82" data-edit-label="Text — Φαλάφελ και χούμους.">Φαλάφελ και χούμους.</span><span class="tr" data-edit="t83" data-edit-label="Text — فلافل وحمّص.">فلافل وحمّص.</span></figcaption></figure>
-      <figure class="fr"><img src="img/12.jpg" alt="Σιροπιαστά Δαμασκού" loading="lazy"><figcaption><span class="el" data-edit="t84" data-edit-label="Text — Το γλυκό στο τέλος.">Το γλυκό στο τέλος.</span><span class="tr" data-edit="t85" data-edit-label="Text — الحلوى في النهاية.">الحلوى في النهاية.</span></figcaption></figure>
-      <figure class="fr"><img src="img/08.jpg" alt="Πίτα στο χέρι" loading="lazy"><figcaption><span class="el" data-edit="t86" data-edit-label="Text — Ζεστή πίτα στο χέρι.">Ζεστή πίτα στο χέρι.</span><span class="tr" data-edit="t87" data-edit-label="Text — خبز ساخن في اليد.">خبز ساخن في اليد.</span></figcaption></figure>
-      <figure class="fr"><img src="img/04.jpg" alt="Ο χώρος με τα τραπέζια" loading="lazy"><figcaption><span class="el" data-edit="t88" data-edit-label="Text — Ο χώρος πριν ανοίξει.">Ο χώρος πριν ανοίξει.</span><span class="tr" data-edit="t89" data-edit-label="Text — المكان قبل الافتتاح.">المكان قبل الافتتاح.</span></figcaption></figure>
+      <figure class="fr"><img src="img/10.jpg" alt="Τραπέζι με μεζέδες" loading="lazy"><figcaption><span class="el" data-edit="t82" data-edit-label="Text: Τραπέζι για δύο.">Τραπέζι για δύο.</span><span class="tr" data-edit="t83" data-edit-label="Text: طاولة لاثنين.">طاولة لاثنين.</span></figcaption></figure>
+      <figure class="fr"><img src="img/09.jpg" alt="Τυλιχτό σε δίσκο" loading="lazy"><figcaption><span class="el" data-edit="t84" data-edit-label="Text: Τυλιχτό φαλάφελ.">Τυλιχτό φαλάφελ.</span><span class="tr" data-edit="t85" data-edit-label="Text: لفّة فلافل.">لفّة فلافل.</span></figcaption></figure>
+      <figure class="fr"><img src="img/03.jpg" alt="Φαλάφελ και χούμους" loading="lazy"><figcaption><span class="el" data-edit="t86" data-edit-label="Text: Φαλάφελ και χούμους.">Φαλάφελ και χούμους.</span><span class="tr" data-edit="t87" data-edit-label="Text: فلافل وحمّص.">فلافل وحمّص.</span></figcaption></figure>
+      <figure class="fr"><img src="img/12.jpg" alt="Σιροπιαστά Δαμασκού" loading="lazy"><figcaption><span class="el" data-edit="t88" data-edit-label="Text: Το γλυκό στο τέλος.">Το γλυκό στο τέλος.</span><span class="tr" data-edit="t89" data-edit-label="Text: الحلوى في النهاية.">الحلوى في النهاية.</span></figcaption></figure>
+      <figure class="fr"><img src="img/08.jpg" alt="Πίτα στο χέρι" loading="lazy"><figcaption><span class="el" data-edit="t90" data-edit-label="Text: Ζεστή πίτα στο χέρι.">Ζεστή πίτα στο χέρι.</span><span class="tr" data-edit="t91" data-edit-label="Text: خبز ساخن في اليد.">خبز ساخن في اليد.</span></figcaption></figure>
+      <figure class="fr"><img src="img/04.jpg" alt="Ο χώρος με τα τραπέζια" loading="lazy"><figcaption><span class="el" data-edit="t92" data-edit-label="Text: Ο χώρος πριν ανοίξει.">Ο χώρος πριν ανοίξει.</span><span class="tr" data-edit="t93" data-edit-label="Text: المكان قبل الافتتاح.">المكان قبل الافتتاح.</span></figcaption></figure>
     </div>
   </div>
 </section>
 
 <section class="slab deep">
   <div class="wrap">
-    <p class="kick rev"><span class="el" data-edit="t90" data-edit-label="Text — Κριτικές Google">Κριτικές Google</span><span class="tr" data-edit="t91" data-edit-label="Text — تقييمات Google">تقييمات Google</span></p>
-    <h2 class="rev"><span class="num" data-edit="t92" data-edit-label="Text — ★ 4,6">★ 4,6</span> <span class="el" data-edit="t93" data-edit-label="Text — από 705 κριτικές">από 705 κριτικές</span><span class="tr" data-edit="t94" data-edit-label="Text — من ٧٠٥ تقييم">من ٧٠٥ تقييم</span></h2>
+    <p class="kick rev"><span class="el" data-edit="t94" data-edit-label="Text: Κριτικές Google">Κριτικές Google</span><span class="tr" data-edit="t95" data-edit-label="Text: تقييمات Google">تقييمات Google</span></p>
+    <h2 class="rev"><span class="num" data-edit="t96" data-edit-label="Text: ★ 4,6">★ 4,6</span> <span class="el" data-edit="t97" data-edit-label="Text: από 705 κριτικές">από 705 κριτικές</span><span class="tr" data-edit="t98" data-edit-label="Text: من 705 تقييم">من 705 تقييم</span></h2>
     <div class="qs rev">
-      <div class="q" style="background:rgba(239,231,218,.1)"><q dir="ltr" data-edit="t95" data-edit-label="Quote — «Οι Γεύσεις της Δαμασκού» σε ταξιδεύου…">«Οι Γεύσεις της Δαμασκού» σε ταξιδεύουν στις γεύσεις της Ανατολής και βρίσκονται σε έναν από τους πεζόδρομους της Κυψέλης.</q><div class="w" style="color:#C9A227" data-edit="t96" data-edit-label="Text — Χριστίνα Αγγελακούδη · Google">Χριστίνα Αγγελακούδη · Google</div></div>
-      <div class="q" style="background:rgba(239,231,218,.1)"><q dir="ltr" data-edit="t97" data-edit-label="Quote — Ωραίο σημείο για να φας κάτι «εξωτικό»…">Ωραίο σημείο για να φας κάτι «εξωτικό». Ωραία προετοιμασμένα πιάτα με ωραίες γεύσεις.</q><div class="w" style="color:#C9A227" data-edit="t98" data-edit-label="Text — Victor M. · Google">Victor M. · Google</div></div>
-      <div class="q" style="background:rgba(239,231,218,.1)"><q dir="ltr" data-edit="t99" data-edit-label="Quote — Έκανα μία στάση για ένα φαλάφελ τυλιχτ…">Έκανα μία στάση για ένα φαλάφελ τυλιχτό στο χέρι. Αρκετά καλό, χορταστικό και σε νορμάλ τιμή.</q><div class="w" style="color:#C9A227" data-edit="t100" data-edit-label="Text — Χρήστος Τσαπακίδης · Google">Χρήστος Τσαπακίδης · Google</div></div>
+      <div class="q" style="background:rgba(239,231,218,.1)"><q dir="ltr" data-edit="t99" data-edit-label="Quote: «Οι Γεύσεις της Δαμασκού» σε ταξιδεύου…">«Οι Γεύσεις της Δαμασκού» σε ταξιδεύουν στις γεύσεις της Ανατολής και βρίσκονται σε έναν από τους πεζόδρομους της Κυψέλης.</q><div class="w" style="color:#C9A227" data-edit="t100" data-edit-label="Text: Χριστίνα Αγγελακούδη · Google">Χριστίνα Αγγελακούδη · Google</div></div>
+      <div class="q" style="background:rgba(239,231,218,.1)"><q dir="ltr" data-edit="t101" data-edit-label="Quote: Ωραίο σημείο για να φας κάτι «εξωτικό»…">Ωραίο σημείο για να φας κάτι «εξωτικό». Ωραία προετοιμασμένα πιάτα με ωραίες γεύσεις.</q><div class="w" style="color:#C9A227" data-edit="t102" data-edit-label="Text: Victor M. · Google">Victor M. · Google</div></div>
+      <div class="q" style="background:rgba(239,231,218,.1)"><q dir="ltr" data-edit="t103" data-edit-label="Quote: Έκανα μία στάση για ένα φαλάφελ τυλιχτ…">Έκανα μία στάση για ένα φαλάφελ τυλιχτό στο χέρι. Αρκετά καλό, χορταστικό και σε νορμάλ τιμή.</q><div class="w" style="color:#C9A227" data-edit="t104" data-edit-label="Text: Χρήστος Τσαπακίδης · Google">Χρήστος Τσαπακίδης · Google</div></div>
     </div>
   </div>
 </section>
@@ -238,40 +273,45 @@ setTimeout(function(){document.querySelectorAll('.rev').forEach(function(e){e.cl
 <section class="slab">
   <div class="wrap two rev">
     <div>
-      <p class="kick"><span class="el" data-edit="t101" data-edit-label="Text — Ωράριο">Ωράριο</span><span class="tr" data-edit="t102" data-edit-label="Text — أوقات العمل">أوقات العمل</span></p>
-      <h2><span class="el" data-edit="t103" data-edit-label="Text — Κάθε μέρα, 12:30–00:30">Κάθε μέρα, 12:30–00:30</span><span class="tr" data-edit="t104" data-edit-label="Text — كل يوم ١٢:٣٠–٠٠:٣٠">كل يوم ١٢:٣٠–٠٠:٣٠</span></h2>
+      <p class="kick"><span class="el" data-edit="t105" data-edit-label="Text: Ωράριο">Ωράριο</span><span class="tr" data-edit="t106" data-edit-label="Text: أوقات العمل">أوقات العمل</span></p>
+      <h2><span class="el" data-edit="t107" data-edit-label="Text: Κάθε μέρα, 12:30–00:30">Κάθε μέρα, 12:30–00:30</span><span class="tr" data-edit="t108" data-edit-label="Text: كل يوم 12:30–00:30">كل يوم 12:30–00:30</span></h2>
       <table>
-        <tr><td><span class="el" data-edit="t105" data-edit-label="Text — Δευτέρα">Δευτέρα</span><span class="tr" data-edit="t106" data-edit-label="Text — الاثنين">الاثنين</span></td><td class="num" data-edit="t107" data-edit-label="Menu / table — 12:30–00:30">12:30–00:30</td></tr>
-        <tr><td><span class="el" data-edit="t108" data-edit-label="Text — Τρίτη">Τρίτη</span><span class="tr" data-edit="t109" data-edit-label="Text — الثلاثاء">الثلاثاء</span></td><td class="num" data-edit="t110" data-edit-label="Menu / table — 12:30–00:30">12:30–00:30</td></tr>
-        <tr><td><span class="el" data-edit="t111" data-edit-label="Text — Τετάρτη">Τετάρτη</span><span class="tr" data-edit="t112" data-edit-label="Text — الأربعاء">الأربعاء</span></td><td class="num" data-edit="t113" data-edit-label="Menu / table — 12:30–00:30">12:30–00:30</td></tr>
-        <tr><td><span class="el" data-edit="t114" data-edit-label="Text — Πέμπτη">Πέμπτη</span><span class="tr" data-edit="t115" data-edit-label="Text — الخميس">الخميس</span></td><td class="num" data-edit="t116" data-edit-label="Menu / table — 12:30–00:30">12:30–00:30</td></tr>
-        <tr><td><span class="el" data-edit="t117" data-edit-label="Text — Παρασκευή">Παρασκευή</span><span class="tr" data-edit="t118" data-edit-label="Text — الجمعة">الجمعة</span></td><td class="num" data-edit="t119" data-edit-label="Menu / table — 12:30–00:30">12:30–00:30</td></tr>
-        <tr><td><span class="el" data-edit="t120" data-edit-label="Text — Σάββατο">Σάββατο</span><span class="tr" data-edit="t121" data-edit-label="Text — السبت">السبت</span></td><td class="num" data-edit="t122" data-edit-label="Menu / table — 12:30–00:30">12:30–00:30</td></tr>
-        <tr><td><span class="el" data-edit="t123" data-edit-label="Text — Κυριακή">Κυριακή</span><span class="tr" data-edit="t124" data-edit-label="Text — الأحد">الأحد</span></td><td class="num" data-edit="t125" data-edit-label="Menu / table — 12:30–00:30">12:30–00:30</td></tr>
+        <tr><td><span class="el" data-edit="t109" data-edit-label="Text: Δευτέρα">Δευτέρα</span><span class="tr" data-edit="t110" data-edit-label="Text: الاثنين">الاثنين</span></td><td class="num" data-edit="t111" data-edit-label="Menu / table: 12:30–00:30">12:30–00:30</td></tr>
+        <tr><td><span class="el" data-edit="t112" data-edit-label="Text: Τρίτη">Τρίτη</span><span class="tr" data-edit="t113" data-edit-label="Text: الثلاثاء">الثلاثاء</span></td><td class="num" data-edit="t114" data-edit-label="Menu / table: 12:30–00:30">12:30–00:30</td></tr>
+        <tr><td><span class="el" data-edit="t115" data-edit-label="Text: Τετάρτη">Τετάρτη</span><span class="tr" data-edit="t116" data-edit-label="Text: الأربعاء">الأربعاء</span></td><td class="num" data-edit="t117" data-edit-label="Menu / table: 12:30–00:30">12:30–00:30</td></tr>
+        <tr><td><span class="el" data-edit="t118" data-edit-label="Text: Πέμπτη">Πέμπτη</span><span class="tr" data-edit="t119" data-edit-label="Text: الخميس">الخميس</span></td><td class="num" data-edit="t120" data-edit-label="Menu / table: 12:30–00:30">12:30–00:30</td></tr>
+        <tr><td><span class="el" data-edit="t121" data-edit-label="Text: Παρασκευή">Παρασκευή</span><span class="tr" data-edit="t122" data-edit-label="Text: الجمعة">الجمعة</span></td><td class="num" data-edit="t123" data-edit-label="Menu / table: 12:30–00:30">12:30–00:30</td></tr>
+        <tr><td><span class="el" data-edit="t124" data-edit-label="Text: Σάββατο">Σάββατο</span><span class="tr" data-edit="t125" data-edit-label="Text: السبت">السبت</span></td><td class="num" data-edit="t126" data-edit-label="Menu / table: 12:30–00:30">12:30–00:30</td></tr>
+        <tr><td><span class="el" data-edit="t127" data-edit-label="Text: Κυριακή">Κυριακή</span><span class="tr" data-edit="t128" data-edit-label="Text: الأحد">الأحد</span></td><td class="num" data-edit="t129" data-edit-label="Menu / table: 12:30–00:30">12:30–00:30</td></tr>
       </table>
     </div>
     <div>
-      <p class="kick"><span class="el" data-edit="t126" data-edit-label="Text — Πού είμαστε">Πού είμαστε</span><span class="tr" data-edit="t127" data-edit-label="Text — أين نحن">أين نحن</span></p>
-      <h2><span class="el" data-edit="t128" data-edit-label="Text — Φωκίωνος Νέγρη 19">Φωκίωνος Νέγρη 19</span><span class="tr" data-edit="t129" data-edit-label="Text — فوكيونوس نيغري ١٩">فوكيونوس نيغري ١٩</span></h2>
-      <p style="font-size:19px"><b class="ad" data-edit="t130" data-edit-label="Text — Φωκίωνος Νέγρη 19, Αθήνα 112 57">Φωκίωνος Νέγρη 19, Αθήνα 112 57</b><br>
-        <span class="el" data-edit="t131" data-edit-label="Text — Κυψέλη — πάνω στον πεζόδρομο">Κυψέλη — πάνω στον πεζόδρομο</span><span class="tr" data-edit="t132" data-edit-label="Text — كيبسيلي — على شارع المشاة">كيبسيلي — على شارع المشاة</span><br>
-        <b class="ph num" data-edit="t133" data-edit-label="Text — +30 21 1117 7714">+30 21 1117 7714</b></p>
+      <p class="kick"><span class="el" data-edit="t130" data-edit-label="Text: Πού είμαστε">Πού είμαστε</span><span class="tr" data-edit="t131" data-edit-label="Text: أين نحن">أين نحن</span></p>
+      <h2><span class="el" data-edit="t132" data-edit-label="Text: Φωκίωνος Νέγρη 19">Φωκίωνος Νέγρη 19</span><span class="tr" data-edit="t133" data-edit-label="Text: فوكيونوس نيغري 19">فوكيونوس نيغري 19</span></h2>
+      <p style="font-size:19px"><b class="ad" data-edit="t134" data-edit-label="Text: Φωκίωνος Νέγρη 19, Αθήνα 112 57">Φωκίωνος Νέγρη 19, Αθήνα 112 57</b><br>
+        <span class="el" data-edit="t135" data-edit-label="Text: Κυψέλη, πάνω στον πεζόδρομο">Κυψέλη, πάνω στον πεζόδρομο</span><span class="tr" data-edit="t136" data-edit-label="Text: كيبسيلي, على شارع المشاة">كيبسيلي, على شارع المشاة</span><br>
+        <b class="ph num" data-edit="t137" data-edit-label="Text: +30 21 1117 7714">+30 21 1117 7714</b></p>
       <p>
-        <a class="btn" href="tel:+302111177714"><span class="el" data-edit="t134" data-edit-label="Text — Τηλέφωνο">Τηλέφωνο</span><span class="tr" data-edit="t135" data-edit-label="Text — اتصال">اتصال</span></a>
-        <a class="btn gold" href="https://www.google.com/maps?cid=13574623282184649804" target="_blank" rel="noopener"><span class="el" data-edit="t136" data-edit-label="Text — Χάρτης">Χάρτης</span><span class="tr" data-edit="t137" data-edit-label="Text — الخريطة">الخريطة</span></a>
+        <a class="btn" href="tel:+302111177714"><span class="el" data-edit="t138" data-edit-label="Text: Τηλέφωνο">Τηλέφωνο</span><span class="tr" data-edit="t139" data-edit-label="Text: اتصال">اتصال</span></a>
+        <a class="btn gold" href="https://www.google.com/maps?cid=13574623282184649804" target="_blank" rel="noopener"><span class="el" data-edit="t140" data-edit-label="Text: Χάρτης">Χάρτης</span><span class="tr" data-edit="t141" data-edit-label="Text: الخريطة">الخريطة</span></a>
       </p>
     </div>
   </div>
-  <div class="wrap"><footer><p><b data-edit="t138" data-edit-label="Text — Γεύσεις της Δαμασκού · نكهات دمشق">Γεύσεις της Δαμασκού · نكهات دمشق</b> — Φωκίωνος Νέγρη 19, Αθήνα 112 57 · <span class="num" data-edit="t139" data-edit-label="Text — +30 21 1117 7714">+30 21 1117 7714</span></p></footer></div>
+  <div class="wrap"><footer><p><b data-edit="t142" data-edit-label="Text: Γεύσεις της Δαμασκού · نكهات دمشق">Γεύσεις της Δαμασκού · نكهات دمشق</b> · Φωκίωνος Νέγρη 19, Αθήνα 112 57 · <span class="num" data-edit="t143" data-edit-label="Text: +30 21 1117 7714">+30 21 1117 7714</span></p></footer></div>
 </section>
 
 <nav class="bar">
   <a class="p" href="tel:+302111177714">
     <svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.4.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C11 21 3 13 3 3c0-.6.4-1 1-1h3.4c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.2 1l-2.2 2.2z"/></svg>
-    <span class="el" data-edit="t140" data-edit-label="Text — Κλήση">Κλήση</span><span class="tr" data-edit="t141" data-edit-label="Text — اتصال">اتصال</span></a>
+    <span class="el" data-edit="t144" data-edit-label="Text: Κλήση">Κλήση</span><span class="tr" data-edit="t145" data-edit-label="Text: اتصال">اتصال</span></a>
   <a href="https://www.google.com/maps?cid=13574623282184649804" target="_blank" rel="noopener">
     <svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>
-    <span class="el" data-edit="t142" data-edit-label="Text — Χάρτης">Χάρτης</span><span class="tr" data-edit="t143" data-edit-label="Text — الخريطة">الخريطة</span></a>
+    <span class="el" data-edit="t146" data-edit-label="Text: Χάρτης">Χάρτης</span><span class="tr" data-edit="t147" data-edit-label="Text: الخريطة">الخريطة</span></a>
+
+  <a class="p" href="https://www.instagram.com/tastesofdamascus/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4C8.4 2.2 8.8 2.2 12 2.2zm0 3.2A6.6 6.6 0 1 0 18.6 12 6.6 6.6 0 0 0 12 5.4zm0 10.9A4.3 4.3 0 1 1 16.3 12 4.3 4.3 0 0 1 12 16.3zm6.9-11.1a1.5 1.5 0 1 1-1.5-1.5 1.5 1.5 0 0 1 1.5 1.5z"/></svg>
+    Instagram</a>
+  <a class="p" href="https://www.facebook.com/TastesofDamascus/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.91.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0 0 22 12z"/></svg>
+    Facebook</a>
 </nav>
 </body>
 </html>

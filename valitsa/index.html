@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Βαλίτσα — Δημοφώντος 80, Άνω Πετράλωνα</title>
+<title>Βαλίτσα · Δημοφώντος 80, Άνω Πετράλωνα</title>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&family=Fira+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
 <style>
@@ -16,29 +16,54 @@ a{color:inherit}
 .lgx{position:fixed;top:14px;inset-inline-end:14px;z-index:60;background:var(--cognac-d);color:var(--ivory);border:0;
   font:700 12.5px/1 'Fira Sans',sans-serif;letter-spacing:.16em;padding:12px 16px;cursor:pointer;text-transform:uppercase;border-radius:4px}
 .lgx:hover{background:var(--brass);color:var(--ink)}
-/* hero — split: leather panel + the real yellow wall */
-header{display:grid;grid-template-columns:1.04fr .96fr;min-height:clamp(600px,92svh,820px);max-height:880px}
-.hl{position:relative;display:flex;flex-direction:column;justify-content:center;color:var(--ivory);
-  padding:clamp(34px,5vw,74px) clamp(26px,5vw,62px);overflow:hidden;
-  background:
-    repeating-linear-gradient(180deg,rgba(0,0,0,.13) 0 1px,transparent 1px 5px),
-    linear-gradient(160deg,#8A5430,#7B4A2A 40%,#553017)}
-.hl::after{content:"";position:absolute;inset:16px;border:2px solid rgba(185,148,78,.45);border-radius:6px}
-.hin{position:relative;z-index:2}
+/* hero: split: leather panel + the real yellow wall */
+/* ===== SUITCASE STACK: three stacked leather cases, the name on the label plate ===== */
+header{position:relative;min-height:clamp(600px,92svh,820px);max-height:860px;overflow:hidden;
+  display:flex;flex-direction:column;justify-content:center;gap:0;
+  padding:clamp(26px,4vw,54px) 5vw;
+  background:repeating-linear-gradient(180deg,rgba(0,0,0,.12) 0 1px,transparent 1px 6px),
+             linear-gradient(168deg,#3A2314,#2A1A0F 62%,#1C120A)}
+.vc{position:relative;width:min(1020px,100%);margin-inline:auto;
+  background:repeating-linear-gradient(180deg,rgba(0,0,0,.10) 0 1px,transparent 1px 4px),
+             linear-gradient(160deg,#8A5430,#7B4A2A 42%,#5A3319);
+  border:1px solid rgba(0,0,0,.45);border-radius:8px;
+  box-shadow:0 18px 34px rgba(0,0,0,.46),inset 0 1px 0 rgba(255,255,255,.16)}
+.vc::before{content:"";position:absolute;inset:9px;border:1.5px dashed rgba(241,234,217,.28);border-radius:5px;pointer-events:none}
+/* the brass corner caps + the belt straps that make it read as luggage */
+.vc::after{content:"";position:absolute;inset-block:0;inset-inline-start:16%;width:30px;
+  background:linear-gradient(90deg,rgba(0,0,0,.45),#6B4A22 22%,#B9944E 50%,#6B4A22 78%,rgba(0,0,0,.45));
+  box-shadow:0 0 0 1px rgba(0,0,0,.35);opacity:.9}
+.vc.top{height:clamp(52px,7vw,74px);margin-bottom:10px}
+.vc.mid{padding:clamp(30px,4.6vw,54px) clamp(24px,4.4vw,56px);text-align:center;z-index:2}
+.vc.bot{height:clamp(168px,22vw,262px);margin-top:10px;overflow:hidden;display:grid;place-items:center}
+/* latches sitting on the top case */
+.latches{position:absolute;inset-inline:0;top:50%;transform:translateY(-50%);display:flex;gap:clamp(60px,16vw,190px);justify-content:center}
 .latch{width:64px;height:34px;border-radius:5px;background:linear-gradient(180deg,var(--brass-l),var(--brass) 50%,#8E6B2E);
-  position:relative;margin-bottom:20px;overflow:hidden;box-shadow:0 4px 10px rgba(0,0,0,.35)}
+  position:relative;overflow:hidden;box-shadow:0 4px 10px rgba(0,0,0,.35)}
 .latch::before{content:"";position:absolute;inset-inline:11px;top:14px;height:6px;border-radius:3px;background:rgba(0,0,0,.35)}
 .latch::after{content:"";position:absolute;inset:0;
   background:linear-gradient(115deg,transparent 40%,rgba(255,255,255,.85) 48%,transparent 56%);
-  animation:glint 13s ease-in-out infinite}
+  animation:glint 13s ease-in-out infinite}   /* data-fx-orn */
 @keyframes glint{0%,88%{transform:translateX(-130%)}100%{transform:translateX(130%)}}
-h1{font-size:clamp(48px,9.4vw,106px);margin:0}
-h1 em{display:block;font-style:normal;font-size:.26em;letter-spacing:.24em;text-transform:uppercase;color:var(--brass-l);margin-top:12px;font-weight:500}
-.hl p{margin-top:16px;font-size:clamp(16px,1.9vw,20px);max-width:40ch;color:#E8DCC8}
-.hp{margin-top:22px;display:flex;flex-wrap:wrap;gap:9px}
-.hp span{border:1px solid rgba(241,234,217,.4);border-radius:4px;padding:8px 14px;font:500 13px/1 'Fira Sans',sans-serif}
+/* the label plate carrying the name */
+.plate{position:relative;z-index:2;background:var(--ivory);color:var(--ink);
+  border:2px solid rgba(90,51,25,.55);border-radius:4px;padding:clamp(24px,3.6vw,42px) clamp(20px,3.4vw,40px);
+  box-shadow:0 10px 26px rgba(0,0,0,.34)}
+.plate::before{content:"";position:absolute;inset:6px;border:1px solid rgba(90,51,25,.28);border-radius:2px;pointer-events:none}
+h1{font-size:clamp(44px,8.4vw,96px);margin:0;color:var(--cognac-d)}
+h1 em{display:block;font-style:normal;font-size:.26em;letter-spacing:.24em;text-transform:uppercase;color:#8A6A34;margin-top:12px;font-weight:500}
+.plate p{margin:16px auto 0;font-size:clamp(15.5px,1.9vw,19px);max-width:56ch;color:#4B3B2A}
+.hp{margin-top:20px;display:flex;flex-wrap:wrap;gap:9px;justify-content:center}
+.hp span{border:1px solid rgba(90,51,25,.38);border-radius:4px;padding:8px 14px;font:500 13px/1 'Fira Sans',sans-serif;color:#4B3B2A}
 .hp span.b{background:var(--brass);border-color:var(--brass);color:var(--ink);font-weight:700}
-.hr{background:#241c15 url('img/01.jpg') center/cover no-repeat}
+/* the bottom case holds a slim window onto the real yellow wall */
+.win{position:relative;z-index:3;width:calc(100% - 34px);height:calc(100% - 26px);border-radius:3px;overflow:hidden;
+  box-shadow:inset 0 0 0 3px rgba(241,234,217,.8),0 6px 16px rgba(0,0,0,.4)}
+.win img{display:block;width:100%;height:100%;object-fit:cover}
+@media(max-width:720px){
+  .latches{gap:clamp(40px,22vw,120px)}
+  .vc::after{inset-inline-start:12%;width:18px}
+}
 /* ===== STACKED CASE BANDS ===== */
 .case{position:relative;padding-block:clamp(48px,7vw,90px);border-block:8px solid var(--cognac);
   background:var(--ivory)}
@@ -133,56 +158,58 @@ setTimeout(function(){document.querySelectorAll('.rev').forEach(function(e){e.cl
 </script>
 </head>
 <body>
-<button class="lgx" onclick="LG()"><span class="el" data-edit="t1" data-edit-label="Text — English">English</span><span class="tr" data-edit="t2" data-edit-label="Text — Ελληνικά">Ελληνικά</span></button>
+<button class="lgx" onclick="LG()"><span class="el" data-edit="t1" data-edit-label="Text: English">English</span><span class="tr" data-edit="t2" data-edit-label="Text: Ελληνικά">Ελληνικά</span></button>
 
 <header>
-  <div class="hl">
-    <div class="hin">
-      <span class="latch"></span>
-      <h1><span class="el" data-edit="t3" data-edit-label="Text — Βαλίτσα">Βαλίτσα</span><span class="tr" data-edit="t4" data-edit-label="Text — Valitsa">Valitsa</span>
-        <em><span class="el" data-edit="t5" data-edit-label="Text — Άνω Πετράλωνα · Δημοφώντος 80">Άνω Πετράλωνα · Δημοφώντος 80</span><span class="tr" data-edit="t6" data-edit-label="Text — Ano Petralona · Dimofontos 80">Ano Petralona · Dimofontos 80</span></em></h1>
-      <p><span class="el" data-edit="t7" data-edit-label="Text — Ταβέρνα με κρητικές γεύσεις και έναν τ…">Ταβέρνα με κρητικές γεύσεις και έναν τοίχο γεμάτο παλιές βαλίτσες. Χύμα κρασί, τσικουδιά και σπιτικά πιάτα.</span><span class="tr" data-edit="t8" data-edit-label="Text — A taverna with Cretan flavours and a w…">A taverna with Cretan flavours and a wall full of old suitcases. Bulk wine, tsikoudia and home cooking.</span></p>
+  <div class="vc top"><div class="latches"><span class="latch"></span><span class="latch"></span></div></div>
+  <div class="vc mid">
+    <div class="plate">
+      <h1><span class="el" data-edit="t3" data-edit-label="Text: Βαλίτσα">Βαλίτσα</span><span class="tr" data-edit="t4" data-edit-label="Text: Valitsa">Valitsa</span>
+        <em><span class="el" data-edit="t5" data-edit-label="Text: Άνω Πετράλωνα · Δημοφώντος 80">Άνω Πετράλωνα · Δημοφώντος 80</span><span class="tr" data-edit="t6" data-edit-label="Text: Ano Petralona · Dimofontos 80">Ano Petralona · Dimofontos 80</span></em></h1>
+      <p><span class="el" data-edit="t7" data-edit-label="Text: Ταβέρνα με κρητικές γεύσεις και έναν τ…">Ταβέρνα με κρητικές γεύσεις και έναν τοίχο γεμάτο παλιές βαλίτσες. Χύμα κρασί, τσικουδιά και σπιτικά πιάτα.</span><span class="tr" data-edit="t8" data-edit-label="Text: A taverna with Cretan flavours and a w…">A taverna with Cretan flavours and a wall full of old suitcases. Bulk wine, tsikoudia and home cooking.</span></p>
       <div class="hp">
-        <span class="b num" data-edit="t9" data-edit-label="Text — ★ 4,7">★ 4,7</span>
-        <span><span class="el" data-edit="t10" data-edit-label="Text — 1.595 κριτικές Google">1.595 κριτικές Google</span><span class="tr" data-edit="t11" data-edit-label="Text — 1,595 Google reviews">1,595 Google reviews</span></span>
-        <span><span class="el" data-edit="t12" data-edit-label="Text — Κάθε μέρα 10:00–00:00">Κάθε μέρα 10:00–00:00</span><span class="tr" data-edit="t13" data-edit-label="Text — Daily 10:00–00:00">Daily 10:00–00:00</span></span>
+        <span class="b num" data-edit="t9" data-edit-label="Text: ★ 4,7">★ 4,7</span>
+        <span><span class="el" data-edit="t10" data-edit-label="Text: 1.595 κριτικές Google">1.595 κριτικές Google</span><span class="tr" data-edit="t11" data-edit-label="Text: 1,595 Google reviews">1,595 Google reviews</span></span>
+        <span><span class="el" data-edit="t12" data-edit-label="Text: Κάθε μέρα 10:00–00:00">Κάθε μέρα 10:00–00:00</span><span class="tr" data-edit="t13" data-edit-label="Text: Daily 10:00–00:00">Daily 10:00–00:00</span></span>
       </div>
     </div>
   </div>
-  <div class="hr" role="img" aria-label="Ο κίτρινος τοίχος και τα ξύλινα παντζούρια της Βαλίτσας"></div>
+  <div class="vc bot">
+    <div class="win"><img src="img/01.jpg" alt="Ο κίτρινος τοίχος και τα ξύλινα παντζούρια της Βαλίτσας"></div>
+  </div>
 </header>
 
 <section class="case">
   <div class="wrap two rev">
     <div>
-      <p class="kick"><span class="el" data-edit="t14" data-edit-label="Text — Το όνομα">Το όνομα</span><span class="tr" data-edit="t15" data-edit-label="Text — The name">The name</span></p>
-      <h2><span class="el" data-edit="t16" data-edit-label="Text — Ένας τοίχος γεμάτος βαλίτσες">Ένας τοίχος γεμάτος βαλίτσες</span><span class="tr" data-edit="t17" data-edit-label="Text — A wall full of suitcases">A wall full of suitcases</span></h2>
-      <p><span class="el" data-edit="t18" data-edit-label="Text — Η Βαλίτσα πήρε το όνομά της από τη δια…">Η Βαλίτσα πήρε το όνομά της από τη διακόσμησή της: ένας ολόκληρος τοίχος καλυμμένος με παλιές, αληθινές βαλίτσες. Δίπλα τους υπάρχει και ένα μικρό παντοπωλείο — μπορείτε να αγοράσετε ό,τι σας άρεσε στο πιάτο.</span><span class="tr" data-edit="t19" data-edit-label="Text — Valitsa took its name from its own dec…">Valitsa took its name from its own decoration: a whole wall covered in old, real suitcases. Next to them there is a small grocery corner — you can buy whatever you liked on your plate.</span></p>
-      <p><span class="el" data-edit="t20" data-edit-label="Text — Οι επιρροές είναι κυρίως κρητικές — μα…">Οι επιρροές είναι κυρίως κρητικές — μαρουβάς Χανίων χύμα, τσικουδιά, απάκι — αλλά στο τραπέζι έρχονται γεύσεις από όλη την Ελλάδα: κολοκυθοανθοί γεμιστοί, σκιουφιχτά στον φούρνο, λουκάνικα γεμιστά.</span><span class="tr" data-edit="t21" data-edit-label="Text — The influences are mostly Cretan — bul…">The influences are mostly Cretan — bulk Marouvas from Chania, tsikoudia, apaki — but the table gets flavours from all of Greece: stuffed courgette flowers, baked skioufichta, stuffed sausages.</span></p>
+      <p class="kick"><span class="el" data-edit="t14" data-edit-label="Text: Το όνομα">Το όνομα</span><span class="tr" data-edit="t15" data-edit-label="Text: The name">The name</span></p>
+      <h2><span class="el" data-edit="t16" data-edit-label="Text: Ένας τοίχος γεμάτος βαλίτσες">Ένας τοίχος γεμάτος βαλίτσες</span><span class="tr" data-edit="t17" data-edit-label="Text: A wall full of suitcases">A wall full of suitcases</span></h2>
+      <p><span class="el" data-edit="t18" data-edit-label="Text: Η Βαλίτσα πήρε το όνομά της από τη δια…">Η Βαλίτσα πήρε το όνομά της από τη διακόσμησή της: ένας ολόκληρος τοίχος καλυμμένος με παλιές, αληθινές βαλίτσες. Δίπλα τους υπάρχει και ένα μικρό παντοπωλείο, μπορείτε να αγοράσετε ό,τι σας άρεσε στο πιάτο.</span><span class="tr" data-edit="t19" data-edit-label="Text: Valitsa took its name from its own dec…">Valitsa took its name from its own decoration: a whole wall covered in old, real suitcases. Next to them there is a small grocery corner, you can buy whatever you liked on your plate.</span></p>
+      <p><span class="el" data-edit="t20" data-edit-label="Text: Οι επιρροές είναι κυρίως κρητικές: μαρ…">Οι επιρροές είναι κυρίως κρητικές: μαρουβάς Χανίων χύμα, τσικουδιά, απάκι. Στο τραπέζι όμως έρχονται γεύσεις από όλη την Ελλάδα: κολοκυθοανθοί γεμιστοί, σκιουφιχτά στον φούρνο, λουκάνικα γεμιστά.</span><span class="tr" data-edit="t21" data-edit-label="Text: The influences are mostly Cretan: bulk…">The influences are mostly Cretan: bulk Marouvas from Chania, tsikoudia, apaki. Still, the table gets flavours from all of Greece: stuffed courgette flowers, baked skioufichta, stuffed sausages.</span></p>
     </div>
     <figure class="fr">
       <img src="img/08.jpg" alt="Ο εσωτερικός χώρος με τα ράφια και τις βαλίτσες" loading="lazy">
-      <figcaption><span class="el" data-edit="t22" data-edit-label="Text — Ο τοίχος με τις βαλίτσες και τα ράφια.">Ο τοίχος με τις βαλίτσες και τα ράφια.</span><span class="tr" data-edit="t23" data-edit-label="Text — The wall of suitcases and the shelves.">The wall of suitcases and the shelves.</span></figcaption>
+      <figcaption><span class="el" data-edit="t22" data-edit-label="Text: Ο τοίχος με τις βαλίτσες και τα ράφια.">Ο τοίχος με τις βαλίτσες και τα ράφια.</span><span class="tr" data-edit="t23" data-edit-label="Text: The wall of suitcases and the shelves.">The wall of suitcases and the shelves.</span></figcaption>
     </figure>
   </div>
 </section>
 
 <section class="case tint">
   <div class="wrap">
-    <p class="kick rev"><span class="el" data-edit="t24" data-edit-label="Text — Τρεις λόγοι">Τρεις λόγοι</span><span class="tr" data-edit="t25" data-edit-label="Text — Three reasons">Three reasons</span></p>
-    <h2 class="rev"><span class="el" data-edit="t26" data-edit-label="Text — Γιατί γεμίζει κάθε βράδυ">Γιατί γεμίζει κάθε βράδυ</span><span class="tr" data-edit="t27" data-edit-label="Text — Why it fills up every night">Why it fills up every night</span></h2>
+    <p class="kick rev"><span class="el" data-edit="t24" data-edit-label="Text: Τρεις λόγοι">Τρεις λόγοι</span><span class="tr" data-edit="t25" data-edit-label="Text: Three reasons">Three reasons</span></p>
+    <h2 class="rev"><span class="el" data-edit="t26" data-edit-label="Text: Γιατί γεμίζει κάθε βράδυ">Γιατί γεμίζει κάθε βράδυ</span><span class="tr" data-edit="t27" data-edit-label="Text: Why it fills up every night">Why it fills up every night</span></h2>
     <div class="cards rev">
-      <div class="card"><div class="b"><h3><span class="el" data-edit="t28" data-edit-label="Text — Καλωσόρισμα με τσιπουράκι">Καλωσόρισμα με τσιπουράκι</span><span class="tr" data-edit="t29" data-edit-label="Text — A welcome tsipouro">A welcome tsipouro</span></h3>
-        <p><span class="el" data-edit="t30" data-edit-label="Text — Πριν παραγγείλετε, έρχεται ένα ποτηράκ…">Πριν παραγγείλετε, έρχεται ένα ποτηράκι για να ανοίξει η όρεξη.</span><span class="tr" data-edit="t31" data-edit-label="Text — Before you order, a small glass arrive…">Before you order, a small glass arrives to open the appetite.</span></p></div></div>
-      <div class="card"><div class="b"><h3><span class="el" data-edit="t32" data-edit-label="Text — Χύμα από το βαρέλι">Χύμα από το βαρέλι</span><span class="tr" data-edit="t33" data-edit-label="Text — Bulk from the barrel">Bulk from the barrel</span></h3>
-        <p><span class="el" data-edit="t34" data-edit-label="Text — Κρασί Κτήμα Καρανίκας και μαρουβάς Χαν…">Κρασί Κτήμα Καρανίκας και μαρουβάς Χανίων, σε καράφα των 500ml ή του λίτρου.</span><span class="tr" data-edit="t35" data-edit-label="Text — Karanikas Estate wine and Marouvas fro…">Karanikas Estate wine and Marouvas from Chania, in a 500ml or one-litre carafe.</span></p></div></div>
-      <div class="card"><div class="b"><h3><span class="el" data-edit="t36" data-edit-label="Text — Παντοπωλείο μέσα">Παντοπωλείο μέσα</span><span class="tr" data-edit="t37" data-edit-label="Text — A grocery inside">A grocery inside</span></h3>
-        <p><span class="el" data-edit="t38" data-edit-label="Text — Ό,τι δοκιμάσατε μπορείτε να το πάρετε …">Ό,τι δοκιμάσατε μπορείτε να το πάρετε και μαζί σας.</span><span class="tr" data-edit="t39" data-edit-label="Text — Whatever you tasted, you can take home…">Whatever you tasted, you can take home with you.</span></p></div></div>
+      <div class="card"><div class="b"><h3><span class="el" data-edit="t28" data-edit-label="Text: Καλωσόρισμα με τσιπουράκι">Καλωσόρισμα με τσιπουράκι</span><span class="tr" data-edit="t29" data-edit-label="Text: A welcome tsipouro">A welcome tsipouro</span></h3>
+        <p><span class="el" data-edit="t30" data-edit-label="Text: Πριν παραγγείλετε, έρχεται ένα ποτηράκ…">Πριν παραγγείλετε, έρχεται ένα ποτηράκι για να ανοίξει η όρεξη.</span><span class="tr" data-edit="t31" data-edit-label="Text: Before you order, a small glass arrive…">Before you order, a small glass arrives to open the appetite.</span></p></div></div>
+      <div class="card"><div class="b"><h3><span class="el" data-edit="t32" data-edit-label="Text: Χύμα από το βαρέλι">Χύμα από το βαρέλι</span><span class="tr" data-edit="t33" data-edit-label="Text: Bulk from the barrel">Bulk from the barrel</span></h3>
+        <p><span class="el" data-edit="t34" data-edit-label="Text: Κρασί Κτήμα Καρανίκας και μαρουβάς Χαν…">Κρασί Κτήμα Καρανίκας και μαρουβάς Χανίων, σε καράφα των 500ml ή του λίτρου.</span><span class="tr" data-edit="t35" data-edit-label="Text: Karanikas Estate wine and Marouvas fro…">Karanikas Estate wine and Marouvas from Chania, in a 500ml or one-litre carafe.</span></p></div></div>
+      <div class="card"><div class="b"><h3><span class="el" data-edit="t36" data-edit-label="Text: Παντοπωλείο μέσα">Παντοπωλείο μέσα</span><span class="tr" data-edit="t37" data-edit-label="Text: A grocery inside">A grocery inside</span></h3>
+        <p><span class="el" data-edit="t38" data-edit-label="Text: Ό,τι δοκιμάσατε μπορείτε να το πάρετε …">Ό,τι δοκιμάσατε μπορείτε να το πάρετε και μαζί σας.</span><span class="tr" data-edit="t39" data-edit-label="Text: Whatever you tasted, you can take home…">Whatever you tasted, you can take home with you.</span></p></div></div>
     </div>
     <div class="trio rev">
-      <figure class="fr"><img src="img/03.jpg" alt="Σαλάτα σε ψωμί" loading="lazy"><figcaption><span class="el" data-edit="t40" data-edit-label="Text — Σαλάτα στο ψωμί.">Σαλάτα στο ψωμί.</span><span class="tr" data-edit="t41" data-edit-label="Text — Salad served in bread.">Salad served in bread.</span></figcaption></figure>
-      <figure class="fr"><img src="img/05.jpg" alt="Κεφτεδάκια στο πιάτο" loading="lazy"><figcaption><span class="el" data-edit="t42" data-edit-label="Text — Κεφτεδάκια.">Κεφτεδάκια.</span><span class="tr" data-edit="t43" data-edit-label="Text — Meatballs.">Meatballs.</span></figcaption></figure>
-      <figure class="fr"><img src="img/07.jpg" alt="Ζυμαρικά με κιμά" loading="lazy"><figcaption><span class="el" data-edit="t44" data-edit-label="Text — Σκιουφιχτά στον φούρνο.">Σκιουφιχτά στον φούρνο.</span><span class="tr" data-edit="t45" data-edit-label="Text — Baked skioufichta.">Baked skioufichta.</span></figcaption></figure>
+      <figure class="fr"><img src="img/03.jpg" alt="Σαλάτα σε ψωμί" loading="lazy"><figcaption><span class="el" data-edit="t40" data-edit-label="Text: Σαλάτα στο ψωμί.">Σαλάτα στο ψωμί.</span><span class="tr" data-edit="t41" data-edit-label="Text: Salad served in bread.">Salad served in bread.</span></figcaption></figure>
+      <figure class="fr"><img src="img/05.jpg" alt="Κεφτεδάκια στο πιάτο" loading="lazy"><figcaption><span class="el" data-edit="t42" data-edit-label="Text: Κεφτεδάκια.">Κεφτεδάκια.</span><span class="tr" data-edit="t43" data-edit-label="Text: Meatballs.">Meatballs.</span></figcaption></figure>
+      <figure class="fr"><img src="img/07.jpg" alt="Ζυμαρικά με κιμά" loading="lazy"><figcaption><span class="el" data-edit="t44" data-edit-label="Text: Σκιουφιχτά στον φούρνο.">Σκιουφιχτά στον φούρνο.</span><span class="tr" data-edit="t45" data-edit-label="Text: Baked skioufichta.">Baked skioufichta.</span></figcaption></figure>
     </div>
   </div>
 </section>
@@ -190,54 +217,54 @@ setTimeout(function(){document.querySelectorAll('.rev').forEach(function(e){e.cl
 <section class="case dark">
   <div class="wrap mg">
     <div class="rev">
-      <p class="kick"><span class="el" data-edit="t46" data-edit-label="Text — Από τον κατάλογο">Από τον κατάλογο</span><span class="tr" data-edit="t47" data-edit-label="Text — From the menu">From the menu</span></p>
-      <h2><span class="el" data-edit="t48" data-edit-label="Text — Κρασιά και αποστάγματα">Κρασιά και αποστάγματα</span><span class="tr" data-edit="t49" data-edit-label="Text — Wine and spirits">Wine and spirits</span></h2>
-      <p class="mh"><span class="el" data-edit="t50" data-edit-label="Text — Μπύρες">Μπύρες</span><span class="tr" data-edit="t51" data-edit-label="Text — Beers">Beers</span></p>
-      <div class="mrow"><span><span class="el" data-edit="t52" data-edit-label="Text — Draft Άλφα 400ml">Draft Άλφα 400ml</span><span class="tr" data-edit="t53" data-edit-label="Text — Draft Alfa 400ml">Draft Alfa 400ml</span></span><b class="pr" data-edit="t54" data-edit-label="Text — 4,00 €">4,00 €</b></div>
-      <div class="mrow"><span><span class="el" data-edit="t55" data-edit-label="Text — Amstel / Mamos / Fischer / Kaiser 500m…">Amstel / Mamos / Fischer / Kaiser 500ml</span><span class="tr" data-edit="t56" data-edit-label="Text — Amstel / Mamos / Fischer / Kaiser 500m…">Amstel / Mamos / Fischer / Kaiser 500ml</span></span><b class="pr" data-edit="t57" data-edit-label="Text — 4,00 €">4,00 €</b></div>
-      <div class="mrow"><span><span class="el" data-edit="t58" data-edit-label="Text — Μηλοκλέφτης — μηλίτης 330ml">Μηλοκλέφτης — μηλίτης 330ml</span><span class="tr" data-edit="t59" data-edit-label="Text — Milokleftis — apple cider 330ml">Milokleftis — apple cider 330ml</span></span><b class="pr" data-edit="t60" data-edit-label="Text — 4,00 €">4,00 €</b></div>
-      <p class="mh"><span class="el" data-edit="t61" data-edit-label="Text — Κρασιά χύμα (500ml / 1Lt)">Κρασιά χύμα (500ml / 1Lt)</span><span class="tr" data-edit="t62" data-edit-label="Text — Bulk wine (500ml / 1Lt)">Bulk wine (500ml / 1Lt)</span></p>
-      <div class="mrow"><span><span class="el" data-edit="t63" data-edit-label="Text — Λευκό ξηρό, Κτήμα Καρανίκας">Λευκό ξηρό, Κτήμα Καρανίκας</span><span class="tr" data-edit="t64" data-edit-label="Text — White dry, Karanikas Winery">White dry, Karanikas Winery</span></span><b class="pr" data-edit="t65" data-edit-label="Text — 4,00 / 8,00 €">4,00 / 8,00 €</b></div>
-      <div class="mrow"><span><span class="el" data-edit="t66" data-edit-label="Text — Ροζέ ξηρό, Κτήμα Καρανίκας">Ροζέ ξηρό, Κτήμα Καρανίκας</span><span class="tr" data-edit="t67" data-edit-label="Text — Rosé dry, Karanikas Winery">Rosé dry, Karanikas Winery</span></span><b class="pr" data-edit="t68" data-edit-label="Text — 4,00 / 8,00 €">4,00 / 8,00 €</b></div>
-      <div class="mrow"><span><span class="el" data-edit="t69" data-edit-label="Text — Κόκκινο ημίγλυκο">Κόκκινο ημίγλυκο</span><span class="tr" data-edit="t70" data-edit-label="Text — Red semi-sweet">Red semi-sweet</span></span><b class="pr" data-edit="t71" data-edit-label="Text — 5,00 / 10,00 €">5,00 / 10,00 €</b></div>
-      <div class="mrow"><span><span class="el" data-edit="t72" data-edit-label="Text — Μαρουβάς Χανίων χύμα">Μαρουβάς Χανίων χύμα</span><span class="tr" data-edit="t73" data-edit-label="Text — Chania’s Marouvas in bulk">Chania’s Marouvas in bulk</span></span><b class="pr" data-edit="t74" data-edit-label="Text — 6,00 / 12,00 €">6,00 / 12,00 €</b></div>
-      <p class="mh"><span class="el" data-edit="t75" data-edit-label="Text — Αποστάγματα χύμα (100 / 200ml)">Αποστάγματα χύμα (100 / 200ml)</span><span class="tr" data-edit="t76" data-edit-label="Text — House spirits (100 / 200ml)">House spirits (100 / 200ml)</span></p>
-      <div class="mrow"><span><span class="el" data-edit="t77" data-edit-label="Text — Τσικουδιά, Αναγνωστάκης">Τσικουδιά, Αναγνωστάκης</span><span class="tr" data-edit="t78" data-edit-label="Text — Tsikoudia, Anagnostakis">Tsikoudia, Anagnostakis</span></span><b class="pr" data-edit="t79" data-edit-label="Text — 2,50 / 5,00 €">2,50 / 5,00 €</b></div>
-      <div class="mrow"><span><span class="el" data-edit="t80" data-edit-label="Text — Ρακόμελο">Ρακόμελο</span><span class="tr" data-edit="t81" data-edit-label="Text — Rakomelo">Rakomelo</span></span><b class="pr" data-edit="t82" data-edit-label="Text — 3,00 / 6,00 €">3,00 / 6,00 €</b></div>
-      <div class="mrow"><span><span class="el" data-edit="t83" data-edit-label="Text — Ψημένη ρακή, Αμοργιανή">Ψημένη ρακή, Αμοργιανή</span><span class="tr" data-edit="t84" data-edit-label="Text — Baked raki, Amorgion">Baked raki, Amorgion</span></span><b class="pr" data-edit="t85" data-edit-label="Text — 4,00 / 8,00 €">4,00 / 8,00 €</b></div>
-      <div class="mrow"><span><span class="el" data-edit="t86" data-edit-label="Text — Παλαιωμένη ρακή">Παλαιωμένη ρακή</span><span class="tr" data-edit="t87" data-edit-label="Text — Aged raki">Aged raki</span></span><b class="pr" data-edit="t88" data-edit-label="Text — 3,50 / 7,00 €">3,50 / 7,00 €</b></div>
-      <p class="mh"><span class="el" data-edit="t89" data-edit-label="Text — Ούζα &amp; τσίπουρα (200ml)">Ούζα &amp; τσίπουρα (200ml)</span><span class="tr" data-edit="t90" data-edit-label="Text — Ouzo &amp; tsipouro (200ml)">Ouzo &amp; tsipouro (200ml)</span></p>
-      <div class="mrow"><span><span class="el" data-edit="t91" data-edit-label="Text — Ούζο Πλωμάρι">Ούζο Πλωμάρι</span><span class="tr" data-edit="t92" data-edit-label="Text — Ouzo Plomari">Ouzo Plomari</span></span><b class="pr" data-edit="t93" data-edit-label="Text — 12,00 €">12,00 €</b></div>
-      <div class="mrow"><span><span class="el" data-edit="t94" data-edit-label="Text — Τσίπουρο Τσιλιλή">Τσίπουρο Τσιλιλή</span><span class="tr" data-edit="t95" data-edit-label="Text — Tsipouro Tsilili">Tsipouro Tsilili</span></span><b class="pr" data-edit="t96" data-edit-label="Text — 13,00 €">13,00 €</b></div>
-      <div class="mrow"><span><span class="el" data-edit="t97" data-edit-label="Text — Φρέσκοι χυμοί">Φρέσκοι χυμοί</span><span class="tr" data-edit="t98" data-edit-label="Text — Fresh juices">Fresh juices</span></span><b class="pr" data-edit="t99" data-edit-label="Text — 3,00 €">3,00 €</b></div>
+      <p class="kick"><span class="el" data-edit="t46" data-edit-label="Text: Από τον κατάλογο">Από τον κατάλογο</span><span class="tr" data-edit="t47" data-edit-label="Text: From the menu">From the menu</span></p>
+      <h2><span class="el" data-edit="t48" data-edit-label="Text: Κρασιά και αποστάγματα">Κρασιά και αποστάγματα</span><span class="tr" data-edit="t49" data-edit-label="Text: Wine and spirits">Wine and spirits</span></h2>
+      <p class="mh"><span class="el" data-edit="t50" data-edit-label="Text: Μπύρες">Μπύρες</span><span class="tr" data-edit="t51" data-edit-label="Text: Beers">Beers</span></p>
+      <div class="mrow"><span><span class="el" data-edit="t52" data-edit-label="Text: Draft Άλφα 400ml">Draft Άλφα 400ml</span><span class="tr" data-edit="t53" data-edit-label="Text: Draft Alfa 400ml">Draft Alfa 400ml</span></span><b class="pr" data-edit="t54" data-edit-label="Text: 4,00 €">4,00 €</b></div>
+      <div class="mrow"><span><span class="el" data-edit="t55" data-edit-label="Text: Amstel / Mamos / Fischer / Kaiser 500m…">Amstel / Mamos / Fischer / Kaiser 500ml</span><span class="tr" data-edit="t56" data-edit-label="Text: Amstel / Mamos / Fischer / Kaiser 500m…">Amstel / Mamos / Fischer / Kaiser 500ml</span></span><b class="pr" data-edit="t57" data-edit-label="Text: 4,00 €">4,00 €</b></div>
+      <div class="mrow"><span><span class="el" data-edit="t58" data-edit-label="Text: Μηλοκλέφτης, μηλίτης 330ml">Μηλοκλέφτης, μηλίτης 330ml</span><span class="tr" data-edit="t59" data-edit-label="Text: Milokleftis, apple cider 330ml">Milokleftis, apple cider 330ml</span></span><b class="pr" data-edit="t60" data-edit-label="Text: 4,00 €">4,00 €</b></div>
+      <p class="mh"><span class="el" data-edit="t61" data-edit-label="Text: Κρασιά χύμα (500ml / 1Lt)">Κρασιά χύμα (500ml / 1Lt)</span><span class="tr" data-edit="t62" data-edit-label="Text: Bulk wine (500ml / 1Lt)">Bulk wine (500ml / 1Lt)</span></p>
+      <div class="mrow"><span><span class="el" data-edit="t63" data-edit-label="Text: Λευκό ξηρό, Κτήμα Καρανίκας">Λευκό ξηρό, Κτήμα Καρανίκας</span><span class="tr" data-edit="t64" data-edit-label="Text: White dry, Karanikas Winery">White dry, Karanikas Winery</span></span><b class="pr" data-edit="t65" data-edit-label="Text: 4,00 / 8,00 €">4,00 / 8,00 €</b></div>
+      <div class="mrow"><span><span class="el" data-edit="t66" data-edit-label="Text: Ροζέ ξηρό, Κτήμα Καρανίκας">Ροζέ ξηρό, Κτήμα Καρανίκας</span><span class="tr" data-edit="t67" data-edit-label="Text: Rosé dry, Karanikas Winery">Rosé dry, Karanikas Winery</span></span><b class="pr" data-edit="t68" data-edit-label="Text: 4,00 / 8,00 €">4,00 / 8,00 €</b></div>
+      <div class="mrow"><span><span class="el" data-edit="t69" data-edit-label="Text: Κόκκινο ημίγλυκο">Κόκκινο ημίγλυκο</span><span class="tr" data-edit="t70" data-edit-label="Text: Red semi-sweet">Red semi-sweet</span></span><b class="pr" data-edit="t71" data-edit-label="Text: 5,00 / 10,00 €">5,00 / 10,00 €</b></div>
+      <div class="mrow"><span><span class="el" data-edit="t72" data-edit-label="Text: Μαρουβάς Χανίων χύμα">Μαρουβάς Χανίων χύμα</span><span class="tr" data-edit="t73" data-edit-label="Text: Chania’s Marouvas in bulk">Chania’s Marouvas in bulk</span></span><b class="pr" data-edit="t74" data-edit-label="Text: 6,00 / 12,00 €">6,00 / 12,00 €</b></div>
+      <p class="mh"><span class="el" data-edit="t75" data-edit-label="Text: Αποστάγματα χύμα (100 / 200ml)">Αποστάγματα χύμα (100 / 200ml)</span><span class="tr" data-edit="t76" data-edit-label="Text: House spirits (100 / 200ml)">House spirits (100 / 200ml)</span></p>
+      <div class="mrow"><span><span class="el" data-edit="t77" data-edit-label="Text: Τσικουδιά, Αναγνωστάκης">Τσικουδιά, Αναγνωστάκης</span><span class="tr" data-edit="t78" data-edit-label="Text: Tsikoudia, Anagnostakis">Tsikoudia, Anagnostakis</span></span><b class="pr" data-edit="t79" data-edit-label="Text: 2,50 / 5,00 €">2,50 / 5,00 €</b></div>
+      <div class="mrow"><span><span class="el" data-edit="t80" data-edit-label="Text: Ρακόμελο">Ρακόμελο</span><span class="tr" data-edit="t81" data-edit-label="Text: Rakomelo">Rakomelo</span></span><b class="pr" data-edit="t82" data-edit-label="Text: 3,00 / 6,00 €">3,00 / 6,00 €</b></div>
+      <div class="mrow"><span><span class="el" data-edit="t83" data-edit-label="Text: Ψημένη ρακή, Αμοργιανή">Ψημένη ρακή, Αμοργιανή</span><span class="tr" data-edit="t84" data-edit-label="Text: Baked raki, Amorgion">Baked raki, Amorgion</span></span><b class="pr" data-edit="t85" data-edit-label="Text: 4,00 / 8,00 €">4,00 / 8,00 €</b></div>
+      <div class="mrow"><span><span class="el" data-edit="t86" data-edit-label="Text: Παλαιωμένη ρακή">Παλαιωμένη ρακή</span><span class="tr" data-edit="t87" data-edit-label="Text: Aged raki">Aged raki</span></span><b class="pr" data-edit="t88" data-edit-label="Text: 3,50 / 7,00 €">3,50 / 7,00 €</b></div>
+      <p class="mh"><span class="el" data-edit="t89" data-edit-label="Text: Ούζα &amp; τσίπουρα (200ml)">Ούζα &amp; τσίπουρα (200ml)</span><span class="tr" data-edit="t90" data-edit-label="Text: Ouzo &amp; tsipouro (200ml)">Ouzo &amp; tsipouro (200ml)</span></p>
+      <div class="mrow"><span><span class="el" data-edit="t91" data-edit-label="Text: Ούζο Πλωμάρι">Ούζο Πλωμάρι</span><span class="tr" data-edit="t92" data-edit-label="Text: Ouzo Plomari">Ouzo Plomari</span></span><b class="pr" data-edit="t93" data-edit-label="Text: 12,00 €">12,00 €</b></div>
+      <div class="mrow"><span><span class="el" data-edit="t94" data-edit-label="Text: Τσίπουρο Τσιλιλή">Τσίπουρο Τσιλιλή</span><span class="tr" data-edit="t95" data-edit-label="Text: Tsipouro Tsilili">Tsipouro Tsilili</span></span><b class="pr" data-edit="t96" data-edit-label="Text: 13,00 €">13,00 €</b></div>
+      <div class="mrow"><span><span class="el" data-edit="t97" data-edit-label="Text: Φρέσκοι χυμοί">Φρέσκοι χυμοί</span><span class="tr" data-edit="t98" data-edit-label="Text: Fresh juices">Fresh juices</span></span><b class="pr" data-edit="t99" data-edit-label="Text: 3,00 €">3,00 €</b></div>
     </div>
     <figure class="fr rev">
       <img src="img/02.jpg" alt="Ο κατάλογος με τα κρασιά" loading="lazy">
-      <figcaption><span class="el" data-edit="t100" data-edit-label="Text — Ο κατάλογος — στα ελληνικά και στα αγγ…">Ο κατάλογος — στα ελληνικά και στα αγγλικά.</span><span class="tr" data-edit="t101" data-edit-label="Text — The menu — in Greek and English.">The menu — in Greek and English.</span></figcaption>
+      <figcaption><span class="el" data-edit="t100" data-edit-label="Text: Ο κατάλογος, στα ελληνικά και στα αγγλ…">Ο κατάλογος, στα ελληνικά και στα αγγλικά.</span><span class="tr" data-edit="t101" data-edit-label="Text: The menu, in Greek and English.">The menu, in Greek and English.</span></figcaption>
     </figure>
   </div>
 </section>
 
 <section class="case">
   <div class="wrap">
-    <p class="kick rev"><span class="el" data-edit="t102" data-edit-label="Text — Στο τραπέζι">Στο τραπέζι</span><span class="tr" data-edit="t103" data-edit-label="Text — On the table">On the table</span></p>
-    <h2 class="rev"><span class="el" data-edit="t104" data-edit-label="Text — Σπιτικές γεύσεις">Σπιτικές γεύσεις</span><span class="tr" data-edit="t105" data-edit-label="Text — Home cooking">Home cooking</span></h2>
+    <p class="kick rev"><span class="el" data-edit="t102" data-edit-label="Text: Στο τραπέζι">Στο τραπέζι</span><span class="tr" data-edit="t103" data-edit-label="Text: On the table">On the table</span></p>
+    <h2 class="rev"><span class="el" data-edit="t104" data-edit-label="Text: Σπιτικές γεύσεις">Σπιτικές γεύσεις</span><span class="tr" data-edit="t105" data-edit-label="Text: Home cooking">Home cooking</span></h2>
     <div class="trio rev">
-      <figure class="fr"><img src="img/04.jpg" alt="Κεφτεδάκια με τζατζίκι" loading="lazy"><figcaption><span class="el" data-edit="t106" data-edit-label="Text — Μεζεδάκια για αρχή.">Μεζεδάκια για αρχή.</span><span class="tr" data-edit="t107" data-edit-label="Text — Small plates to start.">Small plates to start.</span></figcaption></figure>
-      <figure class="fr"><img src="img/09.jpg" alt="Χωριάτικη σαλάτα με φέτα" loading="lazy"><figcaption><span class="el" data-edit="t108" data-edit-label="Text — Χωριάτικη με φέτα.">Χωριάτικη με φέτα.</span><span class="tr" data-edit="t109" data-edit-label="Text — Greek salad with feta.">Greek salad with feta.</span></figcaption></figure>
-      <figure class="fr"><img src="img/06.jpg" alt="Ο χώρος με τα τραπέζια" loading="lazy"><figcaption><span class="el" data-edit="t110" data-edit-label="Text — Η σάλα πριν γεμίσει.">Η σάλα πριν γεμίσει.</span><span class="tr" data-edit="t111" data-edit-label="Text — The room before it fills.">The room before it fills.</span></figcaption></figure>
+      <figure class="fr"><img src="img/04.jpg" alt="Κεφτεδάκια με τζατζίκι" loading="lazy"><figcaption><span class="el" data-edit="t106" data-edit-label="Text: Μεζεδάκια για αρχή.">Μεζεδάκια για αρχή.</span><span class="tr" data-edit="t107" data-edit-label="Text: Small plates to start.">Small plates to start.</span></figcaption></figure>
+      <figure class="fr"><img src="img/09.jpg" alt="Χωριάτικη σαλάτα με φέτα" loading="lazy"><figcaption><span class="el" data-edit="t108" data-edit-label="Text: Χωριάτικη με φέτα.">Χωριάτικη με φέτα.</span><span class="tr" data-edit="t109" data-edit-label="Text: Greek salad with feta.">Greek salad with feta.</span></figcaption></figure>
+      <figure class="fr"><img src="img/06.jpg" alt="Ο χώρος με τα τραπέζια" loading="lazy"><figcaption><span class="el" data-edit="t110" data-edit-label="Text: Η σάλα πριν γεμίσει.">Η σάλα πριν γεμίσει.</span><span class="tr" data-edit="t111" data-edit-label="Text: The room before it fills.">The room before it fills.</span></figcaption></figure>
     </div>
   </div>
 </section>
 
 <section class="case tint">
   <div class="wrap">
-    <p class="kick rev"><span class="el" data-edit="t112" data-edit-label="Text — Κριτικές Google">Κριτικές Google</span><span class="tr" data-edit="t113" data-edit-label="Text — Google reviews">Google reviews</span></p>
-    <h2 class="rev"><span class="num" data-edit="t114" data-edit-label="Text — ★ 4,7">★ 4,7</span> <span class="el" data-edit="t115" data-edit-label="Text — από 1.595 κριτικές">από 1.595 κριτικές</span><span class="tr" data-edit="t116" data-edit-label="Text — from 1,595 reviews">from 1,595 reviews</span></h2>
+    <p class="kick rev"><span class="el" data-edit="t112" data-edit-label="Text: Κριτικές Google">Κριτικές Google</span><span class="tr" data-edit="t113" data-edit-label="Text: Google reviews">Google reviews</span></p>
+    <h2 class="rev"><span class="num" data-edit="t114" data-edit-label="Text: ★ 4,7">★ 4,7</span> <span class="el" data-edit="t115" data-edit-label="Text: από 1.595 κριτικές">από 1.595 κριτικές</span><span class="tr" data-edit="t116" data-edit-label="Text: from 1,595 reviews">from 1,595 reviews</span></h2>
     <div class="qs rev">
-      <div class="q"><q dir="ltr" data-edit="t117" data-edit-label="Quote — Η ταβέρνα «Η Βαλίτσα» είναι ένα πραγμα…">Η ταβέρνα «Η Βαλίτσα» είναι ένα πραγματικό διαμαντάκι! Η ατμόσφαιρα είναι ζεστή και όμορφη, ιδανική για χαλαρό φαγητό με παρέα ή οικογένεια.</q><div class="w" data-edit="t118" data-edit-label="Text — Manos Andrianos · Google">Manos Andrianos · Google</div></div>
-      <div class="q"><q dir="ltr" data-edit="t119" data-edit-label="Quote — Πολύ όμορφο ταβερνάκι στα Πετράλωνα! Κ…">Πολύ όμορφο ταβερνάκι στα Πετράλωνα! Καλωσόρισμα με ένα τσιπουράκι για να ανοίξει η όρεξη, ελληνικό μενού για όλα τα γούστα.</q><div class="w" data-edit="t120" data-edit-label="Text — Giannis S87 · Google">Giannis S87 · Google</div></div>
-      <div class="q"><q dir="ltr" data-edit="t121" data-edit-label="Quote — Μπράβο στους ανθρώπους που δουλεύουν. …">Μπράβο στους ανθρώπους που δουλεύουν. Υπέροχες γεύσεις και ζεστό κλίμα. Η διακόσμηση μοναδική.</q><div class="w" data-edit="t122" data-edit-label="Text — maria maria · Google">maria maria · Google</div></div>
+      <div class="q"><q dir="ltr" data-edit="t117" data-edit-label="Quote: Η ταβέρνα «Η Βαλίτσα» είναι ένα πραγμα…">Η ταβέρνα «Η Βαλίτσα» είναι ένα πραγματικό διαμαντάκι! Η ατμόσφαιρα είναι ζεστή και όμορφη, ιδανική για χαλαρό φαγητό με παρέα ή οικογένεια.</q><div class="w" data-edit="t118" data-edit-label="Text: Manos Andrianos · Google">Manos Andrianos · Google</div></div>
+      <div class="q"><q dir="ltr" data-edit="t119" data-edit-label="Quote: Πολύ όμορφο ταβερνάκι στα Πετράλωνα! Κ…">Πολύ όμορφο ταβερνάκι στα Πετράλωνα! Καλωσόρισμα με ένα τσιπουράκι για να ανοίξει η όρεξη, ελληνικό μενού για όλα τα γούστα.</q><div class="w" data-edit="t120" data-edit-label="Text: Giannis S87 · Google">Giannis S87 · Google</div></div>
+      <div class="q"><q dir="ltr" data-edit="t121" data-edit-label="Quote: Μπράβο στους ανθρώπους που δουλεύουν. …">Μπράβο στους ανθρώπους που δουλεύουν. Υπέροχες γεύσεις και ζεστό κλίμα. Η διακόσμηση μοναδική.</q><div class="w" data-edit="t122" data-edit-label="Text: maria maria · Google">maria maria · Google</div></div>
     </div>
   </div>
 </section>
@@ -245,44 +272,44 @@ setTimeout(function(){document.querySelectorAll('.rev').forEach(function(e){e.cl
 <section class="case">
   <div class="wrap two rev">
     <div>
-      <p class="kick"><span class="el" data-edit="t123" data-edit-label="Text — Ωράριο">Ωράριο</span><span class="tr" data-edit="t124" data-edit-label="Text — Opening hours">Opening hours</span></p>
-      <h2><span class="el" data-edit="t125" data-edit-label="Text — Κάθε μέρα 10:00–00:00">Κάθε μέρα 10:00–00:00</span><span class="tr" data-edit="t126" data-edit-label="Text — Every day 10:00–00:00">Every day 10:00–00:00</span></h2>
+      <p class="kick"><span class="el" data-edit="t123" data-edit-label="Text: Ωράριο">Ωράριο</span><span class="tr" data-edit="t124" data-edit-label="Text: Opening hours">Opening hours</span></p>
+      <h2><span class="el" data-edit="t125" data-edit-label="Text: Κάθε μέρα 10:00–00:00">Κάθε μέρα 10:00–00:00</span><span class="tr" data-edit="t126" data-edit-label="Text: Every day 10:00–00:00">Every day 10:00–00:00</span></h2>
       <table>
-        <tr><td><span class="el" data-edit="t127" data-edit-label="Text — Δευτέρα">Δευτέρα</span><span class="tr" data-edit="t128" data-edit-label="Text — Monday">Monday</span></td><td class="num" data-edit="t129" data-edit-label="Menu / table — 10:00–00:00">10:00–00:00</td></tr>
-        <tr><td><span class="el" data-edit="t130" data-edit-label="Text — Τρίτη">Τρίτη</span><span class="tr" data-edit="t131" data-edit-label="Text — Tuesday">Tuesday</span></td><td class="num" data-edit="t132" data-edit-label="Menu / table — 10:00–00:00">10:00–00:00</td></tr>
-        <tr><td><span class="el" data-edit="t133" data-edit-label="Text — Τετάρτη">Τετάρτη</span><span class="tr" data-edit="t134" data-edit-label="Text — Wednesday">Wednesday</span></td><td class="num" data-edit="t135" data-edit-label="Menu / table — 10:00–00:00">10:00–00:00</td></tr>
-        <tr><td><span class="el" data-edit="t136" data-edit-label="Text — Πέμπτη">Πέμπτη</span><span class="tr" data-edit="t137" data-edit-label="Text — Thursday">Thursday</span></td><td class="num" data-edit="t138" data-edit-label="Menu / table — 10:00–00:00">10:00–00:00</td></tr>
-        <tr><td><span class="el" data-edit="t139" data-edit-label="Text — Παρασκευή">Παρασκευή</span><span class="tr" data-edit="t140" data-edit-label="Text — Friday">Friday</span></td><td class="num" data-edit="t141" data-edit-label="Menu / table — 10:00–00:00">10:00–00:00</td></tr>
-        <tr><td><span class="el" data-edit="t142" data-edit-label="Text — Σάββατο">Σάββατο</span><span class="tr" data-edit="t143" data-edit-label="Text — Saturday">Saturday</span></td><td class="num" data-edit="t144" data-edit-label="Menu / table — 10:00–00:00">10:00–00:00</td></tr>
-        <tr><td><span class="el" data-edit="t145" data-edit-label="Text — Κυριακή">Κυριακή</span><span class="tr" data-edit="t146" data-edit-label="Text — Sunday">Sunday</span></td><td class="num" data-edit="t147" data-edit-label="Menu / table — 10:00–00:00">10:00–00:00</td></tr>
+        <tr><td><span class="el" data-edit="t127" data-edit-label="Text: Δευτέρα">Δευτέρα</span><span class="tr" data-edit="t128" data-edit-label="Text: Monday">Monday</span></td><td class="num" data-edit="t129" data-edit-label="Menu / table: 10:00–00:00">10:00–00:00</td></tr>
+        <tr><td><span class="el" data-edit="t130" data-edit-label="Text: Τρίτη">Τρίτη</span><span class="tr" data-edit="t131" data-edit-label="Text: Tuesday">Tuesday</span></td><td class="num" data-edit="t132" data-edit-label="Menu / table: 10:00–00:00">10:00–00:00</td></tr>
+        <tr><td><span class="el" data-edit="t133" data-edit-label="Text: Τετάρτη">Τετάρτη</span><span class="tr" data-edit="t134" data-edit-label="Text: Wednesday">Wednesday</span></td><td class="num" data-edit="t135" data-edit-label="Menu / table: 10:00–00:00">10:00–00:00</td></tr>
+        <tr><td><span class="el" data-edit="t136" data-edit-label="Text: Πέμπτη">Πέμπτη</span><span class="tr" data-edit="t137" data-edit-label="Text: Thursday">Thursday</span></td><td class="num" data-edit="t138" data-edit-label="Menu / table: 10:00–00:00">10:00–00:00</td></tr>
+        <tr><td><span class="el" data-edit="t139" data-edit-label="Text: Παρασκευή">Παρασκευή</span><span class="tr" data-edit="t140" data-edit-label="Text: Friday">Friday</span></td><td class="num" data-edit="t141" data-edit-label="Menu / table: 10:00–00:00">10:00–00:00</td></tr>
+        <tr><td><span class="el" data-edit="t142" data-edit-label="Text: Σάββατο">Σάββατο</span><span class="tr" data-edit="t143" data-edit-label="Text: Saturday">Saturday</span></td><td class="num" data-edit="t144" data-edit-label="Menu / table: 10:00–00:00">10:00–00:00</td></tr>
+        <tr><td><span class="el" data-edit="t145" data-edit-label="Text: Κυριακή">Κυριακή</span><span class="tr" data-edit="t146" data-edit-label="Text: Sunday">Sunday</span></td><td class="num" data-edit="t147" data-edit-label="Menu / table: 10:00–00:00">10:00–00:00</td></tr>
       </table>
     </div>
     <div>
-      <p class="kick"><span class="el" data-edit="t148" data-edit-label="Text — Πού είμαστε">Πού είμαστε</span><span class="tr" data-edit="t149" data-edit-label="Text — Where we are">Where we are</span></p>
-      <h2><span class="el" data-edit="t150" data-edit-label="Text — Δημοφώντος 80">Δημοφώντος 80</span><span class="tr" data-edit="t151" data-edit-label="Text — Dimofontos 80">Dimofontos 80</span></h2>
-      <p style="font-size:19px"><b class="ad" data-edit="t152" data-edit-label="Text — Δημοφώντος 80, Αθήνα 118 51">Δημοφώντος 80, Αθήνα 118 51</b><br>
-        <span class="el" data-edit="t153" data-edit-label="Text — Άνω Πετράλωνα">Άνω Πετράλωνα</span><span class="tr" data-edit="t154" data-edit-label="Text — Ano Petralona">Ano Petralona</span><br>
-        <b class="ph num" data-edit="t155" data-edit-label="Text — +30 21 0347 0828">+30 21 0347 0828</b></p>
+      <p class="kick"><span class="el" data-edit="t148" data-edit-label="Text: Πού είμαστε">Πού είμαστε</span><span class="tr" data-edit="t149" data-edit-label="Text: Where we are">Where we are</span></p>
+      <h2><span class="el" data-edit="t150" data-edit-label="Text: Δημοφώντος 80">Δημοφώντος 80</span><span class="tr" data-edit="t151" data-edit-label="Text: Dimofontos 80">Dimofontos 80</span></h2>
+      <p style="font-size:19px"><b class="ad" data-edit="t152" data-edit-label="Text: Δημοφώντος 80, Αθήνα 118 51">Δημοφώντος 80, Αθήνα 118 51</b><br>
+        <span class="el" data-edit="t153" data-edit-label="Text: Άνω Πετράλωνα">Άνω Πετράλωνα</span><span class="tr" data-edit="t154" data-edit-label="Text: Ano Petralona">Ano Petralona</span><br>
+        <b class="ph num" data-edit="t155" data-edit-label="Text: +30 21 0347 0828">+30 21 0347 0828</b></p>
       <p>
-        <a class="btn" href="tel:+302103470828"><span class="el" data-edit="t156" data-edit-label="Text — Τηλέφωνο">Τηλέφωνο</span><span class="tr" data-edit="t157" data-edit-label="Text — Call">Call</span></a>
-        <a class="btn b" href="https://www.instagram.com/valitsa80/" target="_blank" rel="noopener" data-edit="t158" data-edit-label="Button / link — Instagram">Instagram</a>
-        <a class="btn b" href="https://www.google.com/maps?cid=1647534126820129760" target="_blank" rel="noopener"><span class="el" data-edit="t159" data-edit-label="Text — Χάρτης">Χάρτης</span><span class="tr" data-edit="t160" data-edit-label="Text — Map">Map</span></a>
+        <a class="btn" href="tel:+302103470828"><span class="el" data-edit="t156" data-edit-label="Text: Τηλέφωνο">Τηλέφωνο</span><span class="tr" data-edit="t157" data-edit-label="Text: Call">Call</span></a>
+        <a class="btn b" href="https://www.instagram.com/valitsa80/" target="_blank" rel="noopener" data-edit="t158" data-edit-label="Button / link: Instagram">Instagram</a>
+        <a class="btn b" href="https://www.google.com/maps?cid=1647534126820129760" target="_blank" rel="noopener"><span class="el" data-edit="t159" data-edit-label="Text: Χάρτης">Χάρτης</span><span class="tr" data-edit="t160" data-edit-label="Text: Map">Map</span></a>
       </p>
     </div>
   </div>
-  <div class="wrap"><footer><p><b><span class="el" data-edit="t161" data-edit-label="Text — Βαλίτσα">Βαλίτσα</span><span class="tr" data-edit="t162" data-edit-label="Text — Valitsa">Valitsa</span></b> — Δημοφώντος 80, Αθήνα 118 51 · <span class="num" data-edit="t163" data-edit-label="Text — +30 21 0347 0828">+30 21 0347 0828</span></p></footer></div>
+  <div class="wrap"><footer><p><b><span class="el" data-edit="t161" data-edit-label="Text: Βαλίτσα">Βαλίτσα</span><span class="tr" data-edit="t162" data-edit-label="Text: Valitsa">Valitsa</span></b> · Δημοφώντος 80, Αθήνα 118 51 · <span class="num" data-edit="t163" data-edit-label="Text: +30 21 0347 0828">+30 21 0347 0828</span></p></footer></div>
 </section>
 
 <nav class="bar">
   <a class="p" href="tel:+302103470828">
     <svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.4.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C11 21 3 13 3 3c0-.6.4-1 1-1h3.4c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.2 1l-2.2 2.2z"/></svg>
-    <span class="el" data-edit="t164" data-edit-label="Text — Κλήση">Κλήση</span><span class="tr" data-edit="t165" data-edit-label="Text — Call">Call</span></a>
+    <span class="el" data-edit="t164" data-edit-label="Text: Κλήση">Κλήση</span><span class="tr" data-edit="t165" data-edit-label="Text: Call">Call</span></a>
   <a href="https://www.instagram.com/valitsa80/" target="_blank" rel="noopener" aria-label="Instagram">
     <svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.3 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .3-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.3-1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.3 2.2-.4C8.4 2.2 8.8 2.2 12 2.2zm0 3.2A6.6 6.6 0 1 0 18.6 12 6.6 6.6 0 0 0 12 5.4zm0 10.9A4.3 4.3 0 1 1 16.3 12 4.3 4.3 0 0 1 12 16.3zm6.9-11.1a1.5 1.5 0 1 1-1.5-1.5 1.5 1.5 0 0 1 1.5 1.5z"/></svg>
     Instagram</a>
   <a href="https://www.google.com/maps?cid=1647534126820129760" target="_blank" rel="noopener">
     <svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>
-    <span class="el" data-edit="t166" data-edit-label="Text — Χάρτης">Χάρτης</span><span class="tr" data-edit="t167" data-edit-label="Text — Map">Map</span></a>
+    <span class="el" data-edit="t166" data-edit-label="Text: Χάρτης">Χάρτης</span><span class="tr" data-edit="t167" data-edit-label="Text: Map">Map</span></a>
 </nav>
 </body>
 </html>
