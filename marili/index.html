@@ -30,33 +30,52 @@ a{color:inherit}
 h2{font-size:clamp(30px,5.2vw,56px);margin-bottom:20px}
 p+p{margin-top:15px}
 /* hero: CRYSTAL FACET BURST, one faceted salt crystal, centred */
+/* ===== ARC HORIZON: slate sky, a cream arc rising from the bottom, bread-oval photo ===== */
 header{position:relative;min-height:clamp(600px,92svh,820px);max-height:860px;overflow:hidden;
-  display:flex;align-items:center;justify-content:center;background:var(--salt)}
-.hgroup{display:flex;flex-direction:column;align-items:center;width:100%;padding:clamp(64px,8vh,84px) 0 clamp(26px,4vh,44px)}
-.crys{position:relative;width:min(1100px,94vw);height:clamp(400px,54vh,540px)}
-.f{position:absolute;inset:0}
-.f1{clip-path:polygon(28% 22%,68% 14%,78% 56%,55% 88%,28% 72%);background:linear-gradient(155deg,#FDFCF9 0%,#EAEEF1 55%,#D6DEE3 100%)}
-.f2{clip-path:polygon(6% 50%,22% 8%,28% 22%,28% 72%);background:#DDE4E9}
-.f2b{clip-path:polygon(6% 50%,28% 72%,19% 86%);background:#CBD5DB}
-.f3{clip-path:polygon(22% 8%,58% 2%,68% 14%,28% 22%);background:#F1F4F6}
-.f4{clip-path:polygon(58% 2%,94% 24%,78% 56%,68% 14%)}
-.f4 img{position:absolute;left:56%;top:0;width:40%;height:58%;object-fit:cover;object-position:50% 62%;display:block}
-.f5{clip-path:polygon(94% 24%,88% 74%,55% 88%,78% 56%);background:#93A2AD}
-.f6{clip-path:polygon(19% 86%,28% 72%,55% 88%,55% 96%);background:#C3CED6}
-.f7{clip-path:polygon(55% 88%,88% 74%,55% 96%);background:#8A99A4}
-.edges{position:absolute;inset:0;width:100%;height:100%;z-index:3;pointer-events:none}
-.edges path{fill:none;stroke:var(--cryst-d);stroke-opacity:.55;stroke-width:1;vector-effect:non-scaling-stroke}
-.cin{position:absolute;z-index:4;left:26%;top:18%;width:48%;height:64%;
-  display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
+  display:grid;grid-template-rows:1fr auto;
+  background:
+    repeating-linear-gradient(90deg,rgba(255,255,255,.045) 0 1px,transparent 1px 46px),
+    linear-gradient(178deg,#42525E,#31404A 52%,#26323A)}
+/* faint drifting salt grain */
+header::before{content:"";position:absolute;inset:0;pointer-events:none;
+  background:radial-gradient(1.5px 1.5px at 18% 24%,rgba(255,255,255,.5),transparent 60%),
+             radial-gradient(1.5px 1.5px at 63% 12%,rgba(255,255,255,.4),transparent 60%),
+             radial-gradient(1.5px 1.5px at 82% 38%,rgba(255,255,255,.45),transparent 60%),
+             radial-gradient(1.5px 1.5px at 37% 44%,rgba(255,255,255,.35),transparent 60%);}
+.sky{position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  text-align:center;padding:clamp(40px,7vh,80px) 5vw clamp(18px,3vh,34px);color:var(--salt)}
+.kick{font:700 11.5px/1 Commissioner,sans-serif;letter-spacing:.34em;text-transform:uppercase;
+  color:#B9C6CE;margin-bottom:16px}
 /* the salt-crystal seal: living ornament */
-.seal{position:relative;width:64px;height:64px;margin-bottom:16px;overflow:hidden}
+.seal{position:relative;width:58px;height:58px;margin-bottom:18px;overflow:hidden}
 .seal i{position:absolute;inset:0;background:linear-gradient(140deg,#fff,#B9C6CE 45%,#7F919D);
   clip-path:polygon(50% 0,93% 26%,93% 74%,50% 100%,7% 74%,7% 26%);display:block}
-.seal::after{content:"";position:absolute;inset:0;background:linear-gradient(120deg,transparent 38%,rgba(255,255,255,.9) 47%,transparent 56%);
+.seal::after{content:"";position:absolute;inset:0;
+  background:linear-gradient(120deg,transparent 38%,rgba(255,255,255,.9) 47%,transparent 56%);
   animation:glint 12s ease-in-out infinite}
 @keyframes glint{0%,86%{transform:translateX(-120%)}100%{transform:translateX(120%)}} /* data-fx-orn */
-h1{font-size:clamp(40px,6.4vw,84px);margin:0;letter-spacing:-.01em}
-h1 em{display:block;font-style:normal;font-family:'Noto Serif Georgian',serif;font-size:.42em;color:var(--cryst-d);margin-top:6px}
+h1{font-size:clamp(44px,7.4vw,96px);margin:0;letter-spacing:-.01em;line-height:1.02}
+h1 em{display:block;font-style:normal;font-size:.26em;letter-spacing:.2em;text-transform:none;
+  color:#C6D2DA;margin-top:14px;font-family:Commissioner,sans-serif;font-weight:500}
+/* the cream arc: a curved horizon nobody else in the roster has */
+.arc{position:relative;z-index:2;background:var(--salt);color:var(--ink);
+  border-radius:52% 52% 0 0 / 15% 15% 0 0;
+  margin-top:clamp(18px,3vh,34px);padding:clamp(30px,5vh,58px) 5vw clamp(20px,3vh,32px);
+  box-shadow:0 -14px 40px rgba(0,0,0,.28)}
+.arc::before{content:"";position:absolute;inset-inline:12%;top:-1px;height:3px;border-radius:3px;
+  background:linear-gradient(90deg,transparent,var(--crust),transparent);opacity:.7}
+.arcin{width:min(880px,100%);margin-inline:auto;text-align:center}
+/* the loaf: a wide soft-ended oval carrying the real shopfront */
+.loaf{width:min(620px,88%);margin:0 auto clamp(18px,2.6vh,28px);aspect-ratio:2.25/1;overflow:hidden;
+  border-radius:96px;border:6px solid #fff;
+  box-shadow:0 16px 34px rgba(32,33,30,.24),0 0 0 1px rgba(94,112,126,.25)}
+.loaf img{width:100%;height:100%;object-fit:cover;object-position:50% 36%;display:block}
+@media(max-width:720px){
+  header{grid-template-rows:auto auto}
+  .arc{border-radius:46% 46% 0 0 / 9% 9% 0 0}
+  .loaf{width:min(430px,94%);border-width:4px;border-radius:64px}
+  h1{font-size:clamp(38px,10.5vw,54px)}
+}
 .hsub{width:min(720px,88vw);margin-top:clamp(18px,3vh,30px);text-align:center}
 .hsub p{font-size:clamp(15.5px,1.8vw,19px);color:#4a5158;max-width:58ch;margin-inline:auto}
 .hp{margin-top:18px;display:flex;flex-wrap:wrap;gap:9px;justify-content:center}
@@ -154,33 +173,22 @@ setTimeout(function(){document.querySelectorAll('.rev').forEach(function(e){e.cl
 <button class="lgx" onclick="LG()"><span class="el">ქართული</span><span class="tr" data-edit="t1" data-edit-label="Text: Ελληνικά">Ελληνικά</span></button>
 
 <header>
-  <div class="hgroup">
-    <div class="crys">
-      <div class="f f2" aria-hidden="true"></div>
-      <div class="f f2b" aria-hidden="true"></div>
-      <div class="f f3" aria-hidden="true"></div>
-      <div class="f f4"><img src="img/01.jpg" alt="Η βαμμένη πρόσοψη του φούρνου MARILI"></div>
-      <div class="f f5" aria-hidden="true"></div>
-      <div class="f f6" aria-hidden="true"></div>
-      <div class="f f7" aria-hidden="true"></div>
-      <div class="f f1" aria-hidden="true"></div>
-      <svg class="edges" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
-        <path d="M6 50 L22 8 L58 2 L94 24 L88 74 L55 96 L19 86 Z"/>
-        <path d="M28 22 L68 14 L78 56 L55 88 L28 72 Z"/>
-        <path d="M22 8 L28 22 M58 2 L68 14 M94 24 L78 56 M88 74 L55 88 M55 96 L55 88 M19 86 L28 72 M6 50 L28 72"/>
-      </svg>
-      <div class="cin">
-        <span class="seal"><i></i></span>
-        <h1><span class="el">MARILI<em data-edit="t2" data-edit-label="Text: მარილი · «αλάτι»">მარილი · «αλάτι»</em></span><span class="tr">მარილი<em data-edit="t3" data-edit-label="Text: MARILI · «αλάτι»">MARILI · «αλάτι»</em></span></h1>
-      </div>
-    </div>
-    <div class="hsub">
-      <p><span class="el" data-edit="t4" data-edit-label="Text: Γεωργιανός φούρνος στον πεζόδρομο της …">Γεωργιανός φούρνος στον πεζόδρομο της Αγίας Ζώνης. Χατσαπούρι, πουγκιά και πίτες που ζυμώνονται και ψήνονται εδώ, κάθε μέρα.</span><span class="tr">ქართული საცხობი აგია ზონის ქუჩაზე. ხაჭაპური, ბურთულები და ცომეული, რომელიც აქ იზილება და ცხვება ყოველდღე.</span></p>
+  <div class="sky">
+    <p class="kick"><span class="el" data-edit="t2" data-edit-label="Text: Γεωργιανός φούρνος · Κυψέλη">Γεωργιανός φούρνος · Κυψέλη</span><span class="tr">ქართული საცხობი · კიფსელი</span></p>
+    <span class="seal"><i></i></span>
+    <h1><span class="el">MARILI<em data-edit="t3" data-edit-label="Text: მარილი · «αλάτι»">მარილი · «αλάτι»</em></span><span class="tr">მარილი<em data-edit="t4" data-edit-label="Text: MARILI · «αλάτι»">MARILI · «αλάτι»</em></span></h1>
+  </div>
+  <div class="arc">
+    <div class="arcin">
+      <figure class="loaf"><img src="img/01.jpg" alt="Η βαμμένη πρόσοψη του φούρνου MARILI στην Αγίας Ζώνης"></figure>
+      <div class="hsub">
+      <p><span class="el" data-edit="t5" data-edit-label="Text: Γεωργιανός φούρνος στον πεζόδρομο της …">Γεωργιανός φούρνος στον πεζόδρομο της Αγίας Ζώνης. Χατσαπούρι, πουγκιά και πίτες που ζυμώνονται και ψήνονται εδώ, κάθε μέρα.</span><span class="tr">ქართული საცხობი აგია ზონის ქუჩაზე. ხაჭაპური, ბურთულები და ცომეული, რომელიც აქ იზილება და ცხვება ყოველდღე.</span></p>
       <div class="hp">
-        <span class="c num" data-edit="t5" data-edit-label="Text: ★ 4,8">★ 4,8</span>
-        <span><span class="el" data-edit="t6" data-edit-label="Text: 236 κριτικές Google">236 κριτικές Google</span><span class="tr" data-edit="t7" data-edit-label="Text: 236 შეფასება Google-ზე">236 შეფასება Google-ზე</span></span>
-        <span><span class="el" data-edit="t8" data-edit-label="Text: Αγίας Ζώνης 26">Αγίας Ζώνης 26</span><span class="tr" data-edit="t9" data-edit-label="Text: აგია ზონი 26">აგია ზონი 26</span></span>
+        <span class="c num" data-edit="t6" data-edit-label="Text: ★ 4,8">★ 4,8</span>
+        <span><span class="el" data-edit="t7" data-edit-label="Text: 236 κριτικές Google">236 κριτικές Google</span><span class="tr" data-edit="t8" data-edit-label="Text: 236 შეფასება Google-ზე">236 შეფასება Google-ზე</span></span>
+        <span><span class="el" data-edit="t9" data-edit-label="Text: Αγίας Ζώνης 26">Αγίας Ζώνης 26</span><span class="tr" data-edit="t10" data-edit-label="Text: აგია ზონი 26">აგია ზონი 26</span></span>
       </div>
+    </div></div>
     </div>
   </div>
 </header>
@@ -188,32 +196,32 @@ setTimeout(function(){document.querySelectorAll('.rev').forEach(function(e){e.cl
 <section class="facet">
   <div class="wrap two rev">
     <div>
-      <p class="kick"><span class="el" data-edit="t10" data-edit-label="Text: Το όνομα">Το όνομα</span><span class="tr">სახელი</span></p>
-      <h2><span class="el" data-edit="t11" data-edit-label="Text: «Μαρίλι» θα πει αλάτι">«Μαρίλι» θα πει αλάτι</span><span class="tr">„მარილი“ ნიშნავს მარილს</span></h2>
-      <p><span class="el" data-edit="t12" data-edit-label="Text: Στα γεωργιανά «marili» σημαίνει αλάτι,…">Στα γεωργιανά «marili» σημαίνει αλάτι, το υλικό που κρίνει το ζύμωμα και το ψήσιμο του γεωργιανού ψωμιού. Απ' αυτό πήρε το όνομά του ο φούρνος, όταν άνοιξε στον πεζόδρομο της Αγίας Ζώνης.</span><span class="tr">ქართულად „მარილი“ ნიშნავს მარილს, იმ ინგრედიენტს, რომელიც განსაზღვრავს ქართული პურის მოზელვასა და გამოცხობას. აქედან მიიღო სახელი საცხობმა, როცა გაიხსნა აგია ზონის ქუჩაზე.</span></p>
-      <p><span class="el" data-edit="t13" data-edit-label="Text: Μέσα υπάρχει ένα «τονέ», ο παραδοσιακό…">Μέσα υπάρχει ένα «τονέ», ο παραδοσιακός πέτρινος γεωργιανός φούρνος που μοιάζει με πηγάδι. Οι πίτες κολλάνε στα τοιχώματά του και βγαίνουν καμένες στα σημεία, όπως πρέπει.</span><span class="tr">შიგნით არის „თონე“, ტრადიციული ქართული ქვის ღუმელი, ჭასავით. ცომი მის კედლებზე ეკვრის და გამოდის ადგილ-ადგილ შებრაწული, როგორც საჭიროა.</span></p>
+      <p class="kick"><span class="el" data-edit="t11" data-edit-label="Text: Το όνομα">Το όνομα</span><span class="tr">სახელი</span></p>
+      <h2><span class="el" data-edit="t12" data-edit-label="Text: «Μαρίλι» θα πει αλάτι">«Μαρίλι» θα πει αλάτι</span><span class="tr">„მარილი“ ნიშნავს მარილს</span></h2>
+      <p><span class="el" data-edit="t13" data-edit-label="Text: Στα γεωργιανά «marili» σημαίνει αλάτι,…">Στα γεωργιανά «marili» σημαίνει αλάτι, το υλικό που κρίνει το ζύμωμα και το ψήσιμο του γεωργιανού ψωμιού. Απ' αυτό πήρε το όνομά του ο φούρνος, όταν άνοιξε στον πεζόδρομο της Αγίας Ζώνης.</span><span class="tr">ქართულად „მარილი“ ნიშნავს მარილს, იმ ინგრედიენტს, რომელიც განსაზღვრავს ქართული პურის მოზელვასა და გამოცხობას. აქედან მიიღო სახელი საცხობმა, როცა გაიხსნა აგია ზონის ქუჩაზე.</span></p>
+      <p><span class="el" data-edit="t14" data-edit-label="Text: Μέσα υπάρχει ένα «τονέ», ο παραδοσιακό…">Μέσα υπάρχει ένα «τονέ», ο παραδοσιακός πέτρινος γεωργιανός φούρνος που μοιάζει με πηγάδι. Οι πίτες κολλάνε στα τοιχώματά του και βγαίνουν καμένες στα σημεία, όπως πρέπει.</span><span class="tr">შიგნით არის „თონე“, ტრადიციული ქართული ქვის ღუმელი, ჭასავით. ცომი მის კედლებზე ეკვრის და გამოდის ადგილ-ადგილ შებრაწული, როგორც საჭიროა.</span></p>
     </div>
     <figure class="fr">
       <img src="img/06.jpg" alt="Το τονέ, ο πέτρινος γεωργιανός φούρνος" loading="lazy">
-      <figcaption><span class="el" data-edit="t14" data-edit-label="Text: Το «τονέ» και το φρέσκο ψωμί.">Το «τονέ» και το φρέσκο ψωμί.</span><span class="tr">„თონე“ და ახალი პური.</span></figcaption>
+      <figcaption><span class="el" data-edit="t15" data-edit-label="Text: Το «τονέ» και το φρέσκο ψωμί.">Το «τονέ» και το φρέσκο ψωμί.</span><span class="tr">„თონე“ და ახალი პური.</span></figcaption>
     </figure>
   </div>
 </section>
 
 <section class="facet b grey">
   <div class="wrap">
-    <p class="kick rev"><span class="el" data-edit="t15" data-edit-label="Text: Από τον φούρνο">Από τον φούρνο</span><span class="tr">ღუმელიდან</span></p>
-    <h2 class="rev"><span class="el" data-edit="t16" data-edit-label="Text: Τρία που βγαίνουν ζεστά">Τρία που βγαίνουν ζεστά</span><span class="tr">სამი, რაც ცხელი გამოდის</span></h2>
+    <p class="kick rev"><span class="el" data-edit="t16" data-edit-label="Text: Από τον φούρνο">Από τον φούρνο</span><span class="tr">ღუმელიდან</span></p>
+    <h2 class="rev"><span class="el" data-edit="t17" data-edit-label="Text: Τρία που βγαίνουν ζεστά">Τρία που βγαίνουν ζεστά</span><span class="tr">სამი, რაც ცხელი გამოდის</span></h2>
     <div class="oven rev">
       <div class="ov"><div class="c"><img src="img/03.jpg" alt="Χατσαπούρι κομμένο σε τέταρτα" loading="lazy"></div>
-        <h3><span class="el" data-edit="t17" data-edit-label="Text: Χατσαπούρι">Χατσαπούρι</span><span class="tr">ხაჭაპური</span></h3>
-        <p><span class="el" data-edit="t18" data-edit-label="Text: Ζύμη με τυρί ιμερούλι, μοιάζει με τυρό…">Ζύμη με τυρί ιμερούλι, μοιάζει με τυρόπιτα, αλλά είναι πιο μαλακή και πιο γεμάτη.</span><span class="tr">ცომი იმერული ყველით, ჰგავს ტიროპიტას, მაგრამ უფრო რბილია და უფრო სავსე.</span></p></div>
+        <h3><span class="el" data-edit="t18" data-edit-label="Text: Χατσαπούρι">Χατσαπούρι</span><span class="tr">ხაჭაპური</span></h3>
+        <p><span class="el" data-edit="t19" data-edit-label="Text: Ζύμη με τυρί ιμερούλι, μοιάζει με τυρό…">Ζύμη με τυρί ιμερούλι, μοιάζει με τυρόπιτα, αλλά είναι πιο μαλακή και πιο γεμάτη.</span><span class="tr">ცომი იმერული ყველით, ჰგავს ტიროპიტას, მაგრამ უფრო რბილია და უფრო სავსე.</span></p></div>
       <div class="ov"><div class="c"><img src="img/04.jpg" alt="Πουγκί με γέμιση" loading="lazy"></div>
-        <h3><span class="el" data-edit="t19" data-edit-label="Text: Πουγκιά">Πουγκιά</span><span class="tr">ბურთულები</span></h3>
-        <p><span class="el" data-edit="t20" data-edit-label="Text: Μικρά πακετάκια ζύμης με πατάτα, φασόλ…">Μικρά πακετάκια ζύμης με πατάτα, φασόλι, μανιτάρι ή κιμά.</span><span class="tr">ცომის პატარა ბურთულები კარტოფილით, ლობიოთი, სოკოთი ან ხორცით.</span></p></div>
+        <h3><span class="el" data-edit="t20" data-edit-label="Text: Πουγκιά">Πουγκιά</span><span class="tr">ბურთულები</span></h3>
+        <p><span class="el" data-edit="t21" data-edit-label="Text: Μικρά πακετάκια ζύμης με πατάτα, φασόλ…">Μικρά πακετάκια ζύμης με πατάτα, φασόλι, μανιτάρι ή κιμά.</span><span class="tr">ცომის პატარა ბურთულები კარტოფილით, ლობიოთი, სოკოთი ან ხორცით.</span></p></div>
       <div class="ov"><div class="c"><img src="img/07.jpg" alt="Πίτα σε χαρτί για το χέρι" loading="lazy"></div>
-        <h3><span class="el" data-edit="t21" data-edit-label="Text: Για τον δρόμο">Για τον δρόμο</span><span class="tr">გზისთვის</span></h3>
-        <p><span class="el" data-edit="t22" data-edit-label="Text: Τυλιγμένο σε χαρτί, ζεστό, έτοιμο να τ…">Τυλιγμένο σε χαρτί, ζεστό, έτοιμο να το φας περπατώντας.</span><span class="tr">ქაღალდში გახვეული, ცხელი, მზად სასეირნოდ.</span></p></div>
+        <h3><span class="el" data-edit="t22" data-edit-label="Text: Για τον δρόμο">Για τον δρόμο</span><span class="tr">გზისთვის</span></h3>
+        <p><span class="el" data-edit="t23" data-edit-label="Text: Τυλιγμένο σε χαρτί, ζεστό, έτοιμο να τ…">Τυλιγμένο σε χαρτί, ζεστό, έτοιμο να το φας περπατώντας.</span><span class="tr">ქაღალდში გახვეული, ცხელი, მზად სასეირნოდ.</span></p></div>
     </div>
   </div>
 </section>
@@ -221,50 +229,50 @@ setTimeout(function(){document.querySelectorAll('.rev').forEach(function(e){e.cl
 <section class="facet">
   <div class="wrap mg">
     <div class="rev">
-      <p class="kick"><span class="el" data-edit="t23" data-edit-label="Text: Το χειρόγραφο μενού">Το χειρόγραφο μενού</span><span class="tr">ხელნაწერი მენიუ</span></p>
-      <h2><span class="el" data-edit="t24" data-edit-label="Text: Τιμές από τον πίνακα">Τιμές από τον πίνακα</span><span class="tr">ფასები დაფიდან</span></h2>
-      <p class="mh"><span class="el" data-edit="t25" data-edit-label="Text: Πίτες">Πίτες</span><span class="tr">ცომეული</span></p>
-      <div class="mrow"><span><span class="el" data-edit="t26" data-edit-label="Text: Χατσαπούρι">Χατσαπούρι</span><span class="tr">ხაჭაპური</span></span><b class="pr" data-edit="t27" data-edit-label="Text: 3,00 €">3,00 €</b></div>
-      <div class="mrow"><span><span class="el" data-edit="t28" data-edit-label="Text: Σπανακοτυρόπιτα">Σπανακοτυρόπιτα</span><span class="tr">ისპანახისა და ყველის ცომეული</span></span><b class="pr" data-edit="t29" data-edit-label="Text: 3,00 €">3,00 €</b></div>
-      <div class="mrow"><span><span class="el" data-edit="t30" data-edit-label="Text: Πατατόπιτα">Πατατόπιτα</span><span class="tr">კარტოფილიანი</span></span><b class="pr" data-edit="t31" data-edit-label="Text: 2,50 €">2,50 €</b></div>
-      <div class="mrow"><span><span class="el" data-edit="t32" data-edit-label="Text: Πίτα με λουκάνικο / μπέικον">Πίτα με λουκάνικο / μπέικον</span><span class="tr">ძეხვით / ბეკონით</span></span><b class="pr" data-edit="t33" data-edit-label="Text: 3,00 €">3,00 €</b></div>
-      <div class="mrow"><span><span class="el" data-edit="t34" data-edit-label="Text: Κιμαδόπιτα">Κιμαδόπιτα</span><span class="tr">ხორცით</span></span><b class="pr" data-edit="t35" data-edit-label="Text: 3,50 €">3,50 €</b></div>
-      <div class="mrow"><span><span class="el" data-edit="t36" data-edit-label="Text: Μανιταρόπιτα">Μανιταρόπιτα</span><span class="tr">სოკოთი</span></span><b class="pr" data-edit="t37" data-edit-label="Text: 3,50 €">3,50 €</b></div>
-      <p class="mh"><span class="el" data-edit="t38" data-edit-label="Text: Πουγκιά">Πουγκιά</span><span class="tr">ბურთულები</span></p>
-      <div class="mrow"><span><span class="el" data-edit="t39" data-edit-label="Text: Με πατάτα">Με πατάτα</span><span class="tr">კარტოფილით</span></span><b class="pr" data-edit="t40" data-edit-label="Text: 1,50 €">1,50 €</b></div>
-      <div class="mrow"><span><span class="el" data-edit="t41" data-edit-label="Text: Με φασόλι">Με φασόλι</span><span class="tr">ლობიოთი</span></span><b class="pr" data-edit="t42" data-edit-label="Text: 1,50 €">1,50 €</b></div>
-      <div class="mrow"><span><span class="el" data-edit="t43" data-edit-label="Text: Με μανιτάρι">Με μανιτάρι</span><span class="tr">სოკოთი</span></span><b class="pr" data-edit="t44" data-edit-label="Text: 1,70 €">1,70 €</b></div>
-      <div class="mrow"><span><span class="el" data-edit="t45" data-edit-label="Text: Με ελιά, φέτα, λιαστή ντομάτα">Με ελιά, φέτα, λιαστή ντομάτα</span><span class="tr">ზეთისხილით, ფეტათი, გამომშრალი პომიდვრით</span></span><b class="pr" data-edit="t46" data-edit-label="Text: 1,70 €">1,70 €</b></div>
-      <div class="mrow"><span><span class="el" data-edit="t47" data-edit-label="Text: Με κοτόπουλο">Με κοτόπουλο</span><span class="tr">ქათმით</span></span><b class="pr" data-edit="t48" data-edit-label="Text: 1,70 €">1,70 €</b></div>
-      <div class="mrow"><span><span class="el" data-edit="t49" data-edit-label="Text: Με κιμά">Με κιμά</span><span class="tr">ხორცით</span></span><b class="pr" data-edit="t50" data-edit-label="Text: 1,70 €">1,70 €</b></div>
+      <p class="kick"><span class="el" data-edit="t24" data-edit-label="Text: Το χειρόγραφο μενού">Το χειρόγραφο μενού</span><span class="tr">ხელნაწერი მენიუ</span></p>
+      <h2><span class="el" data-edit="t25" data-edit-label="Text: Τιμές από τον πίνακα">Τιμές από τον πίνακα</span><span class="tr">ფასები დაფიდან</span></h2>
+      <p class="mh"><span class="el" data-edit="t26" data-edit-label="Text: Πίτες">Πίτες</span><span class="tr">ცომეული</span></p>
+      <div class="mrow"><span><span class="el" data-edit="t27" data-edit-label="Text: Χατσαπούρι">Χατσαπούρι</span><span class="tr">ხაჭაპური</span></span><b class="pr" data-edit="t28" data-edit-label="Text: 3,00 €">3,00 €</b></div>
+      <div class="mrow"><span><span class="el" data-edit="t29" data-edit-label="Text: Σπανακοτυρόπιτα">Σπανακοτυρόπιτα</span><span class="tr">ისპანახისა და ყველის ცომეული</span></span><b class="pr" data-edit="t30" data-edit-label="Text: 3,00 €">3,00 €</b></div>
+      <div class="mrow"><span><span class="el" data-edit="t31" data-edit-label="Text: Πατατόπιτα">Πατατόπιτα</span><span class="tr">კარტოფილიანი</span></span><b class="pr" data-edit="t32" data-edit-label="Text: 2,50 €">2,50 €</b></div>
+      <div class="mrow"><span><span class="el" data-edit="t33" data-edit-label="Text: Πίτα με λουκάνικο / μπέικον">Πίτα με λουκάνικο / μπέικον</span><span class="tr">ძეხვით / ბეკონით</span></span><b class="pr" data-edit="t34" data-edit-label="Text: 3,00 €">3,00 €</b></div>
+      <div class="mrow"><span><span class="el" data-edit="t35" data-edit-label="Text: Κιμαδόπιτα">Κιμαδόπιτα</span><span class="tr">ხორცით</span></span><b class="pr" data-edit="t36" data-edit-label="Text: 3,50 €">3,50 €</b></div>
+      <div class="mrow"><span><span class="el" data-edit="t37" data-edit-label="Text: Μανιταρόπιτα">Μανιταρόπιτα</span><span class="tr">სოკოთი</span></span><b class="pr" data-edit="t38" data-edit-label="Text: 3,50 €">3,50 €</b></div>
+      <p class="mh"><span class="el" data-edit="t39" data-edit-label="Text: Πουγκιά">Πουγκιά</span><span class="tr">ბურთულები</span></p>
+      <div class="mrow"><span><span class="el" data-edit="t40" data-edit-label="Text: Με πατάτα">Με πατάτα</span><span class="tr">კარტოფილით</span></span><b class="pr" data-edit="t41" data-edit-label="Text: 1,50 €">1,50 €</b></div>
+      <div class="mrow"><span><span class="el" data-edit="t42" data-edit-label="Text: Με φασόλι">Με φασόλι</span><span class="tr">ლობიოთი</span></span><b class="pr" data-edit="t43" data-edit-label="Text: 1,50 €">1,50 €</b></div>
+      <div class="mrow"><span><span class="el" data-edit="t44" data-edit-label="Text: Με μανιτάρι">Με μανιτάρι</span><span class="tr">სოკოთი</span></span><b class="pr" data-edit="t45" data-edit-label="Text: 1,70 €">1,70 €</b></div>
+      <div class="mrow"><span><span class="el" data-edit="t46" data-edit-label="Text: Με ελιά, φέτα, λιαστή ντομάτα">Με ελιά, φέτα, λιαστή ντομάτα</span><span class="tr">ზეთისხილით, ფეტათი, გამომშრალი პომიდვრით</span></span><b class="pr" data-edit="t47" data-edit-label="Text: 1,70 €">1,70 €</b></div>
+      <div class="mrow"><span><span class="el" data-edit="t48" data-edit-label="Text: Με κοτόπουλο">Με κοτόπουλο</span><span class="tr">ქათმით</span></span><b class="pr" data-edit="t49" data-edit-label="Text: 1,70 €">1,70 €</b></div>
+      <div class="mrow"><span><span class="el" data-edit="t50" data-edit-label="Text: Με κιμά">Με κιμά</span><span class="tr">ხორცით</span></span><b class="pr" data-edit="t51" data-edit-label="Text: 1,70 €">1,70 €</b></div>
     </div>
     <figure class="fr rev">
       <img src="img/02.jpg" alt="Το χειρόγραφο μενού στο ξύλο" loading="lazy">
-      <figcaption><span class="el" data-edit="t51" data-edit-label="Text: Το μενού γραμμένο στο χέρι, πάνω στον …">Το μενού γραμμένο στο χέρι, πάνω στον πάγκο.</span><span class="tr">მენიუ ხელით დაწერილი, დახლზე.</span></figcaption>
+      <figcaption><span class="el" data-edit="t52" data-edit-label="Text: Το μενού γραμμένο στο χέρι, πάνω στον …">Το μενού γραμμένο στο χέρι, πάνω στον πάγκο.</span><span class="tr">მენიუ ხელით დაწერილი, დახლზე.</span></figcaption>
     </figure>
   </div>
 </section>
 
 <section class="facet b deep">
   <div class="wrap">
-    <p class="kick rev"><span class="el" data-edit="t52" data-edit-label="Text: Ο χώρος">Ο χώρος</span><span class="tr">სივრცე</span></p>
-    <h2 class="rev"><span class="el" data-edit="t53" data-edit-label="Text: Μικρός φούρνος, μεγάλη ουρά">Μικρός φούρνος, μεγάλη ουρά</span><span class="tr">პატარა საცხობი, დიდი რიგი</span></h2>
+    <p class="kick rev"><span class="el" data-edit="t53" data-edit-label="Text: Ο χώρος">Ο χώρος</span><span class="tr">სივრცე</span></p>
+    <h2 class="rev"><span class="el" data-edit="t54" data-edit-label="Text: Μικρός φούρνος, μεγάλη ουρά">Μικρός φούρνος, μεγάλη ουρά</span><span class="tr">პატარა საცხობი, დიდი რიგი</span></h2>
     <div class="gal rev">
-      <figure class="fr"><img src="img/05.jpg" alt="Ο εσωτερικός χώρος του φούρνου" loading="lazy"><figcaption><span class="el" data-edit="t54" data-edit-label="Text: Μέσα στον φούρνο.">Μέσα στον φούρνο.</span><span class="tr">საცხობის შიგნით.</span></figcaption></figure>
-      <figure class="fr"><img src="img/08.jpg" alt="Ο πάγκος με τις πίτες" loading="lazy"><figcaption><span class="el" data-edit="t55" data-edit-label="Text: Ο πάγκος με τη σημερινή παραγωγή.">Ο πάγκος με τη σημερινή παραγωγή.</span><span class="tr">დახლი დღევანდელი პროდუქციით.</span></figcaption></figure>
-      <figure class="fr"><img src="img/09.jpg" alt="Η πρόσοψη με τη γεωργιανή επιγραφή" loading="lazy"><figcaption><span class="el" data-edit="t56" data-edit-label="Text: Η επιγραφή στα γεωργιανά.">Η επιγραφή στα γεωργιανά.</span><span class="tr">ქართული წარწერა.</span></figcaption></figure>
+      <figure class="fr"><img src="img/05.jpg" alt="Ο εσωτερικός χώρος του φούρνου" loading="lazy"><figcaption><span class="el" data-edit="t55" data-edit-label="Text: Μέσα στον φούρνο.">Μέσα στον φούρνο.</span><span class="tr">საცხობის შიგნით.</span></figcaption></figure>
+      <figure class="fr"><img src="img/08.jpg" alt="Ο πάγκος με τις πίτες" loading="lazy"><figcaption><span class="el" data-edit="t56" data-edit-label="Text: Ο πάγκος με τη σημερινή παραγωγή.">Ο πάγκος με τη σημερινή παραγωγή.</span><span class="tr">დახლი დღევანდელი პროდუქციით.</span></figcaption></figure>
+      <figure class="fr"><img src="img/09.jpg" alt="Η πρόσοψη με τη γεωργιανή επιγραφή" loading="lazy"><figcaption><span class="el" data-edit="t57" data-edit-label="Text: Η επιγραφή στα γεωργιανά.">Η επιγραφή στα γεωργιανά.</span><span class="tr">ქართული წარწერა.</span></figcaption></figure>
     </div>
   </div>
 </section>
 
 <section class="facet">
   <div class="wrap">
-    <p class="kick rev"><span class="el" data-edit="t57" data-edit-label="Text: Κριτικές Google">Κριτικές Google</span><span class="tr" data-edit="t58" data-edit-label="Text: Google-ის შეფასებები">Google-ის შეფასებები</span></p>
-    <h2 class="rev"><span class="num" data-edit="t59" data-edit-label="Text: ★ 4,8">★ 4,8</span> <span class="el" data-edit="t60" data-edit-label="Text: από 236 κριτικές">από 236 κριτικές</span><span class="tr" data-edit="t61" data-edit-label="Text: 236 შეფასებიდან">236 შეფასებიდან</span></h2>
+    <p class="kick rev"><span class="el" data-edit="t58" data-edit-label="Text: Κριτικές Google">Κριτικές Google</span><span class="tr" data-edit="t59" data-edit-label="Text: Google-ის შეფასებები">Google-ის შეფასებები</span></p>
+    <h2 class="rev"><span class="num" data-edit="t60" data-edit-label="Text: ★ 4,8">★ 4,8</span> <span class="el" data-edit="t61" data-edit-label="Text: από 236 κριτικές">από 236 κριτικές</span><span class="tr" data-edit="t62" data-edit-label="Text: 236 შეფასებიდან">236 შეფასებიდან</span></h2>
     <div class="qs rev">
-      <div class="q"><q dir="ltr" data-edit="t62" data-edit-label="Quote: Βρεθήκαμε τυχαία στο σημείο και μας τρ…">Βρεθήκαμε τυχαία στο σημείο και μας τράβηξε το ενδιαφέρον. Δοκιμάσαμε το «χατσαπούρι» και μπορώ να πω ότι με εξέπληξε ευχάριστα, πολύ γευστικό.</q><div class="w" data-edit="t63" data-edit-label="Text: Lefteris B · Google">Lefteris B · Google</div></div>
-      <div class="q"><q dir="ltr" data-edit="t64" data-edit-label="Quote: Έχω πάει κάνα δυο φορές στο μαγαζί και…">Έχω πάει κάνα δυο φορές στο μαγαζί και χω πάρει χατσαπούρι, μοιάζει αρκετά με τυρόπιτα, με μαλακό ζυμαράκι, ήταν ζεστό, λαχταριστό.</q><div class="w" data-edit="t65" data-edit-label="Text: Ελενη Θ · Google">Ελενη Θ · Google</div></div>
-      <div class="q"><q dir="ltr" data-edit="t66" data-edit-label="Quote: Τίμια πατατόπιτα, φρέσκα προϊόντα, τιμ…">Τίμια πατατόπιτα, φρέσκα προϊόντα, τιμές αναμενόμενες, καλό σημείο, εξυπηρετικό προσωπικό.</q><div class="w" data-edit="t67" data-edit-label="Text: Σιμος Κωβαιος · Google">Σιμος Κωβαιος · Google</div></div>
+      <div class="q"><q dir="ltr" data-edit="t63" data-edit-label="Quote: Βρεθήκαμε τυχαία στο σημείο και μας τρ…">Βρεθήκαμε τυχαία στο σημείο και μας τράβηξε το ενδιαφέρον. Δοκιμάσαμε το «χατσαπούρι» και μπορώ να πω ότι με εξέπληξε ευχάριστα, πολύ γευστικό.</q><div class="w" data-edit="t64" data-edit-label="Text: Lefteris B · Google">Lefteris B · Google</div></div>
+      <div class="q"><q dir="ltr" data-edit="t65" data-edit-label="Quote: Έχω πάει κάνα δυο φορές στο μαγαζί και…">Έχω πάει κάνα δυο φορές στο μαγαζί και χω πάρει χατσαπούρι, μοιάζει αρκετά με τυρόπιτα, με μαλακό ζυμαράκι, ήταν ζεστό, λαχταριστό.</q><div class="w" data-edit="t66" data-edit-label="Text: Ελενη Θ · Google">Ελενη Θ · Google</div></div>
+      <div class="q"><q dir="ltr" data-edit="t67" data-edit-label="Quote: Τίμια πατατόπιτα, φρέσκα προϊόντα, τιμ…">Τίμια πατατόπιτα, φρέσκα προϊόντα, τιμές αναμενόμενες, καλό σημείο, εξυπηρετικό προσωπικό.</q><div class="w" data-edit="t68" data-edit-label="Text: Σιμος Κωβαιος · Google">Σιμος Κωβαιος · Google</div></div>
     </div>
   </div>
 </section>
@@ -272,40 +280,40 @@ setTimeout(function(){document.querySelectorAll('.rev').forEach(function(e){e.cl
 <section class="facet b grey">
   <div class="wrap two rev">
     <div>
-      <p class="kick"><span class="el" data-edit="t68" data-edit-label="Text: Ωράριο">Ωράριο</span><span class="tr">სამუშაო საათები</span></p>
-      <h2><span class="el" data-edit="t69" data-edit-label="Text: Ανοιχτά κάθε μέρα">Ανοιχτά κάθε μέρα</span><span class="tr">ღიაა ყოველდღე</span></h2>
+      <p class="kick"><span class="el" data-edit="t69" data-edit-label="Text: Ωράριο">Ωράριο</span><span class="tr">სამუშაო საათები</span></p>
+      <h2><span class="el" data-edit="t70" data-edit-label="Text: Ανοιχτά κάθε μέρα">Ανοιχτά κάθε μέρα</span><span class="tr">ღიაა ყოველდღე</span></h2>
       <table>
-        <tr><td><span class="el" data-edit="t70" data-edit-label="Text: Δευτέρα">Δευτέρα</span><span class="tr">ორშაბათი</span></td><td class="num" data-edit="t71" data-edit-label="Menu / table: 09:00–19:00">09:00–19:00</td></tr>
-        <tr><td><span class="el" data-edit="t72" data-edit-label="Text: Τρίτη">Τρίτη</span><span class="tr">სამშაბათი</span></td><td class="num" data-edit="t73" data-edit-label="Menu / table: 09:00–19:00">09:00–19:00</td></tr>
-        <tr><td><span class="el" data-edit="t74" data-edit-label="Text: Τετάρτη">Τετάρτη</span><span class="tr">ოთხშაბათი</span></td><td class="num" data-edit="t75" data-edit-label="Menu / table: 09:00–19:00">09:00–19:00</td></tr>
-        <tr><td><span class="el" data-edit="t76" data-edit-label="Text: Πέμπτη">Πέμπτη</span><span class="tr">ხუთშაბათი</span></td><td class="num" data-edit="t77" data-edit-label="Menu / table: 09:00–19:00">09:00–19:00</td></tr>
-        <tr><td><span class="el" data-edit="t78" data-edit-label="Text: Παρασκευή">Παρασκευή</span><span class="tr">პარასკევი</span></td><td class="num" data-edit="t79" data-edit-label="Menu / table: 09:00–19:00">09:00–19:00</td></tr>
-        <tr><td><span class="el" data-edit="t80" data-edit-label="Text: Σάββατο">Σάββατο</span><span class="tr">შაბათი</span></td><td class="num" data-edit="t81" data-edit-label="Menu / table: 09:00–17:00">09:00–17:00</td></tr>
-        <tr><td><span class="el" data-edit="t82" data-edit-label="Text: Κυριακή">Κυριακή</span><span class="tr">კვირა</span></td><td class="num" data-edit="t83" data-edit-label="Menu / table: 09:00–17:00">09:00–17:00</td></tr>
+        <tr><td><span class="el" data-edit="t71" data-edit-label="Text: Δευτέρα">Δευτέρα</span><span class="tr">ორშაბათი</span></td><td class="num" data-edit="t72" data-edit-label="Menu / table: 09:00–19:00">09:00–19:00</td></tr>
+        <tr><td><span class="el" data-edit="t73" data-edit-label="Text: Τρίτη">Τρίτη</span><span class="tr">სამშაბათი</span></td><td class="num" data-edit="t74" data-edit-label="Menu / table: 09:00–19:00">09:00–19:00</td></tr>
+        <tr><td><span class="el" data-edit="t75" data-edit-label="Text: Τετάρτη">Τετάρτη</span><span class="tr">ოთხშაბათი</span></td><td class="num" data-edit="t76" data-edit-label="Menu / table: 09:00–19:00">09:00–19:00</td></tr>
+        <tr><td><span class="el" data-edit="t77" data-edit-label="Text: Πέμπτη">Πέμπτη</span><span class="tr">ხუთშაბათი</span></td><td class="num" data-edit="t78" data-edit-label="Menu / table: 09:00–19:00">09:00–19:00</td></tr>
+        <tr><td><span class="el" data-edit="t79" data-edit-label="Text: Παρασκευή">Παρασκευή</span><span class="tr">პარასკევი</span></td><td class="num" data-edit="t80" data-edit-label="Menu / table: 09:00–19:00">09:00–19:00</td></tr>
+        <tr><td><span class="el" data-edit="t81" data-edit-label="Text: Σάββατο">Σάββατο</span><span class="tr">შაბათი</span></td><td class="num" data-edit="t82" data-edit-label="Menu / table: 09:00–17:00">09:00–17:00</td></tr>
+        <tr><td><span class="el" data-edit="t83" data-edit-label="Text: Κυριακή">Κυριακή</span><span class="tr">კვირა</span></td><td class="num" data-edit="t84" data-edit-label="Menu / table: 09:00–17:00">09:00–17:00</td></tr>
       </table>
     </div>
     <div>
-      <p class="kick"><span class="el" data-edit="t84" data-edit-label="Text: Πού είμαστε">Πού είμαστε</span><span class="tr">სად ვართ</span></p>
-      <h2><span class="el" data-edit="t85" data-edit-label="Text: Αγίας Ζώνης 26">Αγίας Ζώνης 26</span><span class="tr" data-edit="t86" data-edit-label="Text: აგია ზონი 26">აგია ზონი 26</span></h2>
-      <p style="font-size:19px"><b class="ad" data-edit="t87" data-edit-label="Text: Αγίας Ζώνης 26, Αθήνα 113 61">Αγίας Ζώνης 26, Αθήνα 113 61</b><br>
-        <span class="el" data-edit="t88" data-edit-label="Text: Κυψέλη, πάνω στον πεζόδρομο">Κυψέλη, πάνω στον πεζόδρομο</span><span class="tr">კიფსელი, საფეხმავლო ქუჩაზე</span><br>
-        <b class="ph num" data-edit="t89" data-edit-label="Text: +30 21 1425 2269">+30 21 1425 2269</b></p>
+      <p class="kick"><span class="el" data-edit="t85" data-edit-label="Text: Πού είμαστε">Πού είμαστε</span><span class="tr">სად ვართ</span></p>
+      <h2><span class="el" data-edit="t86" data-edit-label="Text: Αγίας Ζώνης 26">Αγίας Ζώνης 26</span><span class="tr" data-edit="t87" data-edit-label="Text: აგია ზონი 26">აგია ზონი 26</span></h2>
+      <p style="font-size:19px"><b class="ad" data-edit="t88" data-edit-label="Text: Αγίας Ζώνης 26, Αθήνα 113 61">Αγίας Ζώνης 26, Αθήνα 113 61</b><br>
+        <span class="el" data-edit="t89" data-edit-label="Text: Κυψέλη, πάνω στον πεζόδρομο">Κυψέλη, πάνω στον πεζόδρομο</span><span class="tr">კიფსელი, საფეხმავლო ქუჩაზე</span><br>
+        <b class="ph num" data-edit="t90" data-edit-label="Text: +30 21 1425 2269">+30 21 1425 2269</b></p>
       <p>
-        <a class="btn" href="tel:+302114252269"><span class="el" data-edit="t90" data-edit-label="Text: Τηλέφωνο">Τηλέφωνο</span><span class="tr">დარეკვა</span></a>
-        <a class="btn c" href="https://www.google.com/maps?cid=3801204235532510372" target="_blank" rel="noopener"><span class="el" data-edit="t91" data-edit-label="Text: Χάρτης">Χάρτης</span><span class="tr">რუკა</span></a>
+        <a class="btn" href="tel:+302114252269"><span class="el" data-edit="t91" data-edit-label="Text: Τηλέφωνο">Τηλέφωνο</span><span class="tr">დარეკვა</span></a>
+        <a class="btn c" href="https://www.google.com/maps?cid=3801204235532510372" target="_blank" rel="noopener"><span class="el" data-edit="t92" data-edit-label="Text: Χάρτης">Χάρτης</span><span class="tr">რუკა</span></a>
       </p>
     </div>
   </div>
-  <div class="wrap"><footer><p><b data-edit="t92" data-edit-label="Text: MARILI · მარილი">MARILI · მარილი</b> · Αγίας Ζώνης 26, Αθήνα 113 61 · <span class="num" data-edit="t93" data-edit-label="Text: +30 21 1425 2269">+30 21 1425 2269</span></p></footer></div>
+  <div class="wrap"><footer><p><b data-edit="t93" data-edit-label="Text: MARILI · მარილი">MARILI · მარილი</b> · Αγίας Ζώνης 26, Αθήνα 113 61 · <span class="num" data-edit="t94" data-edit-label="Text: +30 21 1425 2269">+30 21 1425 2269</span></p></footer></div>
 </section>
 
 <nav class="bar">
   <a class="p" href="tel:+302114252269">
     <svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.4.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C11 21 3 13 3 3c0-.6.4-1 1-1h3.4c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.2 1l-2.2 2.2z"/></svg>
-    <span class="el" data-edit="t94" data-edit-label="Text: Κλήση">Κλήση</span><span class="tr">დარეკვა</span></a>
+    <span class="el" data-edit="t95" data-edit-label="Text: Κλήση">Κλήση</span><span class="tr">დარეკვა</span></a>
   <a href="https://www.google.com/maps?cid=3801204235532510372" target="_blank" rel="noopener">
     <svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>
-    <span class="el" data-edit="t95" data-edit-label="Text: Χάρτης">Χάρτης</span><span class="tr">რუკა</span></a>
+    <span class="el" data-edit="t96" data-edit-label="Text: Χάρτης">Χάρτης</span><span class="tr">რუკა</span></a>
 
   <a class="p" href="https://www.instagram.com/marili.ath/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4C8.4 2.2 8.8 2.2 12 2.2zm0 3.2A6.6 6.6 0 1 0 18.6 12 6.6 6.6 0 0 0 12 5.4zm0 10.9A4.3 4.3 0 1 1 16.3 12 4.3 4.3 0 0 1 12 16.3zm6.9-11.1a1.5 1.5 0 1 1-1.5-1.5 1.5 1.5 0 0 1 1.5 1.5z"/></svg>
     Instagram</a>

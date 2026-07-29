@@ -24,14 +24,15 @@ header{position:relative;min-height:clamp(600px,92svh,820px);max-height:860px;di
   color:var(--prog);text-align:center;overflow:hidden}
 header::after{content:"";position:absolute;inset-inline:0;bottom:0;height:60px;
   background:repeating-linear-gradient(90deg,var(--brass) 0 2px,transparent 2px 26px);opacity:.35}
-.hin{position:relative;z-index:2;padding:clamp(40px,7vw,84px) 5vw;width:min(860px,100%)}
+.hin{position:relative;z-index:2;padding:clamp(40px,7vw,84px) 5vw;width:min(980px,100%)}
 .plate{border:1px solid rgba(239,231,214,.5);padding:clamp(28px,4.6vw,56px);position:relative;
   background:rgba(94,16,23,.32);backdrop-filter:blur(2px)}
 .plate::before,.plate::after{content:"";position:absolute;width:26px;height:26px;border:1px solid var(--brass)}
 .plate::before{top:9px;left:9px;border-right:0;border-bottom:0}
 .plate::after{bottom:9px;right:9px;border-left:0;border-top:0}
 .pre{font:600 12px/1 Commissioner,sans-serif;letter-spacing:.36em;text-transform:uppercase;color:var(--brass)}
-h1{font-size:clamp(44px,9vw,98px);margin:16px 0 0;letter-spacing:.02em}
+h1{font-size:clamp(34px,6.4vw,74px);margin:16px 0 0;letter-spacing:.02em;
+  max-width:100%;overflow-wrap:break-word}
 .hsub{margin-top:14px;font-size:clamp(16px,2.1vw,21px);color:#EBD9D5;max-width:46ch;margin-inline:auto}
 .hp{margin-top:22px;display:flex;flex-wrap:wrap;gap:9px;justify-content:center}
 .hp span{border:1px solid rgba(239,231,214,.4);padding:8px 15px;font:600 13px/1 Commissioner,sans-serif}

@@ -68,8 +68,8 @@ h1 em{display:block;font-style:normal;font-size:.28em;letter-spacing:.2em;text-t
 .hp span.v{background:var(--inkb);border-color:var(--inkb);color:#fff}
 /* the tipped-in proof photo */
 .tip{position:relative;justify-self:center;width:min(100%,470px);background:#fff;padding:12px 12px 14px;
-  box-shadow:0 18px 40px rgba(22,21,26,.35);transform:rotate(2.4deg)}
-.tip::before{content:"";position:absolute;top:-13px;left:50%;transform:translateX(-50%) rotate(-2.5deg);width:112px;height:26px;
+  box-shadow:0 18px 40px rgba(22,21,26,.35)}
+.tip::before{content:"";position:absolute;top:-13px;left:50%;transform:translateX(-50%);width:112px;height:26px;
   background:rgba(201,197,185,.6);box-shadow:0 1px 2px rgba(0,0,0,.15)}
 .tip img{display:block;width:100%;height:auto;max-height:400px;object-fit:cover}
 .tip figcaption{font:400 12px/1.6 Cousine,monospace;color:#5c5a55;padding:8px 2px 0}
@@ -137,7 +137,7 @@ footer{padding:28px 0 118px;font-size:14px;color:#5f5d58;text-align:center;font-
   header{min-height:auto;max-height:none;padding:14px 10px 24px}
   .sheet{padding:60px 6vw 58px}
   .shin{grid-template-columns:1fr;gap:32px}
-  .tip{width:min(88%,420px);transform:rotate(1.8deg)}
+  .tip{width:min(88%,420px)}
   .reg{width:32px;height:32px;top:auto;bottom:46px;transform:none}
   .reg i{inset:5px}
   .regs.l{display:none}
@@ -218,8 +218,8 @@ setTimeout(function(){document.querySelectorAll('.rev').forEach(function(e){e.cl
       <p><span class="el" data-edit="t30" data-edit-label="Text: Ο χώρος κρατά τα σημάδια της παλιάς δο…">Ο χώρος κρατά τα σημάδια της παλιάς δουλειάς: μεταλλικά στοιχεία, πλακάκια εποχής, φωτιστικά που κρέμονται χαμηλά πάνω από τα τραπέζια.</span><span class="tr" data-edit="t31" data-edit-label="Text: The room keeps the marks of the old tr…">The room keeps the marks of the old trade: metal type, period floor tiles, low lamps hanging over the tables.</span></p>
     </div>
     <figure class="fr">
-      <img src="img/06.jpg" alt="Ο εσωτερικός χώρος με τα πλακάκια εποχής" loading="lazy">
-      <figcaption><span class="el" data-edit="t32" data-edit-label="Text: Τα πλακάκια και οι ξύλινες καρέκλες.">Τα πλακάκια και οι ξύλινες καρέκλες.</span><span class="tr" data-edit="t33" data-edit-label="Text: The old floor tiles and wooden chairs.">The old floor tiles and wooden chairs.</span></figcaption>
+      <img src="img/05.jpg" alt="Τα φωτιστικά χαμηλά πάνω από τα τραπέζια" loading="lazy">
+      <figcaption><span class="el" data-edit="t32" data-edit-label="Text: Τα φωτιστικά κρέμονται χαμηλά, ακριβώς…">Τα φωτιστικά κρέμονται χαμηλά, ακριβώς πάνω από τα τραπέζια.</span><span class="tr" data-edit="t33" data-edit-label="Text: The lamps hang low, right over the tab…">The lamps hang low, right over the tables.</span></figcaption>
     </figure>
   </div>
 </section>
@@ -286,10 +286,10 @@ setTimeout(function(){document.querySelectorAll('.rev').forEach(function(e){e.cl
     <p class="kick rev"><span class="el" data-edit="t130" data-edit-label="Text: Ο χώρος">Ο χώρος</span><span class="tr" data-edit="t131" data-edit-label="Text: The room">The room</span></p>
     <h2 class="rev"><span class="el" data-edit="t132" data-edit-label="Text: Χαμηλά φώτα, μεγάλα τραπέζια">Χαμηλά φώτα, μεγάλα τραπέζια</span><span class="tr" data-edit="t133" data-edit-label="Text: Low lamps, long tables">Low lamps, long tables</span></h2>
     <div class="room rev" style="margin-top:14px">
-      <figure class="fr big"><img src="img/05.jpg" alt="Τα φωτιστικά χαμηλά πάνω από τα τραπέζια" loading="lazy">
-        <figcaption><span class="el" data-edit="t134" data-edit-label="Text: Τα φωτιστικά κρέμονται χαμηλά, ακριβώς…">Τα φωτιστικά κρέμονται χαμηλά, ακριβώς πάνω από τα τραπέζια.</span><span class="tr" data-edit="t135" data-edit-label="Text: The lamps hang low, right over the tab…">The lamps hang low, right over the tables.</span></figcaption></figure>
-      <figure class="fr"><img src="img/01.jpg" alt="Η πινακίδα του Τυπογράφου στην Κοδράτου" loading="lazy">
-        <figcaption><span class="el" data-edit="t136" data-edit-label="Text: Η πινακίδα στην Κοδράτου.">Η πινακίδα στην Κοδράτου.</span><span class="tr" data-edit="t137" data-edit-label="Text: The sign on Kodratou street.">The sign on Kodratou street.</span></figcaption></figure>
+      <figure class="fr big"><img src="img/03.jpg" alt="Ψητά στο πιάτο" loading="lazy">
+        <figcaption><span class="el" data-edit="t134" data-edit-label="Text: Ψητά της ώρας, στο πιάτο.">Ψητά της ώρας, στο πιάτο.</span><span class="tr" data-edit="t135" data-edit-label="Text: Grills, straight to the plate.">Grills, straight to the plate.</span></figcaption></figure>
+      <figure class="fr"><img src="img/04.jpg" alt="Μαγειρευτό σε πήλινο σκεύος" loading="lazy">
+        <figcaption><span class="el" data-edit="t136" data-edit-label="Text: Μαγειρευτό, μέσα στο πήλινο σκεύος του…">Μαγειρευτό, μέσα στο πήλινο σκεύος του.</span><span class="tr" data-edit="t137" data-edit-label="Text: A cooked dish, in its own clay pot.">A cooked dish, in its own clay pot.</span></figcaption></figure>
     </div>
   </div>
 </section>
